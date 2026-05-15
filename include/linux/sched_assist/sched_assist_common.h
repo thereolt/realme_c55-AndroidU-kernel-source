@@ -344,8 +344,8 @@ bool should_limit_task_skip_cpu(struct task_struct *p, int cpu);
 bool set_limit_task_target_cpu(struct task_struct *p, int *cpu);
 bool is_sf(struct task_struct *p);
 
-inline bool is_launcher(struct task_struct *p);
-inline bool ux_debug_enable(void);
+static inline bool is_launcher(struct task_struct *p);
+static inline bool ux_debug_enable(void);
 void ux_debug_systrace_c(int pid, int val);
 
 int task_index_of_sf_union(struct task_struct *p);

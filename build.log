@@ -64,504 +64,23 @@ OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_HEALTHINFO
 OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_DISPLAY
 OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_KMSG_WB
 OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_DATA_MODULE
-scripts/kconfig/conf -s --syncconfig Kconfig
-arch/arm64/kernel/rootguard/Kconfig:1:warning: ignoring unsupported character ''
-arch/arm64/kernel/rootguard/Kconfig:2:warning: ignoring unsupported character ''
-arch/arm64/kernel/rootguard/Kconfig:3:warning: ignoring unsupported character ''
-arch/arm64/kernel/rootguard/Kconfig:4:warning: ignoring unsupported character ''
-mm/malloc_track/Kconfig.compat:6: warning: ignoring unknown option env
-drivers/misc/mediatek/base/power/Kconfig:90:warning: ignoring type redefinition of 'MTK_QOS_FRAMEWORK' from 'tristate' to 'bool'
-drivers/misc/mediatek/sensor/2.0/mtk_nanohub/Kconfig:3:warning: ignoring type redefinition of 'CUSTOM_KERNEL_SENSORHUB' from 'bool' to 'tristate'
-drivers/input/touchscreen/mediatek/goodix_berlin_driver/Kconfig:4:warning: ignoring type redefinition of 'TOUCHSCREEN_GOODIX_BRL' from 'bool' to 'tristate'
-drivers/power/supply/mediatek/charger/Kconfig:199:warning: ignoring type redefinition of 'CHARGER_BQ25890' from 'tristate' to 'bool'
-drivers/power/supply/mediatek/charger/Kconfig:199:warning: ignoring type redefinition of 'CHARGER_BQ25890' from 'tristate' to 'bool'
-drivers/power/supply/mediatek/charger/Kconfig:199:warning: ignoring type redefinition of 'CHARGER_BQ25890' from 'tristate' to 'bool'
-drivers/power/supply/mediatek/charger/Kconfig:199:warning: ignoring type redefinition of 'CHARGER_BQ25890' from 'tristate' to 'bool'
-drivers/power/supply/mediatek/charger/Kconfig:199:warning: ignoring type redefinition of 'CHARGER_BQ25890' from 'tristate' to 'bool'
-drivers/power/supply/mediatek/charger/Kconfig:199:warning: ignoring type redefinition of 'CHARGER_BQ25890' from 'tristate' to 'bool'
-drivers/power/supply/mediatek/charger/Kconfig:199:warning: ignoring type redefinition of 'CHARGER_BQ25890' from 'tristate' to 'bool'
-drivers/power/supply/mediatek/charger/Kconfig:199:warning: ignoring type redefinition of 'CHARGER_BQ25890' from 'tristate' to 'bool'
-drivers/power/supply/mediatek/charger/Kconfig:199:warning: ignoring type redefinition of 'CHARGER_BQ25890' from 'tristate' to 'bool'
-drivers/power/supply/mediatek/charger/Kconfig:199:warning: ignoring type redefinition of 'CHARGER_BQ25890' from 'tristate' to 'bool'
-drivers/power/supply/mediatek/charger/Kconfig:199:warning: ignoring type redefinition of 'CHARGER_BQ25890' from 'tristate' to 'bool'
-sound/soc/codecs/audio/Kconfig:17:warning: ignoring type redefinition of 'SND_SOC_AW87339' from 'tristate' to 'bool'
-drivers/soc/mediatek/Kconfig:7:warning: ignoring type redefinition of 'MTK_CMDQ' from 'bool' to 'tristate'
-drivers/soc/oplus/system/Kconfig:24:warning: prompt redefined
-drivers/soc/oplus/system/Kconfig:22:warning: ignoring type redefinition of 'OPPO_DEVICE_IFNO' from 'bool' to 'tristate'
-drivers/input/touchscreen/mediatek/hxchipset_hx83102p/Kconfig:19:warning: choice value used outside its choice group
-drivers/input/touchscreen/mediatek/hxchipset_hx83102p/Kconfig:28:warning: choice value used outside its choice group
-drivers/input/touchscreen/mediatek/hxchipset_hx83102p/Kconfig:16:warning: choice default symbol 'TOUCHSCREEN_HIMAX_INCELL' is not contained in the choice
-
-WARNING: unmet direct dependencies detected for MTK_PID_MAP
-  Depends on [n]: (MTK_GMO_RAM_OPTIMIZE [=n] && MTK_ENG_BUILD [=n] || !MTK_GMO_RAM_OPTIMIZE [=n]) && DEBUG_FS [=n]
-  Selected by [y]:
-  - MACH_MT6768 [=y]
-
-WARNING: unmet direct dependencies detected for MTK_CACHE_PARITY_CHECK
-  Depends on [n]: MTK_SDA [=n]
-  Selected by [y]:
-  - MACH_MT6768 [=y]
-*
-* Restart config...
-*
-*
-* File systems
-*
-Second extended fs support (EXT2_FS) [N/m/y/?] n
-The Extended 3 (ext3) filesystem (EXT3_FS) [N/m/y/?] n
-The Extended 4 (ext4) filesystem (EXT4_FS) [Y/?] y
-  Use ext4 for ext2 file systems (EXT4_USE_FOR_EXT2) [Y/n/?] y
-  Ext4 POSIX Access Control Lists (EXT4_FS_POSIX_ACL) [Y/?] y
-  Ext4 Security Labels (EXT4_FS_SECURITY) [Y/?] y
-  Ext4 Encryption (EXT4_ENCRYPTION) [Y/?] y
-  Ext4 async discard Support (EXT4_ASYNC_DISCARD_SUPPORT) [Y/n/?] y
-  EXT4 debugging support (EXT4_DEBUG) [N/y/?] n
-  Ext4 fsync nobarrier support (OPLUS_FEATURE_EXT4_FSYNC) [Y/n/?] y
-JBD2 (ext4) debugging support (JBD2_DEBUG) [N/y/?] n
-Reiserfs support (REISERFS_FS) [N/m/y/?] n
-JFS filesystem support (JFS_FS) [N/m/y/?] n
-XFS filesystem support (XFS_FS) [N/m/y/?] n
-GFS2 file system support (GFS2_FS) [N/m/y/?] n
-OCFS2 file system support (OCFS2_FS) [N/m/y/?] n
-Btrfs filesystem support (BTRFS_FS) [N/m/y/?] n
-NILFS2 file system support (NILFS2_FS) [N/m/y/?] n
-F2FS filesystem support (F2FS_FS) [Y/n/m/?] y
-  F2FS Status Information (F2FS_STAT_FS) [Y/n/?] y
-  F2FS extended attributes (F2FS_FS_XATTR) [Y/?] y
-    F2FS Access Control Lists (F2FS_FS_POSIX_ACL) [Y/?] y
-    F2FS Security Labels (F2FS_FS_SECURITY) [Y/n/?] y
-  F2FS consistency checking feature (F2FS_CHECK_FS) [N/y/?] n
-  F2FS Encryption (F2FS_FS_ENCRYPTION) [N/y/?] n
-  F2FS fault injection facility (F2FS_FAULT_INJECTION) [N/y/?] n
-  F2FS compression feature (F2FS_FS_COMPRESSION) [Y/n/?] y
-    F2FS compression feature (fixed output) (F2FS_FS_COMPRESSION_FIXED_OUTPUT) [Y/n/?] y
-    LZO compression support (F2FS_FS_LZO) [Y/n/?] (NEW) 
-    LZ4 compression support (F2FS_FS_LZ4) [Y/n/?] (NEW) 
-      LZ4HC compression support (F2FS_FS_LZ4HC) [Y/n/?] (NEW) 
-    ZSTD compression support (F2FS_FS_ZSTD) [Y/n/?] (NEW) 
-WARNING: unmet direct dependencies detected for MTK_PID_MAP
-  Depends on [n]: (MTK_GMO_RAM_OPTIMIZE [=n] && MTK_ENG_BUILD [=n] || !MTK_GMO_RAM_OPTIMIZE [=n]) && DEBUG_FS [=n]
-  Selected by [y]:
-  - MACH_MT6768 [=y]
-
-WARNING: unmet direct dependencies detected for MTK_CACHE_PARITY_CHECK
-  Depends on [n]: MTK_SDA [=n]
-  Selected by [y]:
-  - MACH_MT6768 [=y]
-
-  F2FS dedup feature (F2FS_FS_DEDUP) [N/y/?] n
-Direct Access (DAX) support (FS_DAX) [N/y/?] n
-Enable filesystem export operations for block IO (EXPORTFS_BLOCK_OPS) [N/y/?] n
-Enable POSIX file locking API (FILE_LOCKING) [Y/?] y
-  Enable Mandatory file locking (MANDATORY_FILE_LOCKING) [Y/n/?] y
-FS Encryption (Per-file encryption) (FS_ENCRYPTION) [Y/?] y
-Enable fscrypt to use inline crypto (FS_ENCRYPTION_INLINE_CRYPT) [Y/n/?] y
-FS Verity (read-only file-based authenticity protection) (FS_VERITY) [Y/?] y
-  FS Verity debugging (FS_VERITY_DEBUG) [N/y/?] n
-  FS Verity builtin signature support (FS_VERITY_BUILTIN_SIGNATURES) [Y/?] y
-Dnotify support (DNOTIFY) [Y/n/?] y
-Inotify support for userspace (INOTIFY_USER) [Y/?] y
-Filesystem wide access notification (FANOTIFY) [N/y/?] n
-Quota support (QUOTA) [Y/?] y
-Report quota messages through netlink interface (QUOTA_NETLINK_INTERFACE) [Y/n/?] y
-Print quota warnings to console (OBSOLETE) (PRINT_QUOTA_WARNING) [Y/n/?] y
-Additional quota sanity checks (QUOTA_DEBUG) [N/y/?] n
-Old quota format support (QFMT_V1) [N/m/y/?] n
-Quota format vfsv0 and vfsv1 support (QFMT_V2) [Y/?] y
-Old Kconfig name for Kernel automounter support (AUTOFS4_FS) [N/m/y/?] n
-Kernel automounter support (supports v3, v4 and v5) (AUTOFS_FS) [N/m/y/?] n
-FUSE (Filesystem in Userspace) support (FUSE_FS) [Y/?] y
-  Character device in Userspace support (CUSE) [N/m/y/?] n
-Overlay filesystem support (OVERLAY_FS) [Y/?] y
-  Overlayfs: turn on redirect directory feature by default (OVERLAY_FS_REDIRECT_DIR) [N/y/?] n
-  Overlayfs: follow redirects even if redirects are turned off (OVERLAY_FS_REDIRECT_ALWAYS_FOLLOW) [Y/n/?] y
-  Overlayfs: turn on inodes index feature by default (OVERLAY_FS_INDEX) [N/y/?] n
-  Overlayfs: auto enable inode number mapping (OVERLAY_FS_XINO_AUTO) [N/y/?] n
-  Overlayfs: turn on metadata only copy up feature by default (OVERLAY_FS_METACOPY) [N/y/?] n
-Incremental file system support (INCREMENTAL_FS) [Y/n/m/?] y
-UTF-8 normalization and casefolding support (UNICODE) [Y/?] y
-  Test UTF-8 normalization support (UNICODE_NORMALIZATION_SELFTEST) [N/m/y/?] n
-exFAT fs support (EXFAT_FS) [Y/n/m/?] y
-  enable discard support (EXFAT_DISCARD) [Y/n/?] y
-  enable delayed sync (EXFAT_DELAYED_SYNC) [N/y/?] n
-  enable kernel debug features via ioctl (EXFAT_KERNEL_DEBUG) [N/y/?] n
-  print debug messages (EXFAT_DEBUG_MSG) [N/y/?] n
-  Default codepage for exFAT (EXFAT_DEFAULT_CODEPAGE) [437] 437
-  Default iocharset for exFAT (EXFAT_DEFAULT_IOCHARSET) [utf8] utf8
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_HANS_FREEZE
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_STORAGE_TOOL
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MMC_DRIVER
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_UFS_DRIVER
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_UFS_SHOW_LATENCY
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_AOD
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_DC
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_ENABLE_MODEM_DB
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_ENGINEERTOOLS
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_FACERECOGNITION
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_FASTBOOT_UNLOCK_VERIFY
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_FG_IO_OPT
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SDCARD_INFO
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_FINGERPRINT
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_HEALTHINFO
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_TASK_CPUSTATS
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MIPICLKCHANGE
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MULTI_FREEAREA
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MULTI_KSWAPD
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_NFC_CONSOFT
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_ONSCREENFINGERPRINT
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_OSC
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_PHOENIX
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_AGINGTEST
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_PROCESS_RECLAIM
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_RESET_ROLLBACK_INDEX
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SELINUX_CONTROL_LOG
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SENSOR
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SENSOR_ALGORITHM
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SENSOR_SMEM
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SENSOR_WISELIGHT
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_IOMONITOR
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SPEAKER_MUTE
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MM_FEEDBACK
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_TP_BSPFWUPDATE
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_TP_BASIC
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_CHG_BASIC
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SCHED_ASSIST
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SIGKILL_DIAGNOSIS
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_VIRTUAL_RESERVE_MEMORY
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MEMLEAK_DETECT
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_MTUDETECT
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_RUSUPGRADE
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_SLA
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_DATA_EVAL
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_ZRAM_OPT
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_EXFAT_SUPPORT
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SDCARDFS_SUPPORT
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_PERFORMANCE
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_BUG_COMPATIBILITY
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_BUG_STABILITY
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_BUG_DEBUG
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_ARCH_INJECT
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_ARCH_EXTENDS
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_LOWMEM_DBG
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_BUG_STABILITY
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_POWERINFO_STANDBY
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_CAMERA_COMMON
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MTK_ION_SEPARATE_LOCK
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_THEIA
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_APP_MONITOR
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SCHEDUTIL_USE_TL
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_HEALTHINFO
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_DISPLAY
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_KMSG_WB
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_DATA_MODULE
-$GED: CONFIG_MTK_PLATFORM is ["mt6768"]
-*MTK_GPU_VERSION 2 = valhall
-*MTK_GPU_VERSION 3 = r32p1
-mali MTK evironment, building r32p1 DDK
-mtk-Kbuild CONFIG_MALI_PLATFORM_THIRDPARTY := y
-mtk-Kbuild CONFIG_MALI_PLATFORM_THIRDPARTY_NAME := "mt6768"
-mali MTK evironment, building r32p1 DDK
-mtk-Kbuild CONFIG_MALI_PLATFORM_THIRDPARTY := y
-mtk-Kbuild CONFIG_MALI_PLATFORM_THIRDPARTY_NAME := "mt6768"
-mali MTK evironment, building r32p1 DDK
-mtk-Kbuild CONFIG_MALI_PLATFORM_THIRDPARTY := y
-mtk-Kbuild CONFIG_MALI_PLATFORM_THIRDPARTY_NAME := "mt6768"
-drivers/misc/mediatek/base/power/cpufreq_v1/src/Makefile:89: "use CONFIG_MTK_TINYSYS_SSPM_V1"
-.
-drivers/misc/mediatek/base/power/ppm_v3/src/Makefile:110: USE_PPM_CPI
-FDVT: Drv use 4.0 folder
-.
-.
-drivers/misc/mediatek/ccu/src/Makefile:33: CCU_MAKE_FILE_CALLED
-drivers/misc/mediatek/ccu/src/1.2/Makefile:28: CCU_INC=./drivers/misc/mediatek/ccu/src/mt6768/ccu_ext_interface
-ION:enable mtk ion
-CONFIG_MTK_PLATFORM_CCCI := mt6768
-CONFIG_MTK_PLATFORM_CCCI := "mt6768"
-MTK_PLATFORM_CCCI := mt6768
-************  drivers/trusty/mtee-kree mk ************
-imgsensor drv by common ../common/v1/s5k2t7sp_mipi_raw/ ../common/v1/s5k2p7_mipi_raw/ ../common/v1/ov8856_mipi_raw/ ../common/v1/imx386_mipi_raw/ ../common/v1/imx398_mipi_raw/ ../common/v1/s5k2l7_mipi_raw/ ../common/v1/even_qtech_main_s5kgm1st03/ ../common/v1/even_qtech_main_ov13b10/ ../common/v1/even_hlt_front_s5k4h7/ ../common/v1/even_hlt_depth_gc02m1b/ ../common/v1/even_shengtai_macro_ov02b10/ ../common/v1/even_shengtai_front_ov8856/
-imgsensor drv by platform imx519_mipi_raw/
-M4U platform folder:"mt6768"
-M4U version:2.0
-TCORE_UT_TESTS_SUPPORT = n
-TCORE_PROFILING_SUPPORT = n
-TCORE_PROFILING_AUTO_DUMP = n
-TCORE_MEMORY_LEAK_DETECTION_SUPPORT = n
-In file included from ./include/linux/printk.h:7,
-                 from ./include/linux/kernel.h:13,
-                 from ./include/asm-generic/bug.h:18,
-                 from ./arch/arm64/include/asm/bug.h:37,
-                 from ./include/linux/bug.h:5,
-                 from ./include/linux/mmdebug.h:5,
-                 from ./include/linux/mm.h:9,
-                 from mm/page_alloc.c:18:
-mm/page_alloc.c: In function ‘free_pages_prepare’:
-./include/linux/kern_levels.h:5:25: warning: format ‘%lx’ expects argument of type ‘long unsigned int’, but argument 3 has type ‘struct page *’ [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:11:25: note: in expansion of macro ‘KERN_SOH’
-   11 | #define KERN_ERR        KERN_SOH "3"    /* error conditions */
-      |                         ^~~~~~~~
-./include/linux/printk.h:359:16: note: in expansion of macro ‘KERN_ERR’
-  359 |         printk(KERN_ERR pr_fmt(fmt), ##__VA_ARGS__)
-      |                ^~~~~~~~
-mm/page_alloc.c:1170:33: note: in expansion of macro ‘pr_err’
- 1170 |                                 pr_err("@@@FIXME:%s freeing subpage-mapped ContPte Pages:%lx pfn:%lx i:%d _mapcount:%d\n",
-      |                                 ^~~~~~
-mm/page_alloc.c: In function ‘__alloc_pages_bulk’:
-mm/page_alloc.c:4956:9: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
- 4956 |         int nr_populated = 0, nr_account = 0;
-      |         ^~~
-mm/page_alloc.c: In function ‘show_free_areas’:
-mm/page_alloc.c:5672:24: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 17 has type ‘int’ [-Wformat=]
- 5672 |                 printk("Node %d"
-      |                        ^~~~~~~~~
-mm/page_alloc.c:5690:44: note: format string is defined here
- 5690 |                         " hugepage_poll: %lukB"
-      |                                          ~~^
-      |                                            |
-      |                                            long unsigned int
-      |                                          %u
-mm/page_alloc.c: In function ‘pgdat_init_chp_lruvec’:
-mm/page_alloc.c:7065:9: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
- 7065 |         struct chp_lruvec *chp_lruvec = NULL;
-      |         ^~~~~~
-mm/page_alloc.c:7074:24: warning: assignment to ‘struct deferred_split *’ from ‘long unsigned int’ makes pointer from integer without a cast [-Wint-conversion]
- 7074 |         chp_lruvec->ds = (unsigned long)chp_lruvec; // pgdat->split_queue_len;
-      |                        ^
-mm/page_alloc.c: In function ‘mem_init_print_info’:
-mm/page_alloc.c:7968:27: warning: comparison between two arrays [-Warray-compare]
- 7968 |                 if (start <= pos && pos < end && size > adj) \
-      |                           ^~
-mm/page_alloc.c:7972:9: note: in expansion of macro ‘adj_init_size’
- 7972 |         adj_init_size(__init_begin, __init_end, init_data_size,
-      |         ^~~~~~~~~~~~~
-mm/page_alloc.c:7968:27: note: use ‘&__init_begin[0] <= &_sinittext[0]’ to compare the addresses
- 7968 |                 if (start <= pos && pos < end && size > adj) \
-      |                           ^~
-mm/page_alloc.c:7972:9: note: in expansion of macro ‘adj_init_size’
- 7972 |         adj_init_size(__init_begin, __init_end, init_data_size,
-      |         ^~~~~~~~~~~~~
-mm/page_alloc.c:7968:41: warning: comparison between two arrays [-Warray-compare]
- 7968 |                 if (start <= pos && pos < end && size > adj) \
-      |                                         ^
-mm/page_alloc.c:7972:9: note: in expansion of macro ‘adj_init_size’
- 7972 |         adj_init_size(__init_begin, __init_end, init_data_size,
-      |         ^~~~~~~~~~~~~
-mm/page_alloc.c:7968:41: note: use ‘&_sinittext[0] < &__init_end[0]’ to compare the addresses
- 7968 |                 if (start <= pos && pos < end && size > adj) \
-      |                                         ^
-mm/page_alloc.c:7972:9: note: in expansion of macro ‘adj_init_size’
- 7972 |         adj_init_size(__init_begin, __init_end, init_data_size,
-      |         ^~~~~~~~~~~~~
-mm/page_alloc.c:7968:27: warning: comparison between two arrays [-Warray-compare]
- 7968 |                 if (start <= pos && pos < end && size > adj) \
-      |                           ^~
-mm/page_alloc.c:7974:9: note: in expansion of macro ‘adj_init_size’
- 7974 |         adj_init_size(_stext, _etext, codesize, _sinittext, init_code_size);
-      |         ^~~~~~~~~~~~~
-mm/page_alloc.c:7968:27: note: use ‘&_stext[0] <= &_sinittext[0]’ to compare the addresses
- 7968 |                 if (start <= pos && pos < end && size > adj) \
-      |                           ^~
-mm/page_alloc.c:7974:9: note: in expansion of macro ‘adj_init_size’
- 7974 |         adj_init_size(_stext, _etext, codesize, _sinittext, init_code_size);
-      |         ^~~~~~~~~~~~~
-mm/page_alloc.c:7968:41: warning: comparison between two arrays [-Warray-compare]
- 7968 |                 if (start <= pos && pos < end && size > adj) \
-      |                                         ^
-mm/page_alloc.c:7974:9: note: in expansion of macro ‘adj_init_size’
- 7974 |         adj_init_size(_stext, _etext, codesize, _sinittext, init_code_size);
-      |         ^~~~~~~~~~~~~
-mm/page_alloc.c:7968:41: note: use ‘&_sinittext[0] < &_etext[0]’ to compare the addresses
- 7968 |                 if (start <= pos && pos < end && size > adj) \
-      |                                         ^
-mm/page_alloc.c:7974:9: note: in expansion of macro ‘adj_init_size’
- 7974 |         adj_init_size(_stext, _etext, codesize, _sinittext, init_code_size);
-      |         ^~~~~~~~~~~~~
-mm/page_alloc.c:7968:27: warning: comparison between two arrays [-Warray-compare]
- 7968 |                 if (start <= pos && pos < end && size > adj) \
-      |                           ^~
-mm/page_alloc.c:7975:9: note: in expansion of macro ‘adj_init_size’
- 7975 |         adj_init_size(_sdata, _edata, datasize, __init_begin, init_data_size);
-      |         ^~~~~~~~~~~~~
-mm/page_alloc.c:7968:27: note: use ‘&_sdata[0] <= &__init_begin[0]’ to compare the addresses
- 7968 |                 if (start <= pos && pos < end && size > adj) \
-      |                           ^~
-mm/page_alloc.c:7975:9: note: in expansion of macro ‘adj_init_size’
- 7975 |         adj_init_size(_sdata, _edata, datasize, __init_begin, init_data_size);
-      |         ^~~~~~~~~~~~~
-mm/page_alloc.c:7968:41: warning: comparison between two arrays [-Warray-compare]
- 7968 |                 if (start <= pos && pos < end && size > adj) \
-      |                                         ^
-mm/page_alloc.c:7975:9: note: in expansion of macro ‘adj_init_size’
- 7975 |         adj_init_size(_sdata, _edata, datasize, __init_begin, init_data_size);
-      |         ^~~~~~~~~~~~~
-mm/page_alloc.c:7968:41: note: use ‘&__init_begin[0] < &_edata[0]’ to compare the addresses
- 7968 |                 if (start <= pos && pos < end && size > adj) \
-      |                                         ^
-mm/page_alloc.c:7975:9: note: in expansion of macro ‘adj_init_size’
- 7975 |         adj_init_size(_sdata, _edata, datasize, __init_begin, init_data_size);
-      |         ^~~~~~~~~~~~~
-mm/page_alloc.c:7968:27: warning: comparison between two arrays [-Warray-compare]
- 7968 |                 if (start <= pos && pos < end && size > adj) \
-      |                           ^~
-mm/page_alloc.c:7976:9: note: in expansion of macro ‘adj_init_size’
- 7976 |         adj_init_size(_stext, _etext, codesize, __start_rodata, rosize);
-      |         ^~~~~~~~~~~~~
-mm/page_alloc.c:7968:27: note: use ‘&_stext[0] <= &__start_rodata[0]’ to compare the addresses
- 7968 |                 if (start <= pos && pos < end && size > adj) \
-      |                           ^~
-mm/page_alloc.c:7976:9: note: in expansion of macro ‘adj_init_size’
- 7976 |         adj_init_size(_stext, _etext, codesize, __start_rodata, rosize);
-      |         ^~~~~~~~~~~~~
-mm/page_alloc.c:7968:41: warning: comparison between two arrays [-Warray-compare]
- 7968 |                 if (start <= pos && pos < end && size > adj) \
-      |                                         ^
-mm/page_alloc.c:7976:9: note: in expansion of macro ‘adj_init_size’
- 7976 |         adj_init_size(_stext, _etext, codesize, __start_rodata, rosize);
-      |         ^~~~~~~~~~~~~
-mm/page_alloc.c:7968:41: note: use ‘&__start_rodata[0] < &_etext[0]’ to compare the addresses
- 7968 |                 if (start <= pos && pos < end && size > adj) \
-      |                                         ^
-mm/page_alloc.c:7976:9: note: in expansion of macro ‘adj_init_size’
- 7976 |         adj_init_size(_stext, _etext, codesize, __start_rodata, rosize);
-      |         ^~~~~~~~~~~~~
-mm/page_alloc.c:7968:27: warning: comparison between two arrays [-Warray-compare]
- 7968 |                 if (start <= pos && pos < end && size > adj) \
-      |                           ^~
-mm/page_alloc.c:7977:9: note: in expansion of macro ‘adj_init_size’
- 7977 |         adj_init_size(_sdata, _edata, datasize, __start_rodata, rosize);
-      |         ^~~~~~~~~~~~~
-mm/page_alloc.c:7968:27: note: use ‘&_sdata[0] <= &__start_rodata[0]’ to compare the addresses
- 7968 |                 if (start <= pos && pos < end && size > adj) \
-      |                           ^~
-mm/page_alloc.c:7977:9: note: in expansion of macro ‘adj_init_size’
- 7977 |         adj_init_size(_sdata, _edata, datasize, __start_rodata, rosize);
-      |         ^~~~~~~~~~~~~
-mm/page_alloc.c:7968:41: warning: comparison between two arrays [-Warray-compare]
- 7968 |                 if (start <= pos && pos < end && size > adj) \
-      |                                         ^
-mm/page_alloc.c:7977:9: note: in expansion of macro ‘adj_init_size’
- 7977 |         adj_init_size(_sdata, _edata, datasize, __start_rodata, rosize);
-      |         ^~~~~~~~~~~~~
-mm/page_alloc.c:7968:41: note: use ‘&__start_rodata[0] < &_edata[0]’ to compare the addresses
- 7968 |                 if (start <= pos && pos < end && size > adj) \
-      |                                         ^
-mm/page_alloc.c:7977:9: note: in expansion of macro ‘adj_init_size’
- 7977 |         adj_init_size(_sdata, _edata, datasize, __start_rodata, rosize);
-      |         ^~~~~~~~~~~~~
-block/uxio_first/uxio_first_opt.c:17:10: fatal error: trace/uxio_first_opt_trace.h: No such file or directory
-   17 | #include <trace/uxio_first_opt_trace.h>
-      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-compilation terminated.
-make[2]: *** [scripts/Makefile.build:333: block/uxio_first/uxio_first_opt.o] Error 1
-make[1]: *** [scripts/Makefile.build:637: block/uxio_first] Error 2
-make[1]: *** Waiting for unfinished jobs....
-make: *** [Makefile:1212: block] Error 2
-make: *** Waiting for unfinished jobs....
-drivers/android/binder.c: In function ‘binder_proc_transaction’:
-drivers/android/binder.c:3342:20: error: inlining failed in call to ‘always_inline’ ‘is_launcher’: function body not available
- 3342 | extern inline bool is_launcher(struct task_struct *p);
+In file included from kernel/locking/rwsem-xadd.c:32:
+./include/linux/sched_assist/sched_assist_common.h:347:20: warning: ‘is_launcher’ declared ‘static’ but never defined [-Wunused-function]
+  347 | static inline bool is_launcher(struct task_struct *p);
       |                    ^~~~~~~~~~~
-drivers/android/binder.c:3470:37: note: called from here
- 3470 |                                 if (is_launcher(grp_leader)) {
-      |                                     ^~~~~~~~~~~~~~~~~~~~~~~
-drivers/android/binder.c:3343:20: error: inlining failed in call to ‘always_inline’ ‘ux_debug_enable’: function body not available
- 3343 | extern inline bool ux_debug_enable(void);
+./include/linux/sched_assist/sched_assist_common.h:348:20: warning: ‘ux_debug_enable’ declared ‘static’ but never defined [-Wunused-function]
+  348 | static inline bool ux_debug_enable(void);
       |                    ^~~~~~~~~~~~~~~
-drivers/android/binder.c:3474:45: note: called from here
- 3474 |                                         if (ux_debug_enable())
-      |                                             ^~~~~~~~~~~~~~~~~
-drivers/android/binder.c:3343:20: error: inlining failed in call to ‘always_inline’ ‘ux_debug_enable’: function body not available
- 3343 | extern inline bool ux_debug_enable(void);
-      |                    ^~~~~~~~~~~~~~~
-drivers/android/binder.c:3474:45: note: called from here
- 3474 |                                         if (ux_debug_enable())
-      |                                             ^~~~~~~~~~~~~~~~~
-make[2]: *** [scripts/Makefile.build:333: drivers/android/binder.o] Error 1
-make[1]: *** [scripts/Makefile.build:637: drivers/android] Error 2
+./kernel/gen_kheaders.sh: line 62: /tools/build/cpio: No such file or directory
+make[1]: *** [kernel/Makefile:152: kernel/kheaders_data.tar.xz] Error 127
 make[1]: *** Waiting for unfinished jobs....
-kernel/power/qos.c:1022:13: warning: ‘pm_qos_irq_notify’ defined but not used [-Wunused-function]
- 1022 | static void pm_qos_irq_notify(struct irq_affinity_notify *notify,
-      |             ^~~~~~~~~~~~~~~~~
-kernel/power/qos.c:1004:13: warning: ‘pm_qos_irq_release’ defined but not used [-Wunused-function]
- 1004 | static void pm_qos_irq_release(struct kref *ref)
-      |             ^~~~~~~~~~~~~~~~~~
-mm/vmscan.c: In function ‘shrink_page_list’:
-<command-line>: warning: format ‘%lx’ expects argument of type ‘long unsigned int’, but argument 5 has type ‘struct page *’ [-Wformat=]
-mm/vmscan.c:14:21: note: in expansion of macro ‘KBUILD_MODNAME’
-   14 | #define pr_fmt(fmt) KBUILD_MODNAME ": " fmt
-      |                     ^~~~~~~~~~~~~~
-./include/linux/printk.h:524:49: note: in expansion of macro ‘pr_fmt’
-  524 |                 __dynamic_pr_debug(&descriptor, pr_fmt(fmt), ##__VA_ARGS__);    \
-      |                                                 ^~~~~~
-mm/vmscan.c:1677:33: note: in expansion of macro ‘pr_debug_ratelimited’
- 1677 |                                 pr_debug_ratelimited("@%s:%d page:%lx comm:%s pid:%d nr_reclaimed:%d @\n",
-      |                                 ^~~~~~~~~~~~~~~~~~~~
-mm/vmscan.c:1688:1: warning: label ‘activate_locked_split’ defined but not used [-Wunused-label]
- 1688 | activate_locked_split:
-      | ^~~~~~~~~~~~~~~~~~~~~
-In file included from ./include/linux/printk.h:7,
-                 from ./include/linux/kernel.h:13,
-                 from ./include/asm-generic/bug.h:18,
-                 from ./arch/arm64/include/asm/bug.h:37,
-                 from ./include/linux/bug.h:5,
-                 from ./include/linux/mmdebug.h:5,
-                 from ./include/linux/mm.h:9,
-                 from mm/vmscan.c:16:
-mm/vmscan.c: In function ‘isolate_lru_pages’:
-./include/linux/kern_levels.h:5:25: warning: format ‘%lx’ expects argument of type ‘long unsigned int’, but argument 9 has type ‘struct lruvec *’ [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:11:25: note: in expansion of macro ‘KERN_SOH’
-   11 | #define KERN_ERR        KERN_SOH "3"    /* error conditions */
-      |                         ^~~~~~~~
-./include/linux/printk.h:359:16: note: in expansion of macro ‘KERN_ERR’
-  359 |         printk(KERN_ERR pr_fmt(fmt), ##__VA_ARGS__)
-      |                ^~~~~~~~
-mm/vmscan.c:2079:25: note: in expansion of macro ‘pr_err’
- 2079 |                         pr_err("@@@%s:%d comm:%s pid:%d nr_to_reclaim:%ld nr_scanned:%ld nr_reclaimed:%ld"
-      |                         ^~~~~~
-mm/vmscan.c: In function ‘inactive_list_is_low’:
-mm/vmscan.c:2780:9: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
- 2780 |         int zid;
-      |         ^~~
-mm/vmscan.c: In function ‘get_scan_count’:
-mm/vmscan.c:2935:23: warning: unused variable ‘totalswap’ [-Wunused-variable]
- 2935 |         unsigned long totalswap = total_swap_pages;
-      |                       ^~~~~~~~~
-mm/vmscan.c: In function ‘clear_chp_pgdat_congested’:
-mm/vmscan.c:7087:24: warning: unused variable ‘lruvec’ [-Wunused-variable]
- 7087 |         struct lruvec *lruvec = mem_cgroup_chp_lruvec(NULL, pgdat);
-      |                        ^~~~~~
-mm/vmscan.c: In function ‘prepare_kswapd_sleep’:
-<command-line>: warning: format ‘%d’ expects argument of type ‘int’, but argument 6 has type ‘long unsigned int’ [-Wformat=]
-mm/vmscan.c:14:21: note: in expansion of macro ‘KBUILD_MODNAME’
-   14 | #define pr_fmt(fmt) KBUILD_MODNAME ": " fmt
-      |                     ^~~~~~~~~~~~~~
-./include/linux/printk.h:524:49: note: in expansion of macro ‘pr_fmt’
-  524 |                 __dynamic_pr_debug(&descriptor, pr_fmt(fmt), ##__VA_ARGS__);    \
-      |                                                 ^~~~~~
-mm/vmscan.c:7121:25: note: in expansion of macro ‘pr_debug_ratelimited’
- 7121 |                         pr_debug_ratelimited("@%s:%d -> wake_up pool_direct_reclaim_wait count:%d wmark_min=%d @\n",
-      |                         ^~~~~~~~~~~~~~~~~~~~
-mm/vmscan.c: In function ‘swappiness_para_write’:
-./include/linux/kern_levels.h:5:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ {aka ‘long unsigned int’} [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:11:25: note: in expansion of macro ‘KERN_SOH’
-   11 | #define KERN_ERR        KERN_SOH "3"    /* error conditions */
-      |                         ^~~~~~~~
-./include/linux/printk.h:359:16: note: in expansion of macro ‘KERN_ERR’
-  359 |         printk(KERN_ERR pr_fmt(fmt), ##__VA_ARGS__)
-      |                ^~~~~~~~
-mm/vmscan.c:8083:17: note: in expansion of macro ‘pr_err’
- 8083 |                 pr_err("len %d is too long\n", len);
-      |                 ^~~~~~
-mm/vmscan.c: At top level:
-mm/vmscan.c:7085:13: warning: ‘clear_chp_pgdat_congested’ defined but not used [-Wunused-function]
- 7085 | static void clear_chp_pgdat_congested(pg_data_t *pgdat)
-      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from kernel/cgroup/cgroup-v1.c:23:
+./include/linux/sched_assist/sched_assist_common.h:347:20: warning: ‘is_launcher’ declared ‘static’ but never defined [-Wunused-function]
+  347 | static inline bool is_launcher(struct task_struct *p);
+      |                    ^~~~~~~~~~~
+./include/linux/sched_assist/sched_assist_common.h:348:20: warning: ‘ux_debug_enable’ declared ‘static’ but never defined [-Wunused-function]
+  348 | static inline bool ux_debug_enable(void);
+      |                    ^~~~~~~~~~~~~~~
 In file included from ./include/trace/define_trace.h:96,
                  from ./include/trace/events/sched.h:1325,
                  from kernel/sched/core.c:27:
@@ -651,6 +170,14 @@ In file included from ./include/trace/trace_events.h:394:
       |                                                                                         |
       |                                                                                         void *
       |                                                                                        %ld
+In file included from kernel/sched/core.c:36:
+./include/linux/sched_assist/sched_assist_common.h: At top level:
+./include/linux/sched_assist/sched_assist_common.h:347:20: warning: ‘is_launcher’ declared ‘static’ but never defined [-Wunused-function]
+  347 | static inline bool is_launcher(struct task_struct *p);
+      |                    ^~~~~~~~~~~
+./include/linux/sched_assist/sched_assist_common.h:348:20: warning: ‘ux_debug_enable’ declared ‘static’ but never defined [-Wunused-function]
+  348 | static inline bool ux_debug_enable(void);
+      |                    ^~~~~~~~~~~~~~~
 kernel/sched/core.c: In function ‘uclamp_task’:
 kernel/sched/core.c:1289:14: warning: ‘util’ is used uninitialized [-Wuninitialized]
  1289 |         util += schedtune_task_margin(p);
@@ -658,649 +185,39 @@ kernel/sched/core.c:1289:14: warning: ‘util’ is used uninitialized [-Wuninit
 kernel/sched/core.c:1286:23: note: ‘util’ was declared here
  1286 |         unsigned long util;
       |                       ^~~~
-In file included from ./include/linux/list.h:9,
-                 from ./include/linux/wait.h:7,
-                 from ./include/linux/wait_bit.h:8,
-                 from ./include/linux/fs.h:6,
-                 from fs/f2fs/file.c:8:
-fs/f2fs/file.c: In function ‘_f2fs_insert_merge_extent’:
-fs/f2fs/file.c:4652:22: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 2 has type ‘unsigned int’ [-Wformat=]
- 4652 |         trace_printk("count=%lu index=%lu length=%lu\n",
-      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- 4653 |                         fm_node->merge_file.extent_count, ext_node->extent.index , ext_node->extent.length);
-      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      |                                            |
-      |                                            unsigned int
-./include/linux/kernel.h:656:47: note: in definition of macro ‘__trace_printk_check_format’
-  656 |                 ____trace_printk_check_format(fmt, ##args);             \
-      |                                               ^~~
-./include/linux/kernel.h:693:17: note: in expansion of macro ‘do_trace_printk’
-  693 |                 do_trace_printk(fmt, ##__VA_ARGS__);    \
-      |                 ^~~~~~~~~~~~~~~
-fs/f2fs/file.c:4652:9: note: in expansion of macro ‘trace_printk’
- 4652 |         trace_printk("count=%lu index=%lu length=%lu\n",
-      |         ^~~~~~~~~~~~
-fs/f2fs/file.c:4652:31: note: format string is defined here
- 4652 |         trace_printk("count=%lu index=%lu length=%lu\n",
-      |                             ~~^
-      |                               |
-      |                               long unsigned int
-      |                             %u
-fs/f2fs/file.c:4652:22: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 3 has type ‘unsigned int’ [-Wformat=]
- 4652 |         trace_printk("count=%lu index=%lu length=%lu\n",
-      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- 4653 |                         fm_node->merge_file.extent_count, ext_node->extent.index , ext_node->extent.length);
-      |                                                           ~~~~~~~~~~~~~~~~~~~~~~
-      |                                                                           |
-      |                                                                           unsigned int
-./include/linux/kernel.h:656:47: note: in definition of macro ‘__trace_printk_check_format’
-  656 |                 ____trace_printk_check_format(fmt, ##args);             \
-      |                                               ^~~
-./include/linux/kernel.h:693:17: note: in expansion of macro ‘do_trace_printk’
-  693 |                 do_trace_printk(fmt, ##__VA_ARGS__);    \
-      |                 ^~~~~~~~~~~~~~~
-fs/f2fs/file.c:4652:9: note: in expansion of macro ‘trace_printk’
- 4652 |         trace_printk("count=%lu index=%lu length=%lu\n",
-      |         ^~~~~~~~~~~~
-fs/f2fs/file.c:4652:41: note: format string is defined here
- 4652 |         trace_printk("count=%lu index=%lu length=%lu\n",
-      |                                       ~~^
-      |                                         |
-      |                                         long unsigned int
-      |                                       %u
-fs/f2fs/file.c:4652:22: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 4 has type ‘unsigned int’ [-Wformat=]
- 4652 |         trace_printk("count=%lu index=%lu length=%lu\n",
-      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- 4653 |                         fm_node->merge_file.extent_count, ext_node->extent.index , ext_node->extent.length);
-      |                                                                                    ~~~~~~~~~~~~~~~~~~~~~~~
-      |                                                                                                    |
-      |                                                                                                    unsigned int
-./include/linux/kernel.h:656:47: note: in definition of macro ‘__trace_printk_check_format’
-  656 |                 ____trace_printk_check_format(fmt, ##args);             \
-      |                                               ^~~
-./include/linux/kernel.h:693:17: note: in expansion of macro ‘do_trace_printk’
-  693 |                 do_trace_printk(fmt, ##__VA_ARGS__);    \
-      |                 ^~~~~~~~~~~~~~~
-fs/f2fs/file.c:4652:9: note: in expansion of macro ‘trace_printk’
- 4652 |         trace_printk("count=%lu index=%lu length=%lu\n",
-      |         ^~~~~~~~~~~~
-fs/f2fs/file.c:4652:52: note: format string is defined here
- 4652 |         trace_printk("count=%lu index=%lu length=%lu\n",
-      |                                                  ~~^
-      |                                                    |
-      |                                                    long unsigned int
-      |                                                  %u
-fs/f2fs/file.c:4652:22: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 3 has type ‘unsigned int’ [-Wformat=]
- 4652 |         trace_printk("count=%lu index=%lu length=%lu\n",
-      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- 4653 |                         fm_node->merge_file.extent_count, ext_node->extent.index , ext_node->extent.length);
-      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      |                                            |
-      |                                            unsigned int
-./include/linux/kernel.h:709:43: note: in definition of macro ‘do_trace_printk’
-  709 |                 __trace_printk(_THIS_IP_, fmt, ##args);                 \
-      |                                           ^~~
-fs/f2fs/file.c:4652:9: note: in expansion of macro ‘trace_printk’
- 4652 |         trace_printk("count=%lu index=%lu length=%lu\n",
-      |         ^~~~~~~~~~~~
-fs/f2fs/file.c:4652:31: note: format string is defined here
- 4652 |         trace_printk("count=%lu index=%lu length=%lu\n",
-      |                             ~~^
-      |                               |
-      |                               long unsigned int
-      |                             %u
-fs/f2fs/file.c:4652:22: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 4 has type ‘unsigned int’ [-Wformat=]
- 4652 |         trace_printk("count=%lu index=%lu length=%lu\n",
-      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- 4653 |                         fm_node->merge_file.extent_count, ext_node->extent.index , ext_node->extent.length);
-      |                                                           ~~~~~~~~~~~~~~~~~~~~~~
-      |                                                                           |
-      |                                                                           unsigned int
-./include/linux/kernel.h:709:43: note: in definition of macro ‘do_trace_printk’
-  709 |                 __trace_printk(_THIS_IP_, fmt, ##args);                 \
-      |                                           ^~~
-fs/f2fs/file.c:4652:9: note: in expansion of macro ‘trace_printk’
- 4652 |         trace_printk("count=%lu index=%lu length=%lu\n",
-      |         ^~~~~~~~~~~~
-fs/f2fs/file.c:4652:41: note: format string is defined here
- 4652 |         trace_printk("count=%lu index=%lu length=%lu\n",
-      |                                       ~~^
-      |                                         |
-      |                                         long unsigned int
-      |                                       %u
-fs/f2fs/file.c:4652:22: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 5 has type ‘unsigned int’ [-Wformat=]
- 4652 |         trace_printk("count=%lu index=%lu length=%lu\n",
-      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- 4653 |                         fm_node->merge_file.extent_count, ext_node->extent.index , ext_node->extent.length);
-      |                                                                                    ~~~~~~~~~~~~~~~~~~~~~~~
-      |                                                                                                    |
-      |                                                                                                    unsigned int
-./include/linux/kernel.h:709:43: note: in definition of macro ‘do_trace_printk’
-  709 |                 __trace_printk(_THIS_IP_, fmt, ##args);                 \
-      |                                           ^~~
-fs/f2fs/file.c:4652:9: note: in expansion of macro ‘trace_printk’
- 4652 |         trace_printk("count=%lu index=%lu length=%lu\n",
-      |         ^~~~~~~~~~~~
-fs/f2fs/file.c:4652:52: note: format string is defined here
- 4652 |         trace_printk("count=%lu index=%lu length=%lu\n",
-      |                                                  ~~^
-      |                                                    |
-      |                                                    long unsigned int
-      |                                                  %u
-In file included from ./include/linux/printk.h:7,
-                 from ./include/linux/kernel.h:13:
-fs/f2fs/file.c: In function ‘f2fs_insert_merge_extent’:
-./include/linux/kern_levels.h:5:25: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 5 has type ‘u64’ {aka ‘long long unsigned int’} [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:12:25: note: in expansion of macro ‘KERN_SOH’
-   12 | #define KERN_WARNING    KERN_SOH "4"    /* warning conditions */
-      |                         ^~~~~~~~
-fs/f2fs/f2fs.h:2614:26: note: in expansion of macro ‘KERN_WARNING’
- 2614 |         f2fs_printk(sbi, KERN_WARNING fmt, ##__VA_ARGS__)
-      |                          ^~~~~~~~~~~~
-fs/f2fs/file.c:4670:17: note: in expansion of macro ‘f2fs_warn’
- 4670 |                 f2fs_warn(sbi, "f2fs_insert_merge_extent range bad value [%u,%u,%u]",
-      |                 ^~~~~~~~~
-fs/f2fs/file.c:4675:22: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 2 has type ‘unsigned int’ [-Wformat=]
- 4675 |         trace_printk("f2fs_insert_merge_extebt low=%lu high=%lu\n", low, high);
-      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~
-      |                                                                     |
-      |                                                                     unsigned int
-./include/linux/kernel.h:656:47: note: in definition of macro ‘__trace_printk_check_format’
-  656 |                 ____trace_printk_check_format(fmt, ##args);             \
-      |                                               ^~~
-./include/linux/kernel.h:693:17: note: in expansion of macro ‘do_trace_printk’
-  693 |                 do_trace_printk(fmt, ##__VA_ARGS__);    \
-      |                 ^~~~~~~~~~~~~~~
-fs/f2fs/file.c:4675:9: note: in expansion of macro ‘trace_printk’
- 4675 |         trace_printk("f2fs_insert_merge_extebt low=%lu high=%lu\n", low, high);
-      |         ^~~~~~~~~~~~
-fs/f2fs/file.c:4675:54: note: format string is defined here
- 4675 |         trace_printk("f2fs_insert_merge_extebt low=%lu high=%lu\n", low, high);
-      |                                                    ~~^
-      |                                                      |
-      |                                                      long unsigned int
-      |                                                    %u
-fs/f2fs/file.c:4675:22: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 3 has type ‘unsigned int’ [-Wformat=]
- 4675 |         trace_printk("f2fs_insert_merge_extebt low=%lu high=%lu\n", low, high);
-      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       ~~~~
-      |                                                                          |
-      |                                                                          unsigned int
-./include/linux/kernel.h:656:47: note: in definition of macro ‘__trace_printk_check_format’
-  656 |                 ____trace_printk_check_format(fmt, ##args);             \
-      |                                               ^~~
-./include/linux/kernel.h:693:17: note: in expansion of macro ‘do_trace_printk’
-  693 |                 do_trace_printk(fmt, ##__VA_ARGS__);    \
-      |                 ^~~~~~~~~~~~~~~
-fs/f2fs/file.c:4675:9: note: in expansion of macro ‘trace_printk’
- 4675 |         trace_printk("f2fs_insert_merge_extebt low=%lu high=%lu\n", low, high);
-      |         ^~~~~~~~~~~~
-fs/f2fs/file.c:4675:63: note: format string is defined here
- 4675 |         trace_printk("f2fs_insert_merge_extebt low=%lu high=%lu\n", low, high);
-      |                                                             ~~^
-      |                                                               |
-      |                                                               long unsigned int
-      |                                                             %u
-fs/f2fs/file.c:4675:22: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 3 has type ‘unsigned int’ [-Wformat=]
- 4675 |         trace_printk("f2fs_insert_merge_extebt low=%lu high=%lu\n", low, high);
-      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~
-      |                                                                     |
-      |                                                                     unsigned int
-./include/linux/kernel.h:709:43: note: in definition of macro ‘do_trace_printk’
-  709 |                 __trace_printk(_THIS_IP_, fmt, ##args);                 \
-      |                                           ^~~
-fs/f2fs/file.c:4675:9: note: in expansion of macro ‘trace_printk’
- 4675 |         trace_printk("f2fs_insert_merge_extebt low=%lu high=%lu\n", low, high);
-      |         ^~~~~~~~~~~~
-fs/f2fs/file.c:4675:54: note: format string is defined here
- 4675 |         trace_printk("f2fs_insert_merge_extebt low=%lu high=%lu\n", low, high);
-      |                                                    ~~^
-      |                                                      |
-      |                                                      long unsigned int
-      |                                                    %u
-fs/f2fs/file.c:4675:22: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 4 has type ‘unsigned int’ [-Wformat=]
- 4675 |         trace_printk("f2fs_insert_merge_extebt low=%lu high=%lu\n", low, high);
-      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       ~~~~
-      |                                                                          |
-      |                                                                          unsigned int
-./include/linux/kernel.h:709:43: note: in definition of macro ‘do_trace_printk’
-  709 |                 __trace_printk(_THIS_IP_, fmt, ##args);                 \
-      |                                           ^~~
-fs/f2fs/file.c:4675:9: note: in expansion of macro ‘trace_printk’
- 4675 |         trace_printk("f2fs_insert_merge_extebt low=%lu high=%lu\n", low, high);
-      |         ^~~~~~~~~~~~
-fs/f2fs/file.c:4675:63: note: format string is defined here
- 4675 |         trace_printk("f2fs_insert_merge_extebt low=%lu high=%lu\n", low, high);
-      |                                                             ~~^
-      |                                                               |
-      |                                                               long unsigned int
-      |                                                             %u
-fs/f2fs/file.c: In function ‘end_file_merge’:
-fs/f2fs/file.c:5038:22: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 3 has type ‘long unsigned int’ [-Wformat=]
- 5038 |         trace_printk("f2fs_ioc_end_file_merge fill summary num=%d,cur_blocks=%u\n",
-      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- 5039 |                                                                 fmm->num, fmm->cur_blocks);
-      |                                                                           ~~~~~~~~~~~~~~~
-      |                                                                              |
-      |                                                                              long unsigned int
-./include/linux/kernel.h:656:47: note: in definition of macro ‘__trace_printk_check_format’
-  656 |                 ____trace_printk_check_format(fmt, ##args);             \
-      |                                               ^~~
-./include/linux/kernel.h:693:17: note: in expansion of macro ‘do_trace_printk’
-  693 |                 do_trace_printk(fmt, ##__VA_ARGS__);    \
-      |                 ^~~~~~~~~~~~~~~
-fs/f2fs/file.c:5038:9: note: in expansion of macro ‘trace_printk’
- 5038 |         trace_printk("f2fs_ioc_end_file_merge fill summary num=%d,cur_blocks=%u\n",
-      |         ^~~~~~~~~~~~
-fs/f2fs/file.c:5038:79: note: format string is defined here
- 5038 |         trace_printk("f2fs_ioc_end_file_merge fill summary num=%d,cur_blocks=%u\n",
-      |                                                                              ~^
-      |                                                                               |
-      |                                                                               unsigned int
-      |                                                                              %lu
-fs/f2fs/file.c:5038:22: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 4 has type ‘long unsigned int’ [-Wformat=]
- 5038 |         trace_printk("f2fs_ioc_end_file_merge fill summary num=%d,cur_blocks=%u\n",
-      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- 5039 |                                                                 fmm->num, fmm->cur_blocks);
-      |                                                                           ~~~~~~~~~~~~~~~
-      |                                                                              |
-      |                                                                              long unsigned int
-./include/linux/kernel.h:709:43: note: in definition of macro ‘do_trace_printk’
-  709 |                 __trace_printk(_THIS_IP_, fmt, ##args);                 \
-      |                                           ^~~
-fs/f2fs/file.c:5038:9: note: in expansion of macro ‘trace_printk’
- 5038 |         trace_printk("f2fs_ioc_end_file_merge fill summary num=%d,cur_blocks=%u\n",
-      |         ^~~~~~~~~~~~
-fs/f2fs/file.c:5038:79: note: format string is defined here
- 5038 |         trace_printk("f2fs_ioc_end_file_merge fill summary num=%d,cur_blocks=%u\n",
-      |                                                                              ~^
-      |                                                                               |
-      |                                                                               unsigned int
-      |                                                                              %lu
-./include/linux/kern_levels.h:5:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘long unsigned int’ [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:12:25: note: in expansion of macro ‘KERN_SOH’
-   12 | #define KERN_WARNING    KERN_SOH "4"    /* warning conditions */
-      |                         ^~~~~~~~
-fs/f2fs/f2fs.h:2614:26: note: in expansion of macro ‘KERN_WARNING’
- 2614 |         f2fs_printk(sbi, KERN_WARNING fmt, ##__VA_ARGS__)
-      |                          ^~~~~~~~~~~~
-fs/f2fs/file.c:5104:25: note: in expansion of macro ‘f2fs_warn’
- 5104 |                         f2fs_warn(sbi, "f2fs_ioc_end_file_merge get file ino = %d encrypt info failed\n", inode_source->i_ino);
-      |                         ^~~~~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 4 has type ‘unsigned int’ [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:12:25: note: in expansion of macro ‘KERN_SOH’
-   12 | #define KERN_WARNING    KERN_SOH "4"    /* warning conditions */
-      |                         ^~~~~~~~
-fs/f2fs/f2fs.h:2614:26: note: in expansion of macro ‘KERN_WARNING’
- 2614 |         f2fs_printk(sbi, KERN_WARNING fmt, ##__VA_ARGS__)
-      |                          ^~~~~~~~~~~~
-fs/f2fs/file.c:5167:41: note: in expansion of macro ‘f2fs_warn’
- 5167 |                                         f2fs_warn(sbi, "f2fs_ioc_end_file_merge excess max_blocks %lu,%lu!!!",
-      |                                         ^~~~~~~~~
-fs/f2fs/file.c:5214:22: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
- 5214 |         trace_printk("f2fs_ioc_end_file_merge write summary size:%d. offset:%d tail:%d, checksum:%u\n",
-      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- 5215 |                           sizeof(struct merge_summary), offset, summary->tail, summary->checksum);
-      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      |                           |
-      |                           long unsigned int
-./include/linux/kernel.h:656:47: note: in definition of macro ‘__trace_printk_check_format’
-  656 |                 ____trace_printk_check_format(fmt, ##args);             \
-      |                                               ^~~
-./include/linux/kernel.h:693:17: note: in expansion of macro ‘do_trace_printk’
-  693 |                 do_trace_printk(fmt, ##__VA_ARGS__);    \
-      |                 ^~~~~~~~~~~~~~~
-fs/f2fs/file.c:5214:9: note: in expansion of macro ‘trace_printk’
- 5214 |         trace_printk("f2fs_ioc_end_file_merge write summary size:%d. offset:%d tail:%d, checksum:%u\n",
-      |         ^~~~~~~~~~~~
-fs/f2fs/file.c:5214:67: note: format string is defined here
- 5214 |         trace_printk("f2fs_ioc_end_file_merge write summary size:%d. offset:%d tail:%d, checksum:%u\n",
-      |                                                                  ~^
-      |                                                                   |
-      |                                                                   int
-      |                                                                  %ld
-fs/f2fs/file.c:5214:22: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘loff_t’ {aka ‘long long int’} [-Wformat=]
- 5214 |         trace_printk("f2fs_ioc_end_file_merge write summary size:%d. offset:%d tail:%d, checksum:%u\n",
-      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- 5215 |                           sizeof(struct merge_summary), offset, summary->tail, summary->checksum);
-      |                                                         ~~~~~~
-      |                                                         |
-      |                                                         loff_t {aka long long int}
-./include/linux/kernel.h:656:47: note: in definition of macro ‘__trace_printk_check_format’
-  656 |                 ____trace_printk_check_format(fmt, ##args);             \
-      |                                               ^~~
-./include/linux/kernel.h:693:17: note: in expansion of macro ‘do_trace_printk’
-  693 |                 do_trace_printk(fmt, ##__VA_ARGS__);    \
-      |                 ^~~~~~~~~~~~~~~
-fs/f2fs/file.c:5214:9: note: in expansion of macro ‘trace_printk’
- 5214 |         trace_printk("f2fs_ioc_end_file_merge write summary size:%d. offset:%d tail:%d, checksum:%u\n",
-      |         ^~~~~~~~~~~~
-fs/f2fs/file.c:5214:78: note: format string is defined here
- 5214 |         trace_printk("f2fs_ioc_end_file_merge write summary size:%d. offset:%d tail:%d, checksum:%u\n",
-      |                                                                             ~^
-      |                                                                              |
-      |                                                                              int
-      |                                                                             %lld
-fs/f2fs/file.c:5214:22: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘long unsigned int’ [-Wformat=]
- 5214 |         trace_printk("f2fs_ioc_end_file_merge write summary size:%d. offset:%d tail:%d, checksum:%u\n",
-      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- 5215 |                           sizeof(struct merge_summary), offset, summary->tail, summary->checksum);
-      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      |                           |
-      |                           long unsigned int
-./include/linux/kernel.h:709:43: note: in definition of macro ‘do_trace_printk’
-  709 |                 __trace_printk(_THIS_IP_, fmt, ##args);                 \
-      |                                           ^~~
-fs/f2fs/file.c:5214:9: note: in expansion of macro ‘trace_printk’
- 5214 |         trace_printk("f2fs_ioc_end_file_merge write summary size:%d. offset:%d tail:%d, checksum:%u\n",
-      |         ^~~~~~~~~~~~
-fs/f2fs/file.c:5214:67: note: format string is defined here
- 5214 |         trace_printk("f2fs_ioc_end_file_merge write summary size:%d. offset:%d tail:%d, checksum:%u\n",
-      |                                                                  ~^
-      |                                                                   |
-      |                                                                   int
-      |                                                                  %ld
-fs/f2fs/file.c:5214:22: warning: format ‘%d’ expects argument of type ‘int’, but argument 4 has type ‘loff_t’ {aka ‘long long int’} [-Wformat=]
- 5214 |         trace_printk("f2fs_ioc_end_file_merge write summary size:%d. offset:%d tail:%d, checksum:%u\n",
-      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- 5215 |                           sizeof(struct merge_summary), offset, summary->tail, summary->checksum);
-      |                                                         ~~~~~~
-      |                                                         |
-      |                                                         loff_t {aka long long int}
-./include/linux/kernel.h:709:43: note: in definition of macro ‘do_trace_printk’
-  709 |                 __trace_printk(_THIS_IP_, fmt, ##args);                 \
-      |                                           ^~~
-fs/f2fs/file.c:5214:9: note: in expansion of macro ‘trace_printk’
- 5214 |         trace_printk("f2fs_ioc_end_file_merge write summary size:%d. offset:%d tail:%d, checksum:%u\n",
-      |         ^~~~~~~~~~~~
-fs/f2fs/file.c:5214:78: note: format string is defined here
- 5214 |         trace_printk("f2fs_ioc_end_file_merge write summary size:%d. offset:%d tail:%d, checksum:%u\n",
-      |                                                                             ~^
-      |                                                                              |
-      |                                                                              int
-      |                                                                             %lld
-fs/f2fs/file.c:5273:22: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘loff_t’ {aka ‘long long int’} [-Wformat=]
- 5273 |         trace_printk("f2fs_ioc_end_file_merge ret:%d, size:%d\n", ret, inode->i_size);
-      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       ~~~~~~~~~~~~~
-      |                                                                             |
-      |                                                                             loff_t {aka long long int}
-./include/linux/kernel.h:656:47: note: in definition of macro ‘__trace_printk_check_format’
-  656 |                 ____trace_printk_check_format(fmt, ##args);             \
-      |                                               ^~~
-./include/linux/kernel.h:693:17: note: in expansion of macro ‘do_trace_printk’
-  693 |                 do_trace_printk(fmt, ##__VA_ARGS__);    \
-      |                 ^~~~~~~~~~~~~~~
-fs/f2fs/file.c:5273:9: note: in expansion of macro ‘trace_printk’
- 5273 |         trace_printk("f2fs_ioc_end_file_merge ret:%d, size:%d\n", ret, inode->i_size);
-      |         ^~~~~~~~~~~~
-fs/f2fs/file.c:5273:61: note: format string is defined here
- 5273 |         trace_printk("f2fs_ioc_end_file_merge ret:%d, size:%d\n", ret, inode->i_size);
-      |                                                            ~^
-      |                                                             |
-      |                                                             int
-      |                                                            %lld
-fs/f2fs/file.c:5273:22: warning: format ‘%d’ expects argument of type ‘int’, but argument 4 has type ‘loff_t’ {aka ‘long long int’} [-Wformat=]
- 5273 |         trace_printk("f2fs_ioc_end_file_merge ret:%d, size:%d\n", ret, inode->i_size);
-      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       ~~~~~~~~~~~~~
-      |                                                                             |
-      |                                                                             loff_t {aka long long int}
-./include/linux/kernel.h:709:43: note: in definition of macro ‘do_trace_printk’
-  709 |                 __trace_printk(_THIS_IP_, fmt, ##args);                 \
-      |                                           ^~~
-fs/f2fs/file.c:5273:9: note: in expansion of macro ‘trace_printk’
- 5273 |         trace_printk("f2fs_ioc_end_file_merge ret:%d, size:%d\n", ret, inode->i_size);
-      |         ^~~~~~~~~~~~
-fs/f2fs/file.c:5273:61: note: format string is defined here
- 5273 |         trace_printk("f2fs_ioc_end_file_merge ret:%d, size:%d\n", ret, inode->i_size);
-      |                                                            ~^
-      |                                                             |
-      |                                                             int
-      |                                                            %lld
-fs/f2fs/file.c: In function ‘f2fs_ioc_preload_file’:
-./include/linux/kern_levels.h:5:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘long unsigned int’ [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:12:25: note: in expansion of macro ‘KERN_SOH’
-   12 | #define KERN_WARNING    KERN_SOH "4"    /* warning conditions */
-      |                         ^~~~~~~~
-fs/f2fs/f2fs.h:2614:26: note: in expansion of macro ‘KERN_WARNING’
- 2614 |         f2fs_printk(sbi, KERN_WARNING fmt, ##__VA_ARGS__)
-      |                          ^~~~~~~~~~~~
-fs/f2fs/file.c:5556:25: note: in expansion of macro ‘f2fs_warn’
- 5556 |                         f2fs_warn(sbi, "f2fs_ioc_preload_file get file ino = %d encrypt info failed\n", inode_source->i_ino);
-      |                         ^~~~~~~~~
-fs/f2fs/file.c:5595:46: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 4 has type ‘long unsigned int’ [-Wformat=]
- 5595 |                                 trace_printk("f2fs_ioc_preload_file preload ino = %u, index_in_mfile = %u, index = %u, pos = %llu, checksum = %u\n",
-      |                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- 5596 |                                                 merge_file.ino, extent.index_in_mfile, page->index,
-      |                                                                                        ~~~~~~~~~~~
-      |                                                                                            |
-      |                                                                                            long unsigned int
-./include/linux/kernel.h:656:47: note: in definition of macro ‘__trace_printk_check_format’
-  656 |                 ____trace_printk_check_format(fmt, ##args);             \
-      |                                               ^~~
-./include/linux/kernel.h:693:17: note: in expansion of macro ‘do_trace_printk’
-  693 |                 do_trace_printk(fmt, ##__VA_ARGS__);    \
-      |                 ^~~~~~~~~~~~~~~
-fs/f2fs/file.c:5595:33: note: in expansion of macro ‘trace_printk’
- 5595 |                                 trace_printk("f2fs_ioc_preload_file preload ino = %u, index_in_mfile = %u, index = %u, pos = %llu, checksum = %u\n",
-      |                                 ^~~~~~~~~~~~
-fs/f2fs/file.c:5595:117: note: format string is defined here
- 5595 |                                 trace_printk("f2fs_ioc_preload_file preload ino = %u, index_in_mfile = %u, index = %u, pos = %llu, checksum = %u\n",
-      |                                                                                                                    ~^
-      |                                                                                                                     |
-      |                                                                                                                     unsigned int
-      |                                                                                                                    %lu
-fs/f2fs/file.c:5595:46: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 5 has type ‘long unsigned int’ [-Wformat=]
- 5595 |                                 trace_printk("f2fs_ioc_preload_file preload ino = %u, index_in_mfile = %u, index = %u, pos = %llu, checksum = %u\n",
-      |                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- 5596 |                                                 merge_file.ino, extent.index_in_mfile, page->index,
-      |                                                                                        ~~~~~~~~~~~
-      |                                                                                            |
-      |                                                                                            long unsigned int
-./include/linux/kernel.h:709:43: note: in definition of macro ‘do_trace_printk’
-  709 |                 __trace_printk(_THIS_IP_, fmt, ##args);                 \
-      |                                           ^~~
-fs/f2fs/file.c:5595:33: note: in expansion of macro ‘trace_printk’
- 5595 |                                 trace_printk("f2fs_ioc_preload_file preload ino = %u, index_in_mfile = %u, index = %u, pos = %llu, checksum = %u\n",
-      |                                 ^~~~~~~~~~~~
-fs/f2fs/file.c:5595:117: note: format string is defined here
- 5595 |                                 trace_printk("f2fs_ioc_preload_file preload ino = %u, index_in_mfile = %u, index = %u, pos = %llu, checksum = %u\n",
-      |                                                                                                                    ~^
-      |                                                                                                                     |
-      |                                                                                                                     unsigned int
-      |                                                                                                                    %lu
-fs/f2fs/file.c: In function ‘f2fs_release_compress_blocks’:
-./include/linux/kern_levels.h:5:25: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 6 has type ‘blkcnt_t’ {aka ‘long unsigned int’} [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-fs/f2fs/f2fs.h:2618:26: note: in expansion of macro ‘KERN_INFO’
- 2618 |         f2fs_printk(sbi, KERN_INFO fmt, ##__VA_ARGS__)
-      |                          ^~~~~~~~~
-fs/f2fs/file.c:6738:9: note: in expansion of macro ‘f2fs_info’
- 6738 |         f2fs_info(sbi, "start release cblocks ino %lu (%pd) size %llu blocks %llu "
+In file included from kernel/cpu.c:41:
+./include/linux/sched_assist/sched_assist_common.h:347:20: warning: ‘is_launcher’ declared ‘static’ but never defined [-Wunused-function]
+  347 | static inline bool is_launcher(struct task_struct *p);
+      |                    ^~~~~~~~~~~
+./include/linux/sched_assist/sched_assist_common.h:348:20: warning: ‘ux_debug_enable’ declared ‘static’ but never defined [-Wunused-function]
+  348 | static inline bool ux_debug_enable(void);
+      |                    ^~~~~~~~~~~~~~~
+In file included from ./include/trace/define_trace.h:96,
+                 from ./include/trace/uxio_first_opt_trace.h:46,
+                 from block/uxio_first/uxio_first_opt.c:17:
+./include/trace/../../block/uxio_first/trace/uxio_first_opt_trace.h: In function ‘trace_raw_output_block_uxio_first_peek_req’:
+./include/trace/../../block/uxio_first/trace/uxio_first_opt_trace.h:41:19: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 5 has type ‘long int’ [-Wformat=]
+   41 |         TP_printk("%s (%d), req_addr %x task_group:%s, inflight(%u,%u,%u)",
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./include/trace/trace_events.h:360:29: note: in definition of macro ‘DECLARE_EVENT_CLASS’
+  360 |         trace_seq_printf(s, print);                                     \
+      |                             ^~~~~
+./include/trace/trace_events.h:79:30: note: in expansion of macro ‘PARAMS’
+   79 |                              PARAMS(print));                   \
+      |                              ^~~~~~
+./include/trace/../../block/uxio_first/trace/uxio_first_opt_trace.h:15:1: note: in expansion of macro ‘TRACE_EVENT’
+   15 | TRACE_EVENT(block_uxio_first_peek_req,
+      | ^~~~~~~~~~~
+./include/trace/../../block/uxio_first/trace/uxio_first_opt_trace.h:41:9: note: in expansion of macro ‘TP_printk’
+   41 |         TP_printk("%s (%d), req_addr %x task_group:%s, inflight(%u,%u,%u)",
       |         ^~~~~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 7 has type ‘u64’ {aka ‘long long unsigned int’} [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-fs/f2fs/f2fs.h:2618:26: note: in expansion of macro ‘KERN_INFO’
- 2618 |         f2fs_printk(sbi, KERN_INFO fmt, ##__VA_ARGS__)
-      |                          ^~~~~~~~~
-fs/f2fs/file.c:6738:9: note: in expansion of macro ‘f2fs_info’
- 6738 |         f2fs_info(sbi, "start release cblocks ino %lu (%pd) size %llu blocks %llu "
-      |         ^~~~~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 6 has type ‘blkcnt_t’ {aka ‘long unsigned int’} [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-fs/f2fs/f2fs.h:2618:26: note: in expansion of macro ‘KERN_INFO’
- 2618 |         f2fs_printk(sbi, KERN_INFO fmt, ##__VA_ARGS__)
-      |                          ^~~~~~~~~
-fs/f2fs/file.c:6807:9: note: in expansion of macro ‘f2fs_info’
- 6807 |         f2fs_info(sbi, "end release cblocks ino %lu (%pd) size %llu blocks %llu "
-      |         ^~~~~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 7 has type ‘u64’ {aka ‘long long unsigned int’} [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-fs/f2fs/f2fs.h:2618:26: note: in expansion of macro ‘KERN_INFO’
- 2618 |         f2fs_printk(sbi, KERN_INFO fmt, ##__VA_ARGS__)
-      |                          ^~~~~~~~~
-fs/f2fs/file.c:6807:9: note: in expansion of macro ‘f2fs_info’
- 6807 |         f2fs_info(sbi, "end release cblocks ino %lu (%pd) size %llu blocks %llu "
-      |         ^~~~~~~~~
-fs/f2fs/file.c: In function ‘f2fs_reserve_compress_blocks’:
-./include/linux/kern_levels.h:5:25: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 5 has type ‘blkcnt_t’ {aka ‘long unsigned int’} [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-fs/f2fs/f2fs.h:2618:26: note: in expansion of macro ‘KERN_INFO’
- 2618 |         f2fs_printk(sbi, KERN_INFO fmt, ##__VA_ARGS__)
-      |                          ^~~~~~~~~
-fs/f2fs/file.c:6908:9: note: in expansion of macro ‘f2fs_info’
- 6908 |         f2fs_info(sbi, "start reserve cblocks ino %lu size %llu blocks %llu "
-      |         ^~~~~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 6 has type ‘u64’ {aka ‘long long unsigned int’} [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-fs/f2fs/f2fs.h:2618:26: note: in expansion of macro ‘KERN_INFO’
- 2618 |         f2fs_printk(sbi, KERN_INFO fmt, ##__VA_ARGS__)
-      |                          ^~~~~~~~~
-fs/f2fs/file.c:6908:9: note: in expansion of macro ‘f2fs_info’
- 6908 |         f2fs_info(sbi, "start reserve cblocks ino %lu size %llu blocks %llu "
-      |         ^~~~~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 5 has type ‘blkcnt_t’ {aka ‘long unsigned int’} [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-fs/f2fs/f2fs.h:2618:26: note: in expansion of macro ‘KERN_INFO’
- 2618 |         f2fs_printk(sbi, KERN_INFO fmt, ##__VA_ARGS__)
-      |                          ^~~~~~~~~
-fs/f2fs/file.c:6968:9: note: in expansion of macro ‘f2fs_info’
- 6968 |         f2fs_info(sbi, "end reserve cblocks ino %lu size %llu blocks %llu "
-      |         ^~~~~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 6 has type ‘u64’ {aka ‘long long unsigned int’} [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-fs/f2fs/f2fs.h:2618:26: note: in expansion of macro ‘KERN_INFO’
- 2618 |         f2fs_printk(sbi, KERN_INFO fmt, ##__VA_ARGS__)
-      |                          ^~~~~~~~~
-fs/f2fs/file.c:6968:9: note: in expansion of macro ‘f2fs_info’
- 6968 |         f2fs_info(sbi, "end reserve cblocks ino %lu size %llu blocks %llu "
-      |         ^~~~~~~~~
-fs/f2fs/file.c: In function ‘f2fs_decompress_inode’:
-./include/linux/kern_levels.h:5:25: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 5 has type ‘blkcnt_t’ {aka ‘long unsigned int’} [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-fs/f2fs/f2fs.h:2618:26: note: in expansion of macro ‘KERN_INFO’
- 2618 |         f2fs_printk(sbi, KERN_INFO fmt, ##__VA_ARGS__)
-      |                          ^~~~~~~~~
-fs/f2fs/file.c:7229:9: note: in expansion of macro ‘f2fs_info’
- 7229 |         f2fs_info(sbi, "start decompress ino %lu size %llu blocks %llu "
-      |         ^~~~~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 6 has type ‘u64’ {aka ‘long long unsigned int’} [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-fs/f2fs/f2fs.h:2618:26: note: in expansion of macro ‘KERN_INFO’
- 2618 |         f2fs_printk(sbi, KERN_INFO fmt, ##__VA_ARGS__)
-      |                          ^~~~~~~~~
-fs/f2fs/file.c:7229:9: note: in expansion of macro ‘f2fs_info’
- 7229 |         f2fs_info(sbi, "start decompress ino %lu size %llu blocks %llu "
-      |         ^~~~~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 5 has type ‘blkcnt_t’ {aka ‘long unsigned int’} [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-fs/f2fs/f2fs.h:2618:26: note: in expansion of macro ‘KERN_INFO’
- 2618 |         f2fs_printk(sbi, KERN_INFO fmt, ##__VA_ARGS__)
-      |                          ^~~~~~~~~
-fs/f2fs/file.c:7280:9: note: in expansion of macro ‘f2fs_info’
- 7280 |         f2fs_info(sbi, "end decompress ino %lu size %llu blocks %llu cblocks %d ret %d\n",
-      |         ^~~~~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 6 has type ‘u64’ {aka ‘long long unsigned int’} [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-fs/f2fs/f2fs.h:2618:26: note: in expansion of macro ‘KERN_INFO’
- 2618 |         f2fs_printk(sbi, KERN_INFO fmt, ##__VA_ARGS__)
-      |                          ^~~~~~~~~
-fs/f2fs/file.c:7280:9: note: in expansion of macro ‘f2fs_info’
- 7280 |         f2fs_info(sbi, "end decompress ino %lu size %llu blocks %llu cblocks %d ret %d\n",
-      |         ^~~~~~~~~
-fs/f2fs/file.c: In function ‘f2fs_ioc_compress_file’:
-./include/linux/kern_levels.h:5:25: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 6 has type ‘blkcnt_t’ {aka ‘long unsigned int’} [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-fs/f2fs/f2fs.h:2618:26: note: in expansion of macro ‘KERN_INFO’
- 2618 |         f2fs_printk(sbi, KERN_INFO fmt, ##__VA_ARGS__)
-      |                          ^~~~~~~~~
-fs/f2fs/file.c:7374:9: note: in expansion of macro ‘f2fs_info’
- 7374 |         f2fs_info(sbi, "compress ino %lu (%pd) size %llu blocks %llu released %d\n",
-      |         ^~~~~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 6 has type ‘blkcnt_t’ {aka ‘long unsigned int’} [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-fs/f2fs/f2fs.h:2618:26: note: in expansion of macro ‘KERN_INFO’
- 2618 |         f2fs_printk(sbi, KERN_INFO fmt, ##__VA_ARGS__)
-      |                          ^~~~~~~~~
-fs/f2fs/file.c:7432:9: note: in expansion of macro ‘f2fs_info’
- 7432 |         f2fs_info(sbi, "end compress ino %lu (%pd) size %llu blocks %llu cblocks %d ret %d\n",
-      |         ^~~~~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 7 has type ‘u64’ {aka ‘long long unsigned int’} [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-fs/f2fs/f2fs.h:2618:26: note: in expansion of macro ‘KERN_INFO’
- 2618 |         f2fs_printk(sbi, KERN_INFO fmt, ##__VA_ARGS__)
-      |                          ^~~~~~~~~
-fs/f2fs/file.c:7432:9: note: in expansion of macro ‘f2fs_info’
- 7432 |         f2fs_info(sbi, "end compress ino %lu (%pd) size %llu blocks %llu cblocks %d ret %d\n",
-      |         ^~~~~~~~~
-At top level:
-cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+In file included from ./include/trace/trace_events.h:394:
+./include/trace/../../block/uxio_first/trace/uxio_first_opt_trace.h:41:39: note: format string is defined here
+   41 |         TP_printk("%s (%d), req_addr %x task_group:%s, inflight(%u,%u,%u)",
+      |                                      ~^
+      |                                       |
+      |                                       unsigned int
+      |                                      %lx
 In file included from ./include/linux/list.h:9,
                  from ./include/linux/rculist.h:10,
                  from ./include/linux/pid.h:5,
@@ -1331,33 +248,20 @@ kernel/sched/fair.c: In function ‘ux_task_misfit’:
 kernel/sched/fair.c:12011:13: warning: unused variable ‘num_mincpu’ [-Wunused-variable]
 12011 |         int num_mincpu = cpumask_weight(topology_core_cpumask(0));
       |             ^~~~~~~~~~
-make: *** [Makefile:1212: drivers] Error 2
-./kernel/gen_kheaders.sh: line 62: /tools/build/cpio: No such file or directory
-make[1]: *** [kernel/Makefile:152: kernel/kheaders_data.tar.xz] Error 127
-make[1]: *** Waiting for unfinished jobs....
-In file included from ./include/linux/printk.h:7,
-                 from ./include/linux/kernel.h:13,
-                 from ./include/linux/list.h:9,
-                 from ./include/linux/wait.h:7,
-                 from ./include/linux/wait_bit.h:8,
-                 from ./include/linux/fs.h:6,
-                 from fs/fuse/fuse_i.h:13,
-                 from fs/fuse/passthrough.c:3:
-fs/fuse/passthrough.c: In function ‘fuse_passthrough_open’:
-./include/linux/kern_levels.h:5:25: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 3 has type ‘long unsigned int’ [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:11:25: note: in expansion of macro ‘KERN_SOH’
-   11 | #define KERN_ERR        KERN_SOH "3"    /* error conditions */
-      |                         ^~~~~~~~
-./include/linux/printk.h:359:16: note: in expansion of macro ‘KERN_ERR’
-  359 |         printk(KERN_ERR pr_fmt(fmt), ##__VA_ARGS__)
-      |                ^~~~~~~~
-fs/fuse/passthrough.c:258:17: note: in expansion of macro ‘pr_err’
-  258 |                 pr_err("FUSE: file name = %s, super block magic = 0x%x\n",
-      |                 ^~~~~~
-At top level:
-cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+In file included from kernel/sched/fair.c:31:
+./include/linux/sched_assist/sched_assist_common.h: At top level:
+./include/linux/sched_assist/sched_assist_common.h:347:20: warning: ‘is_launcher’ declared ‘static’ but never defined [-Wunused-function]
+  347 | static inline bool is_launcher(struct task_struct *p);
+      |                    ^~~~~~~~~~~
+./include/linux/sched_assist/sched_assist_common.h:348:20: warning: ‘ux_debug_enable’ declared ‘static’ but never defined [-Wunused-function]
+  348 | static inline bool ux_debug_enable(void);
+      |                    ^~~~~~~~~~~~~~~
+drivers/android/binder.c:3342:20: warning: ‘is_launcher’ used but never defined
+ 3342 | extern inline bool is_launcher(struct task_struct *p);
+      |                    ^~~~~~~~~~~
+drivers/android/binder.c:3343:20: warning: ‘ux_debug_enable’ used but never defined
+ 3343 | extern inline bool ux_debug_enable(void);
+      |                    ^~~~~~~~~~~~~~~
 In file included from ./include/linux/printk.h:7,
                  from ./include/linux/kernel.h:13,
                  from ./include/linux/list.h:9,
@@ -1366,7 +270,7 @@ In file included from ./include/linux/printk.h:7,
                  from ./include/linux/platform_device.h:14,
                  from sound/soc/codecs/audio/driver/audio_extend_drv.c:14:
 sound/soc/codecs/audio/driver/audio_extend_drv.c: In function ‘extend_codec_prop_parse’:
-./include/linux/kern_levels.h:5:25: error: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘const char *’ [-Werror=format=]
+./include/linux/kern_levels.h:5:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘const char *’ [-Wformat=]
     5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
       |                         ^~~~~~
 ./include/linux/kern_levels.h:12:25: note: in expansion of macro ‘KERN_SOH’
@@ -1397,7 +301,7 @@ sound/soc/codecs/audio/driver/audio_extend_drv.c:142:17: note: in expansion of m
   142 |                 pr_warn("%s: Invalid number of codecs, ret=%d\n",
       |                 ^~~~~~~
 sound/soc/codecs/audio/driver/audio_extend_drv.c: In function ‘extend_codec_be_dailink’:
-./include/linux/kern_levels.h:5:25: error: format ‘%d’ expects argument of type ‘int’, but argument 4 has type ‘size_t’ {aka ‘long unsigned int’} [-Werror=format=]
+./include/linux/kern_levels.h:5:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 4 has type ‘size_t’ {aka ‘long unsigned int’} [-Wformat=]
     5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
       |                         ^~~~~~
 ./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
@@ -1409,7 +313,7 @@ sound/soc/codecs/audio/driver/audio_extend_drv.c: In function ‘extend_codec_be
 sound/soc/codecs/audio/driver/audio_extend_drv.c:196:9: note: in expansion of macro ‘pr_info’
   196 |         pr_info("%s: i2s_id=%d, size=%d!\n", __func__, i2s_id, size);
       |         ^~~~~~~
-./include/linux/kern_levels.h:5:25: error: format ‘%d’ expects argument of type ‘int’, but argument 5 has type ‘size_t’ {aka ‘long unsigned int’} [-Werror=format=]
+./include/linux/kern_levels.h:5:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 5 has type ‘size_t’ {aka ‘long unsigned int’} [-Wformat=]
     5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
       |                         ^~~~~~
 ./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
@@ -1421,405 +325,640 @@ sound/soc/codecs/audio/driver/audio_extend_drv.c:196:9: note: in expansion of ma
 sound/soc/codecs/audio/driver/audio_extend_drv.c:204:9: note: in expansion of macro ‘pr_info’
   204 |         pr_info("%s: b_ivdata_support=%d, i2s_id_in=%d, size=%d!\n", __func__, b_ivdata_support, i2s_id_in, size);
       |         ^~~~~~~
+drivers/android/binder.c: In function ‘binder_proc_transaction’:
+drivers/android/binder.c:3342:20: error: inlining failed in call to ‘always_inline’ ‘is_launcher’: function body not available
+ 3342 | extern inline bool is_launcher(struct task_struct *p);
+      |                    ^~~~~~~~~~~
+drivers/android/binder.c:3470:37: note: called from here
+ 3470 |                                 if (is_launcher(grp_leader)) {
+      |                                     ^~~~~~~~~~~~~~~~~~~~~~~
+drivers/android/binder.c:3343:20: error: inlining failed in call to ‘always_inline’ ‘ux_debug_enable’: function body not available
+ 3343 | extern inline bool ux_debug_enable(void);
+      |                    ^~~~~~~~~~~~~~~
+drivers/android/binder.c:3474:45: note: called from here
+ 3474 |                                         if (ux_debug_enable())
+      |                                             ^~~~~~~~~~~~~~~~~
+drivers/android/binder.c:3343:20: error: inlining failed in call to ‘always_inline’ ‘ux_debug_enable’: function body not available
+ 3343 | extern inline bool ux_debug_enable(void);
+      |                    ^~~~~~~~~~~~~~~
+drivers/android/binder.c:3474:45: note: called from here
+ 3474 |                                         if (ux_debug_enable())
+      |                                             ^~~~~~~~~~~~~~~~~
 cc1: all warnings being treated as errors
 make[5]: *** [scripts/Makefile.build:334: sound/soc/codecs/audio/driver/audio_extend_drv.o] Error 1
 make[4]: *** [scripts/Makefile.build:637: sound/soc/codecs/audio/driver] Error 2
+make[4]: *** Waiting for unfinished jobs....
+make[2]: *** [scripts/Makefile.build:334: drivers/android/binder.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+In file included from ./include/linux/printk.h:7,
+                 from ./include/linux/kernel.h:13,
+                 from ./include/linux/list.h:9,
+                 from ./include/linux/kobject.h:19,
+                 from ./include/linux/device.h:16,
+                 from sound/soc/codecs/richtek_spm_cls.c:7:
+sound/soc/codecs/richtek_spm_cls.c: In function ‘richtek_spm_class_attr_show’:
+./include/linux/kern_levels.h:5:25: error: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘ptrdiff_t’ {aka ‘long int’} [-Werror=format=]
+    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
+      |                         ^~~~~~
+./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
+   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
+      |                         ^~~~~~~~
+./include/linux/printk.h:366:16: note: in expansion of macro ‘KERN_INFO’
+  366 |         printk(KERN_INFO pr_fmt(fmt), ##__VA_ARGS__)
+      |                ^~~~~~~~~
+sound/soc/codecs/richtek_spm_cls.c:83:9: note: in expansion of macro ‘pr_info’
+   83 |         pr_info("%s: %d\n", __func__, offset);
+      |         ^~~~~~~
+sound/soc/codecs/richtek_spm_cls.c: In function ‘richtek_spm_class_attr_store’:
+./include/linux/kern_levels.h:5:25: error: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘ptrdiff_t’ {aka ‘long int’} [-Werror=format=]
+    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
+      |                         ^~~~~~
+./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
+   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
+      |                         ^~~~~~~~
+./include/linux/printk.h:366:16: note: in expansion of macro ‘KERN_INFO’
+  366 |         printk(KERN_INFO pr_fmt(fmt), ##__VA_ARGS__)
+      |                ^~~~~~~~~
+sound/soc/codecs/richtek_spm_cls.c:229:9: note: in expansion of macro ‘pr_info’
+  229 |         pr_info("%s: %d\n", __func__, offset);
+      |         ^~~~~~~
+sound/soc/codecs/richtek_spm_cls.c: In function ‘richtek_spm_dev_attr_show’:
+sound/soc/codecs/richtek_spm_cls.c:374:23: error: format ‘%d’ expects argument of type ‘int’, but argument 4 has type ‘ptrdiff_t’ {aka ‘long int’} [-Werror=format=]
+  374 |         dev_info(dev, "%s: %d\n", __func__, offset);
+      |                       ^~~~~~~~~~
+./include/linux/device.h:1461:22: note: in definition of macro ‘dev_fmt’
+ 1461 | #define dev_fmt(fmt) fmt
+      |                      ^~~
+sound/soc/codecs/richtek_spm_cls.c:374:9: note: in expansion of macro ‘dev_info’
+  374 |         dev_info(dev, "%s: %d\n", __func__, offset);
+      |         ^~~~~~~~
+sound/soc/codecs/richtek_spm_cls.c:374:29: note: format string is defined here
+  374 |         dev_info(dev, "%s: %d\n", __func__, offset);
+      |                            ~^
+      |                             |
+      |                             int
+      |                            %ld
+cc1: all warnings being treated as errors
+make[3]: *** [scripts/Makefile.build:333: sound/soc/codecs/richtek_spm_cls.o] Error 1
+make[3]: *** Waiting for unfinished jobs....
+make[1]: *** [scripts/Makefile.build:637: drivers/android] Error 2
+make[1]: *** Waiting for unfinished jobs....
+In file included from ./include/linux/printk.h:7,
+                 from ./include/linux/kernel.h:13,
+                 from ./include/linux/list.h:9,
+                 from ./include/linux/kobject.h:19,
+                 from ./include/linux/device.h:16,
+                 from ./include/linux/i2c.h:30,
+                 from sound/soc/codecs/audio/sia81xx/sia81xx.c:19:
+sound/soc/codecs/audio/sia81xx/sia81xx.c: In function ‘sia81xx_volme_boost_set’:
+./include/linux/kern_levels.h:5:25: error: format ‘%ld’ expects argument of type ‘long int’, but argument 4 has type ‘unsigned int’ [-Werror=format=]
+    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
+      |                         ^~~~~~
+./include/linux/kern_levels.h:11:25: note: in expansion of macro ‘KERN_SOH’
+   11 | #define KERN_ERR        KERN_SOH "3"    /* error conditions */
+      |                         ^~~~~~~~
+./include/linux/printk.h:359:16: note: in expansion of macro ‘KERN_ERR’
+  359 |         printk(KERN_ERR pr_fmt(fmt), ##__VA_ARGS__)
+      |                ^~~~~~~~
+sound/soc/codecs/audio/sia81xx/sia81xx.c:1817:13: note: in expansion of macro ‘pr_err’
+ 1817 |             pr_err("[err][%s] %s: index = %ld, rst = %d ucontrol_value is Invalid parameter\r\n",
+      |             ^~~~~~
+sound/soc/codecs/audio/sia81xx/sia81xx.c: At top level:
+sound/soc/codecs/audio/sia81xx/sia81xx.c:1893:6: error: function declaration isn’t a prototype [-Werror=strict-prototypes]
+ 1893 | void sia81xx_start(){
+      |      ^~~~~~~~~~~~~
+sound/soc/codecs/audio/sia81xx/sia81xx.c:1896:6: error: function declaration isn’t a prototype [-Werror=strict-prototypes]
+ 1896 | void sia81xx_stop(){
+      |      ^~~~~~~~~~~~
+net/8021q/vlan_core.c: In function ‘vlan_do_receive’:
+net/8021q/vlan_core.c:36:21: warning: ‘ether_addr_equal_64bits’ reading 8 bytes from a region of size 6 [-Wstringop-overread]
+   36 |                 if (ether_addr_equal_64bits(eth_hdr(skb)->h_dest, vlan_dev->dev_addr))
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+net/8021q/vlan_core.c:36:21: note: referencing argument 1 of type ‘const u8[8]’ {aka ‘const unsigned char[8]’}
+net/8021q/vlan_core.c:36:21: note: referencing argument 2 of type ‘const u8[8]’ {aka ‘const unsigned char[8]’}
+In file included from ./include/linux/if_vlan.h:16,
+                 from net/8021q/vlan_core.c:4:
+./include/linux/etherdevice.h:347:20: note: in a call to function ‘ether_addr_equal_64bits’
+  347 | static inline bool ether_addr_equal_64bits(const u8 addr1[6+2],
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+make[5]: *** [scripts/Makefile.build:333: sound/soc/codecs/audio/sia81xx/sia81xx.o] Error 1
+make[5]: *** Waiting for unfinished jobs....
+make[4]: *** [scripts/Makefile.build:637: sound/soc/codecs/audio/sia81xx] Error 2
 make[3]: *** [scripts/Makefile.build:637: sound/soc/codecs/audio] Error 2
 make[2]: *** [scripts/Makefile.build:637: sound/soc/codecs] Error 2
 make[1]: *** [scripts/Makefile.build:637: sound/soc] Error 2
 make: *** [Makefile:1212: sound] Error 2
-mm/memory.c: In function ‘zap_pte_range’:
-mm/memory.c:1516:58: warning: suggest parentheses around ‘-’ in operand of ‘&’ [-Wparentheses]
- 1516 |                                 pte += (next - PAGE_SIZE - addr & PAGE_MASK)/PAGE_SIZE;
-      |                                         ~~~~~~~~~~~~~~~~~^~~~~~
+make: *** Waiting for unfinished jobs....
 In file included from ./include/linux/printk.h:7,
                  from ./include/linux/kernel.h:13,
-                 from ./include/linux/list.h:9,
-                 from ./include/linux/smp.h:12,
-                 from ./include/linux/kernel_stat.h:5,
-                 from mm/memory.c:41:
-mm/memory.c: In function ‘do_swap_page’:
-./include/linux/kern_levels.h:5:25: warning: format ‘%llx’ expects argument of type ‘long long unsigned int’, but argument 6 has type ‘long unsigned int’ [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:11:25: note: in expansion of macro ‘KERN_SOH’
-   11 | #define KERN_ERR        KERN_SOH "3"    /* error conditions */
-      |                         ^~~~~~~~
-./include/linux/printk.h:359:16: note: in expansion of macro ‘KERN_ERR’
-  359 |         printk(KERN_ERR pr_fmt(fmt), ##__VA_ARGS__)
-      |                ^~~~~~~~
-mm/memory.c:4311:41: note: in expansion of macro ‘pr_err’
- 4311 |                                         pr_err("@@@@%s-%d current:%s-%d vma:%llx-%llx fault addr:%llx vma-not-eligible doublemap eligible:%d\n",
-      |                                         ^~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%llx’ expects argument of type ‘long long unsigned int’, but argument 7 has type ‘long unsigned int’ [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:11:25: note: in expansion of macro ‘KERN_SOH’
-   11 | #define KERN_ERR        KERN_SOH "3"    /* error conditions */
-      |                         ^~~~~~~~
-./include/linux/printk.h:359:16: note: in expansion of macro ‘KERN_ERR’
-  359 |         printk(KERN_ERR pr_fmt(fmt), ##__VA_ARGS__)
-      |                ^~~~~~~~
-mm/memory.c:4311:41: note: in expansion of macro ‘pr_err’
- 4311 |                                         pr_err("@@@@%s-%d current:%s-%d vma:%llx-%llx fault addr:%llx vma-not-eligible doublemap eligible:%d\n",
-      |                                         ^~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%llx’ expects argument of type ‘long long unsigned int’, but argument 8 has type ‘long unsigned int’ [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:11:25: note: in expansion of macro ‘KERN_SOH’
-   11 | #define KERN_ERR        KERN_SOH "3"    /* error conditions */
-      |                         ^~~~~~~~
-./include/linux/printk.h:359:16: note: in expansion of macro ‘KERN_ERR’
-  359 |         printk(KERN_ERR pr_fmt(fmt), ##__VA_ARGS__)
-      |                ^~~~~~~~
-mm/memory.c:4311:41: note: in expansion of macro ‘pr_err’
- 4311 |                                         pr_err("@@@@%s-%d current:%s-%d vma:%llx-%llx fault addr:%llx vma-not-eligible doublemap eligible:%d\n",
-      |                                         ^~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%llx’ expects argument of type ‘long long unsigned int’, but argument 6 has type ‘long unsigned int’ [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:11:25: note: in expansion of macro ‘KERN_SOH’
-   11 | #define KERN_ERR        KERN_SOH "3"    /* error conditions */
-      |                         ^~~~~~~~
-./include/linux/printk.h:359:16: note: in expansion of macro ‘KERN_ERR’
-  359 |         printk(KERN_ERR pr_fmt(fmt), ##__VA_ARGS__)
-      |                ^~~~~~~~
-mm/memory.c:4394:41: note: in expansion of macro ‘pr_err’
- 4394 |                                         pr_err("@@@@%s-%d current:%s-%d vma:%llx-%llx fault addr:%llx pte-unchanged doublemap eligible:%d\n",
-      |                                         ^~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%llx’ expects argument of type ‘long long unsigned int’, but argument 7 has type ‘long unsigned int’ [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:11:25: note: in expansion of macro ‘KERN_SOH’
-   11 | #define KERN_ERR        KERN_SOH "3"    /* error conditions */
-      |                         ^~~~~~~~
-./include/linux/printk.h:359:16: note: in expansion of macro ‘KERN_ERR’
-  359 |         printk(KERN_ERR pr_fmt(fmt), ##__VA_ARGS__)
-      |                ^~~~~~~~
-mm/memory.c:4394:41: note: in expansion of macro ‘pr_err’
- 4394 |                                         pr_err("@@@@%s-%d current:%s-%d vma:%llx-%llx fault addr:%llx pte-unchanged doublemap eligible:%d\n",
-      |                                         ^~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%llx’ expects argument of type ‘long long unsigned int’, but argument 8 has type ‘long unsigned int’ [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:11:25: note: in expansion of macro ‘KERN_SOH’
-   11 | #define KERN_ERR        KERN_SOH "3"    /* error conditions */
-      |                         ^~~~~~~~
-./include/linux/printk.h:359:16: note: in expansion of macro ‘KERN_ERR’
-  359 |         printk(KERN_ERR pr_fmt(fmt), ##__VA_ARGS__)
-      |                ^~~~~~~~
-mm/memory.c:4394:41: note: in expansion of macro ‘pr_err’
- 4394 |                                         pr_err("@@@@%s-%d current:%s-%d vma:%llx-%llx fault addr:%llx pte-unchanged doublemap eligible:%d\n",
-      |                                         ^~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%llx’ expects argument of type ‘long long unsigned int’, but argument 6 has type ‘long unsigned int’ [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:11:25: note: in expansion of macro ‘KERN_SOH’
-   11 | #define KERN_ERR        KERN_SOH "3"    /* error conditions */
-      |                         ^~~~~~~~
-./include/linux/printk.h:359:16: note: in expansion of macro ‘KERN_ERR’
-  359 |         printk(KERN_ERR pr_fmt(fmt), ##__VA_ARGS__)
-      |                ^~~~~~~~
-mm/memory.c:4438:41: note: in expansion of macro ‘pr_err’
- 4438 |                                         pr_err("@@@@%s-%d current:%s-%d vma:%llx-%llx fault addr:%llx vma-not-eligible doublemap eligible:%d\n",
-      |                                         ^~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%llx’ expects argument of type ‘long long unsigned int’, but argument 7 has type ‘long unsigned int’ [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:11:25: note: in expansion of macro ‘KERN_SOH’
-   11 | #define KERN_ERR        KERN_SOH "3"    /* error conditions */
-      |                         ^~~~~~~~
-./include/linux/printk.h:359:16: note: in expansion of macro ‘KERN_ERR’
-  359 |         printk(KERN_ERR pr_fmt(fmt), ##__VA_ARGS__)
-      |                ^~~~~~~~
-mm/memory.c:4438:41: note: in expansion of macro ‘pr_err’
- 4438 |                                         pr_err("@@@@%s-%d current:%s-%d vma:%llx-%llx fault addr:%llx vma-not-eligible doublemap eligible:%d\n",
-      |                                         ^~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%llx’ expects argument of type ‘long long unsigned int’, but argument 8 has type ‘long unsigned int’ [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:11:25: note: in expansion of macro ‘KERN_SOH’
-   11 | #define KERN_ERR        KERN_SOH "3"    /* error conditions */
-      |                         ^~~~~~~~
-./include/linux/printk.h:359:16: note: in expansion of macro ‘KERN_ERR’
-  359 |         printk(KERN_ERR pr_fmt(fmt), ##__VA_ARGS__)
-      |                ^~~~~~~~
-mm/memory.c:4438:41: note: in expansion of macro ‘pr_err’
- 4438 |                                         pr_err("@@@@%s-%d current:%s-%d vma:%llx-%llx fault addr:%llx vma-not-eligible doublemap eligible:%d\n",
-      |                                         ^~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%llx’ expects argument of type ‘long long unsigned int’, but argument 6 has type ‘long unsigned int’ [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:11:25: note: in expansion of macro ‘KERN_SOH’
-   11 | #define KERN_ERR        KERN_SOH "3"    /* error conditions */
-      |                         ^~~~~~~~
-./include/linux/printk.h:359:16: note: in expansion of macro ‘KERN_ERR’
-  359 |         printk(KERN_ERR pr_fmt(fmt), ##__VA_ARGS__)
-      |                ^~~~~~~~
-mm/memory.c:4512:41: note: in expansion of macro ‘pr_err’
- 4512 |                                         pr_err("@@@@%s-%d current:%s-%d vma:%llx-%llx fault addr:%llx pte-unchanged doublemap eligible:%d\n",
-      |                                         ^~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%llx’ expects argument of type ‘long long unsigned int’, but argument 7 has type ‘long unsigned int’ [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:11:25: note: in expansion of macro ‘KERN_SOH’
-   11 | #define KERN_ERR        KERN_SOH "3"    /* error conditions */
-      |                         ^~~~~~~~
-./include/linux/printk.h:359:16: note: in expansion of macro ‘KERN_ERR’
-  359 |         printk(KERN_ERR pr_fmt(fmt), ##__VA_ARGS__)
-      |                ^~~~~~~~
-mm/memory.c:4512:41: note: in expansion of macro ‘pr_err’
- 4512 |                                         pr_err("@@@@%s-%d current:%s-%d vma:%llx-%llx fault addr:%llx pte-unchanged doublemap eligible:%d\n",
-      |                                         ^~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%llx’ expects argument of type ‘long long unsigned int’, but argument 8 has type ‘long unsigned int’ [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:11:25: note: in expansion of macro ‘KERN_SOH’
-   11 | #define KERN_ERR        KERN_SOH "3"    /* error conditions */
-      |                         ^~~~~~~~
-./include/linux/printk.h:359:16: note: in expansion of macro ‘KERN_ERR’
-  359 |         printk(KERN_ERR pr_fmt(fmt), ##__VA_ARGS__)
-      |                ^~~~~~~~
-mm/memory.c:4512:41: note: in expansion of macro ‘pr_err’
- 4512 |                                         pr_err("@@@@%s-%d current:%s-%d vma:%llx-%llx fault addr:%llx pte-unchanged doublemap eligible:%d\n",
-      |                                         ^~~~~~
-fs/proc/task_mmu.c: In function ‘show_smap’:
-fs/proc/task_mmu.c:927:23: warning: unused variable ‘p’ [-Wunused-variable]
-  927 |                 char *p;
-      |                       ^
-fs/proc/task_mmu.c:926:22: warning: unused variable ‘buf’ [-Wunused-variable]
-  926 |                 char buf[256];
-      |                      ^~~
-In file included from ./include/linux/kernel.h:13,
                  from ./include/asm-generic/bug.h:18,
                  from ./arch/arm64/include/asm/bug.h:37,
                  from ./include/linux/bug.h:5,
                  from ./include/linux/mmdebug.h:5,
-                 from ./include/linux/mm.h:9,
-                 from fs/proc/task_mmu.c:2:
-fs/proc/task_mmu.c: In function ‘reclaim_pte_range’:
-./include/linux/kern_levels.h:5:25: warning: format ‘%lx’ expects argument of type ‘long unsigned int’, but argument 5 has type ‘struct page *’ [-Wformat=]
+                 from ./include/linux/gfp.h:5,
+                 from ./include/linux/slab.h:15,
+                 from drivers/block/zram/hybridswap/hybridmain.c:8:
+drivers/block/zram/hybridswap/hybridmain.c: In function ‘mem_cgroup_force_shrink_anon’:
+./include/linux/kern_levels.h:5:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 10 has type ‘long unsigned int’ [-Wformat=]
     5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
       |                         ^~~~~~
-./include/linux/printk.h:482:24: note: in definition of macro ‘printk_ratelimited’
-  482 |                 printk(fmt, ##__VA_ARGS__);                             \
-      |                        ^~~
-./include/linux/kern_levels.h:11:25: note: in expansion of macro ‘KERN_SOH’
-   11 | #define KERN_ERR        KERN_SOH "3"    /* error conditions */
+./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
+   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
       |                         ^~~~~~~~
-./include/linux/printk.h:496:28: note: in expansion of macro ‘KERN_ERR’
-  496 |         printk_ratelimited(KERN_ERR pr_fmt(fmt), ##__VA_ARGS__)
-      |                            ^~~~~~~~
-fs/proc/task_mmu.c:2013:25: note: in expansion of macro ‘pr_err_ratelimited’
- 2013 |                         pr_err_ratelimited("%s comm:%s pid:%d -> non_cont pte thp reclaim page:%lx "
-      |                         ^~~~~~~~~~~~~~~~~~
-In file included from kernel/sched/cpufreq_schedutil.c:20:
-kernel/sched/cpufreq_schedutil.h:54:38: warning: conflicting types for ‘mt_cpufreq_get_cur_freq’ due to enum/integer mismatch; have ‘unsigned int(enum mt_cpu_dvfs_id)’ [-Wenum-int-mismatch]
-   54 | unsigned int __attribute__ ((weak))  mt_cpufreq_get_cur_freq(
-      |                                      ^~~~~~~~~~~~~~~~~~~~~~~
-In file included from kernel/sched/../../drivers/misc/mediatek/include/mt-plat/mtk_cpufreq_common_api.h:18,
-                 from kernel/sched/cpufreq_schedutil.h:29:
-kernel/sched/../../drivers/misc/mediatek/include/mt-plat/mt6768/include/mach/mtk_cpufreq_api.h:53:21: note: previous declaration of ‘mt_cpufreq_get_cur_freq’ with type ‘unsigned int(unsigned int)’
-   53 | extern unsigned int mt_cpufreq_get_cur_freq(unsigned int cluster_id);
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~
+drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
+   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
+      |                        ^~~~~~~~~
+drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
+   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
+      |                          ^~~~
+drivers/block/zram/hybridswap/hybridmain.c:518:9: note: in expansion of macro ‘log_info’
+  518 |         log_info("%s try to reclaim %d pages and reclaim %d pages\n",
+      |         ^~~~~~~~
+./include/linux/kern_levels.h:5:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 11 has type ‘long unsigned int’ [-Wformat=]
+    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
+      |                         ^~~~~~
+./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
+   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
+      |                         ^~~~~~~~
+drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
+   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
+      |                        ^~~~~~~~~
+drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
+   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
+      |                          ^~~~
+drivers/block/zram/hybridswap/hybridmain.c:518:9: note: in expansion of macro ‘log_info’
+  518 |         log_info("%s try to reclaim %d pages and reclaim %d pages\n",
+      |         ^~~~~~~~
+drivers/block/zram/hybridswap/hybridmain.c: In function ‘mem_cgroup_force_shrink_file’:
+./include/linux/kern_levels.h:5:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 10 has type ‘long unsigned int’ [-Wformat=]
+    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
+      |                         ^~~~~~
+./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
+   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
+      |                         ^~~~~~~~
+drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
+   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
+      |                        ^~~~~~~~~
+drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
+   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
+      |                          ^~~~
+drivers/block/zram/hybridswap/hybridmain.c:537:9: note: in expansion of macro ‘log_info’
+  537 |         log_info("%s try to reclaim %d pages and reclaim %d pages\n",
+      |         ^~~~~~~~
+./include/linux/kern_levels.h:5:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 11 has type ‘long unsigned int’ [-Wformat=]
+    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
+      |                         ^~~~~~
+./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
+   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
+      |                         ^~~~~~~~
+drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
+   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
+      |                        ^~~~~~~~~
+drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
+   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
+      |                          ^~~~
+drivers/block/zram/hybridswap/hybridmain.c:537:9: note: in expansion of macro ‘log_info’
+  537 |         log_info("%s try to reclaim %d pages and reclaim %d pages\n",
+      |         ^~~~~~~~
+drivers/block/zram/hybridswap/hybridswapd.c: In function ‘avail_buffers_params_show’:
+drivers/block/zram/hybridswap/hybridswapd.c:252:48: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘long unsigned int’ [-Wformat=]
+  252 |         seq_printf(m, "free_swap_threshold: %llu\n",
+      |                                             ~~~^
+      |                                                |
+      |                                                long long unsigned int
+      |                                             %lu
+  253 |                         (atomic64_read(&free_swap_threshold) * PAGE_SIZE / SZ_1M));
+      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                          |
+      |                                                                          long unsigned int
+In file included from ./include/linux/printk.h:7,
+                 from ./include/linux/kernel.h:13,
+                 from ./include/linux/list.h:9,
+                 from ./include/linux/rculist.h:10,
+                 from ./include/linux/pid.h:5,
+                 from ./include/linux/sched.h:14,
+                 from drivers/block/zram/hybridswap/hybridswapd.c:9:
+drivers/block/zram/hybridswap/hybridswapd.c: In function ‘get_hs_swap_anon_refault_status’:
+./include/linux/kern_levels.h:5:25: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 12 has type ‘long unsigned int’ [-Wformat=]
+    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
+      |                         ^~~~~~
+./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
+   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
+      |                         ^~~~~~~~
+drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
+   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
+      |                        ^~~~~~~~~
+drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
+   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
+      |                          ^~~~
+drivers/block/zram/hybridswap/hybridswapd.c:918:9: note: in expansion of macro ‘log_info’
+  918 |         log_info("current %llu t %llu last %llu t %llu ratio %llu refault_ratio %llu\n",
+      |         ^~~~~~~~
+./include/linux/kern_levels.h:5:25: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 14 has type ‘atomic64_t’ [-Wformat=]
+    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
+      |                         ^~~~~~
+./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
+   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
+      |                         ^~~~~~~~
+drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
+   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
+      |                        ^~~~~~~~~
+drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
+   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
+      |                          ^~~~
+drivers/block/zram/hybridswap/hybridswapd.c:918:9: note: in expansion of macro ‘log_info’
+  918 |         log_info("current %llu t %llu last %llu t %llu ratio %llu refault_ratio %llu\n",
+      |         ^~~~~~~~
+drivers/block/zram/hybridswap/hybridswapd.c: In function ‘calc_shrink_ratio’:
+./include/linux/kern_levels.h:5:25: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 10 has type ‘long long int’ [-Wformat=]
+    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
+      |                         ^~~~~~
+./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
+   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
+      |                         ^~~~~~~~
+drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
+   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
+      |                        ^~~~~~~~~
+drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
+   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
+      |                          ^~~~
+drivers/block/zram/hybridswap/hybridswapd.c:1507:17: note: in expansion of macro ‘log_info’
+ 1507 |                 log_info("memcg %s can_reclaimed %lu nr_anon %lu zram %lu eswap %lu total %lu ratio %lu thresh %lu\n",
+      |                 ^~~~~~~~
+./include/linux/kern_levels.h:5:25: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 11 has type ‘s64’ {aka ‘long long int’} [-Wformat=]
+    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
+      |                         ^~~~~~
+./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
+   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
+      |                         ^~~~~~~~
+drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
+   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
+      |                        ^~~~~~~~~
+drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
+   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
+      |                          ^~~~
+drivers/block/zram/hybridswap/hybridswapd.c:1507:17: note: in expansion of macro ‘log_info’
+ 1507 |                 log_info("memcg %s can_reclaimed %lu nr_anon %lu zram %lu eswap %lu total %lu ratio %lu thresh %lu\n",
+      |                 ^~~~~~~~
+./include/linux/kern_levels.h:5:25: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 12 has type ‘s64’ {aka ‘long long int’} [-Wformat=]
+    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
+      |                         ^~~~~~
+./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
+   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
+      |                         ^~~~~~~~
+drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
+   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
+      |                        ^~~~~~~~~
+drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
+   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
+      |                          ^~~~
+drivers/block/zram/hybridswap/hybridswapd.c:1507:17: note: in expansion of macro ‘log_info’
+ 1507 |                 log_info("memcg %s can_reclaimed %lu nr_anon %lu zram %lu eswap %lu total %lu ratio %lu thresh %lu\n",
+      |                 ^~~~~~~~
+./include/linux/kern_levels.h:5:25: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 13 has type ‘s64’ {aka ‘long long int’} [-Wformat=]
+    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
+      |                         ^~~~~~
+./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
+   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
+      |                         ^~~~~~~~
+drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
+   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
+      |                        ^~~~~~~~~
+drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
+   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
+      |                          ^~~~
+drivers/block/zram/hybridswap/hybridswapd.c:1507:17: note: in expansion of macro ‘log_info’
+ 1507 |                 log_info("memcg %s can_reclaimed %lu nr_anon %lu zram %lu eswap %lu total %lu ratio %lu thresh %lu\n",
+      |                 ^~~~~~~~
+./include/linux/kern_levels.h:5:25: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 14 has type ‘s64’ {aka ‘long long int’} [-Wformat=]
+    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
+      |                         ^~~~~~
+./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
+   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
+      |                         ^~~~~~~~
+drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
+   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
+      |                        ^~~~~~~~~
+drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
+   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
+      |                          ^~~~
+drivers/block/zram/hybridswap/hybridswapd.c:1507:17: note: in expansion of macro ‘log_info’
+ 1507 |                 log_info("memcg %s can_reclaimed %lu nr_anon %lu zram %lu eswap %lu total %lu ratio %lu thresh %lu\n",
+      |                 ^~~~~~~~
+./include/linux/kern_levels.h:5:25: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 15 has type ‘s64’ {aka ‘long long int’} [-Wformat=]
+    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
+      |                         ^~~~~~
+./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
+   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
+      |                         ^~~~~~~~
+drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
+   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
+      |                        ^~~~~~~~~
+drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
+   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
+      |                          ^~~~
+drivers/block/zram/hybridswap/hybridswapd.c:1507:17: note: in expansion of macro ‘log_info’
+ 1507 |                 log_info("memcg %s can_reclaimed %lu nr_anon %lu zram %lu eswap %lu total %lu ratio %lu thresh %lu\n",
+      |                 ^~~~~~~~
+./include/linux/kern_levels.h:5:25: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 16 has type ‘s64’ {aka ‘long long int’} [-Wformat=]
+    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
+      |                         ^~~~~~
+./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
+   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
+      |                         ^~~~~~~~
+drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
+   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
+      |                        ^~~~~~~~~
+drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
+   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
+      |                          ^~~~
+drivers/block/zram/hybridswap/hybridswapd.c:1507:17: note: in expansion of macro ‘log_info’
+ 1507 |                 log_info("memcg %s can_reclaimed %lu nr_anon %lu zram %lu eswap %lu total %lu ratio %lu thresh %lu\n",
+      |                 ^~~~~~~~
+drivers/block/zram/hybridswap/hybridswapd.c: In function ‘swapd_shrink_anon’:
+./include/linux/kern_levels.h:5:25: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 12 has type ‘u64’ {aka ‘long long unsigned int’} [-Wformat=]
+    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
+      |                         ^~~~~~
+./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
+   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
+      |                         ^~~~~~~~
+drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
+   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
+      |                        ^~~~~~~~~
+drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
+   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
+      |                          ^~~~
+drivers/block/zram/hybridswap/hybridswapd.c:1585:9: note: in expansion of macro ‘log_info’
+ 1585 |         log_info("total_reclaim %lu nr_to_reclaim %lu from memcg %lu total_can_reclaimed %lu\n",
+      |         ^~~~~~~~
+drivers/block/zram/hybridswap/hybridswapd.c: In function ‘swapd_shrink_node’:
+./include/linux/kern_levels.h:5:25: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 10 has type ‘unsigned int’ [-Wformat=]
+    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
+      |                         ^~~~~~
+./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
+   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
+      |                         ^~~~~~~~
+drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
+   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
+      |                        ^~~~~~~~~
+drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
+   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
+      |                          ^~~~
+drivers/block/zram/hybridswap/hybridswapd.c:1655:9: note: in expansion of macro ‘log_info’
+ 1655 |         log_info("total_reclaimed %lu KB, avail buffer %lu %lu MB, swapd_skip_interval %llu\n",
+      |         ^~~~~~~~
+./include/linux/kern_levels.h:5:25: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 11 has type ‘unsigned int’ [-Wformat=]
+    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
+      |                         ^~~~~~
+./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
+   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
+      |                         ^~~~~~~~
+drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
+   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
+      |                        ^~~~~~~~~
+drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
+   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
+      |                          ^~~~
+drivers/block/zram/hybridswap/hybridswapd.c:1655:9: note: in expansion of macro ‘log_info’
+ 1655 |         log_info("total_reclaimed %lu KB, avail buffer %lu %lu MB, swapd_skip_interval %llu\n",
+      |         ^~~~~~~~
+drivers/block/zram/hybridswap/hybridswapd.c: In function ‘swapd’:
+./include/linux/kern_levels.h:5:25: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 9 has type ‘u64’ {aka ‘long long unsigned int’} [-Wformat=]
+    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
+      |                         ^~~~~~
+./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
+   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
+      |                         ^~~~~~~~
+drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
+   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
+      |                        ^~~~~~~~~
+drivers/block/zram/hybridswap/internal.h:76:25: note: in expansion of macro ‘hybp’
+   76 | #define log_dbg(f, ...) hybp(HS_LOG_DEBUG, f, ##__VA_ARGS__)
+      |                         ^~~~
+drivers/block/zram/hybridswap/hybridswapd.c:1717:33: note: in expansion of macro ‘log_dbg’
+ 1717 |                                 log_dbg("SWAPD_SWAPOUT curr %u avail %lu size %lu maybe swapout %lu\n",
+      |                                 ^~~~~~~
+./include/linux/kern_levels.h:5:25: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 10 has type ‘u64’ {aka ‘long long unsigned int’} [-Wformat=]
+    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
+      |                         ^~~~~~
+./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
+   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
+      |                         ^~~~~~~~
+drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
+   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
+      |                        ^~~~~~~~~
+drivers/block/zram/hybridswap/internal.h:76:25: note: in expansion of macro ‘hybp’
+   76 | #define log_dbg(f, ...) hybp(HS_LOG_DEBUG, f, ##__VA_ARGS__)
+      |                         ^~~~
+drivers/block/zram/hybridswap/hybridswapd.c:1717:33: note: in expansion of macro ‘log_dbg’
+ 1717 |                                 log_dbg("SWAPD_SWAPOUT curr %u avail %lu size %lu maybe swapout %lu\n",
+      |                                 ^~~~~~~
+./include/linux/kern_levels.h:5:25: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 11 has type ‘u64’ {aka ‘long long unsigned int’} [-Wformat=]
+    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
+      |                         ^~~~~~
+./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
+   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
+      |                         ^~~~~~~~
+drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
+   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
+      |                        ^~~~~~~~~
+drivers/block/zram/hybridswap/internal.h:76:25: note: in expansion of macro ‘hybp’
+   76 | #define log_dbg(f, ...) hybp(HS_LOG_DEBUG, f, ##__VA_ARGS__)
+      |                         ^~~~
+drivers/block/zram/hybridswap/hybridswapd.c:1717:33: note: in expansion of macro ‘log_dbg’
+ 1717 |                                 log_dbg("SWAPD_SWAPOUT curr %u avail %lu size %lu maybe swapout %lu\n",
+      |                                 ^~~~~~~
+./include/linux/kern_levels.h:5:25: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 12 has type ‘u64’ {aka ‘long long unsigned int’} [-Wformat=]
+    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
+      |                         ^~~~~~
+./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
+   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
+      |                         ^~~~~~~~
+drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
+   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
+      |                        ^~~~~~~~~
+drivers/block/zram/hybridswap/internal.h:76:25: note: in expansion of macro ‘hybp’
+   76 | #define log_dbg(f, ...) hybp(HS_LOG_DEBUG, f, ##__VA_ARGS__)
+      |                         ^~~~
+drivers/block/zram/hybridswap/hybridswapd.c:1717:33: note: in expansion of macro ‘log_dbg’
+ 1717 |                                 log_dbg("SWAPD_SWAPOUT curr %u avail %lu size %lu maybe swapout %lu\n",
+      |                                 ^~~~~~~
+./include/linux/kern_levels.h:5:25: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 9 has type ‘u64’ {aka ‘long long unsigned int’} [-Wformat=]
+    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
+      |                         ^~~~~~
+./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
+   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
+      |                         ^~~~~~~~
+drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
+   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
+      |                        ^~~~~~~~~
+drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
+   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
+      |                          ^~~~
+drivers/block/zram/hybridswap/hybridswapd.c:1721:33: note: in expansion of macro ‘log_info’
+ 1721 |                                 log_info("SWAPD_SKIP_SWAPOUT curr %u avail %lu\n",
+      |                                 ^~~~~~~~
+./include/linux/kern_levels.h:5:25: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 10 has type ‘u64’ {aka ‘long long unsigned int’} [-Wformat=]
+    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
+      |                         ^~~~~~
+./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
+   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
+      |                         ^~~~~~~~
+drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
+   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
+      |                        ^~~~~~~~~
+drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
+   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
+      |                          ^~~~
+drivers/block/zram/hybridswap/hybridswapd.c:1721:33: note: in expansion of macro ‘log_info’
+ 1721 |                                 log_info("SWAPD_SKIP_SWAPOUT curr %u avail %lu\n",
+      |                                 ^~~~~~~~
+In file included from ./include/linux/export.h:45,
+                 from ./include/linux/linkage.h:7,
+                 from ./include/linux/kernel.h:6,
+                 from ./include/linux/list.h:9,
+                 from ./include/linux/module.h:9,
+                 from net/ethernet/eth.c:40:
+net/ethernet/eth.c: In function ‘eth_type_trans’:
+net/ethernet/eth.c:168:22: warning: ‘is_multicast_ether_addr_64bits’ reading 8 bytes from a region of size 6 [-Wstringop-overread]
+  168 |         if (unlikely(is_multicast_ether_addr_64bits(eth->h_dest))) {
+./include/linux/compiler.h:77:45: note: in definition of macro ‘unlikely’
+   77 | # define unlikely(x)    __builtin_expect(!!(x), 0)
+      |                                             ^
+net/ethernet/eth.c:168:22: note: referencing argument 1 of type ‘const u8[8]’ {aka ‘const unsigned char[8]’}
+  168 |         if (unlikely(is_multicast_ether_addr_64bits(eth->h_dest))) {
+./include/linux/compiler.h:77:45: note: in definition of macro ‘unlikely’
+   77 | # define unlikely(x)    __builtin_expect(!!(x), 0)
+      |                                             ^
+In file included from net/ethernet/eth.c:50:
+./include/linux/etherdevice.h:133:20: note: in a call to function ‘is_multicast_ether_addr_64bits’
+  133 | static inline bool is_multicast_ether_addr_64bits(const u8 addr[6+2])
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+net/ethernet/eth.c:169:21: warning: ‘ether_addr_equal_64bits’ reading 8 bytes from a region of size 6 [-Wstringop-overread]
+  169 |                 if (ether_addr_equal_64bits(eth->h_dest, dev->broadcast))
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+net/ethernet/eth.c:169:21: note: referencing argument 1 of type ‘const u8[8]’ {aka ‘const unsigned char[8]’}
+net/ethernet/eth.c:169:21: note: referencing argument 2 of type ‘const u8[8]’ {aka ‘const unsigned char[8]’}
+./include/linux/etherdevice.h:347:20: note: in a call to function ‘ether_addr_equal_64bits’
+  347 | static inline bool ether_addr_equal_64bits(const u8 addr1[6+2],
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~
+net/ethernet/eth.c:174:28: warning: ‘ether_addr_equal_64bits’ reading 8 bytes from a region of size 6 [-Wstringop-overread]
+  174 |         else if (unlikely(!ether_addr_equal_64bits(eth->h_dest,
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  175 |                                                    dev->dev_addr)))
+      |                                                    ~~~~~~~~~~~~~~
+./include/linux/compiler.h:77:45: note: in definition of macro ‘unlikely’
+   77 | # define unlikely(x)    __builtin_expect(!!(x), 0)
+      |                                             ^
+net/ethernet/eth.c:174:28: note: referencing argument 1 of type ‘const u8[8]’ {aka ‘const unsigned char[8]’}
+  174 |         else if (unlikely(!ether_addr_equal_64bits(eth->h_dest,
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  175 |                                                    dev->dev_addr)))
+      |                                                    ~~~~~~~~~~~~~~
+./include/linux/compiler.h:77:45: note: in definition of macro ‘unlikely’
+   77 | # define unlikely(x)    __builtin_expect(!!(x), 0)
+      |                                             ^
+net/ethernet/eth.c:174:28: note: referencing argument 2 of type ‘const u8[8]’ {aka ‘const unsigned char[8]’}
+  174 |         else if (unlikely(!ether_addr_equal_64bits(eth->h_dest,
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  175 |                                                    dev->dev_addr)))
+      |                                                    ~~~~~~~~~~~~~~
+./include/linux/compiler.h:77:45: note: in definition of macro ‘unlikely’
+   77 | # define unlikely(x)    __builtin_expect(!!(x), 0)
+      |                                             ^
+./include/linux/etherdevice.h:347:20: note: in a call to function ‘ether_addr_equal_64bits’
+  347 | static inline bool ether_addr_equal_64bits(const u8 addr1[6+2],
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~
+drivers/block/zram/hybridswap/hybridswapd_chp.c: In function ‘avail_buffers_params_show’:
+drivers/block/zram/hybridswap/hybridswapd_chp.c:241:48: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘long unsigned int’ [-Wformat=]
+  241 |         seq_printf(m, "free_swap_threshold: %llu\n",
+      |                                             ~~~^
+      |                                                |
+      |                                                long long unsigned int
+      |                                             %lu
+  242 |                    (atomic64_read(&free_swap_threshold) * PAGE_SIZE / SZ_1M));
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                     |
+      |                                                                     long unsigned int
+In file included from ./include/linux/list.h:9,
+                 from ./include/linux/rculist.h:10,
+                 from ./include/linux/pid.h:5,
+                 from ./include/linux/sched.h:14,
+                 from drivers/block/zram/hybridswap/hybridswapd_chp.c:9:
+drivers/block/zram/hybridswap/hybridswapd_chp.c: In function ‘get_hybridswapd_reclaim_type’:
+drivers/block/zram/hybridswap/hybridswapd_chp.c:1247:22: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 4 has type ‘int’ [-Wformat=]
+ 1247 |         trace_printk("@ %s:%d cma_count:%lu anon_pg: %lu anon_chp_pg: %lu swap_pg: %lu "
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+ 1250 |                      __func__, __LINE__, pool->cma_count / 3, anon_pg, anon_chp_pg, swap_pg, swap_chp_pg, base_factor,
+      |                                          ~~~~~~~~~~~~~~~~~~~
+      |                                                          |
+      |                                                          int
+./include/linux/kernel.h:656:47: note: in definition of macro ‘__trace_printk_check_format’
+  656 |                 ____trace_printk_check_format(fmt, ##args);             \
+      |                                               ^~~
+./include/linux/kernel.h:693:17: note: in expansion of macro ‘do_trace_printk’
+  693 |                 do_trace_printk(fmt, ##__VA_ARGS__);    \
+      |                 ^~~~~~~~~~~~~~~
+drivers/block/zram/hybridswap/hybridswapd_chp.c:1247:9: note: in expansion of macro ‘trace_printk’
+ 1247 |         trace_printk("@ %s:%d cma_count:%lu anon_pg: %lu anon_chp_pg: %lu swap_pg: %lu "
+      |         ^~~~~~~~~~~~
+drivers/block/zram/hybridswap/hybridswapd_chp.c:1247:43: note: format string is defined here
+ 1247 |         trace_printk("@ %s:%d cma_count:%lu anon_pg: %lu anon_chp_pg: %lu swap_pg: %lu "
+      |                                         ~~^
+      |                                           |
+      |                                           long unsigned int
+      |                                         %u
+drivers/block/zram/hybridswap/hybridswapd_chp.c:1247:22: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 5 has type ‘int’ [-Wformat=]
+ 1247 |         trace_printk("@ %s:%d cma_count:%lu anon_pg: %lu anon_chp_pg: %lu swap_pg: %lu "
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+ 1250 |                      __func__, __LINE__, pool->cma_count / 3, anon_pg, anon_chp_pg, swap_pg, swap_chp_pg, base_factor,
+      |                                          ~~~~~~~~~~~~~~~~~~~
+      |                                                          |
+      |                                                          int
+./include/linux/kernel.h:709:43: note: in definition of macro ‘do_trace_printk’
+  709 |                 __trace_printk(_THIS_IP_, fmt, ##args);                 \
+      |                                           ^~~
+drivers/block/zram/hybridswap/hybridswapd_chp.c:1247:9: note: in expansion of macro ‘trace_printk’
+ 1247 |         trace_printk("@ %s:%d cma_count:%lu anon_pg: %lu anon_chp_pg: %lu swap_pg: %lu "
+      |         ^~~~~~~~~~~~
+drivers/block/zram/hybridswap/hybridswapd_chp.c:1247:43: note: format string is defined here
+ 1247 |         trace_printk("@ %s:%d cma_count:%lu anon_pg: %lu anon_chp_pg: %lu swap_pg: %lu "
+      |                                         ~~^
+      |                                           |
+      |                                           long unsigned int
+      |                                         %u
+In file included from drivers/block/zram/hybridswap/hybridswapd_chp.c:27:
+drivers/block/zram/hybridswap/../zram_drv_internal.h: In function ‘zram_compressed_pages’:
+drivers/block/zram/hybridswap/../zram_drv_internal.h:59:29: error: inlining failed in call to ‘always_inline’ ‘zram_page_state’: function body not available
+   59 | extern inline unsigned long zram_page_state(struct zram *zram, int type);
+      |                             ^~~~~~~~~~~~~~~
+drivers/block/zram/hybridswap/hybridswapd_chp.c:1104:24: note: called from here
+ 1104 |                 ret += zram_page_state(zram_arr[i], ZRAM_STATE_COMPRESSED_PAGE);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make[3]: *** [scripts/Makefile.build:333: drivers/block/zram/hybridswap/hybridswapd_chp.o] Error 1
+make[2]: *** [scripts/Makefile.build:637: drivers/block/zram] Error 2
+make[1]: *** [scripts/Makefile.build:637: drivers/block] Error 2
+make: *** [Makefile:1212: drivers] Error 2
+At top level:
 cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
-mm/rmap.c: In function ‘try_to_unmap_one’:
-mm/rmap.c:1699:52: warning: the comparison will always evaluate as ‘true’ for the pointer operand in ‘hpte + (sizetype)((long unsigned int)i * 8)’ must not be NULL [-Waddress]
- 1699 |                                         (hpte + i) ? pte_val(READ_ONCE(*(hpte + i))) : 0;
-      |                                                    ^
-kernel/sched/extension/debug_aee.c: In function ‘print_task_at_AEE’:
-kernel/sched/extension/debug_aee.c:81:38: warning: format ‘%lld’ expects argument of type ‘long long int’, but argument 6 has type ‘long unsigned int’ [-Wformat=]
-   81 |                 SEQ_printf_at_AEE(m, "R %15s %5d %9lld.%06ld %9lld ",
-      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-kernel/sched/extension/debug_aee.c:71:68: note: in definition of macro ‘SEQ_printf_at_AEE’
-   71 |         snprintf(print_at_AEE_buffer, sizeof(print_at_AEE_buffer), x);  \
-      |                                                                    ^
-kernel/sched/extension/debug_aee.c:81:54: note: format string is defined here
-   81 |                 SEQ_printf_at_AEE(m, "R %15s %5d %9lld.%06ld %9lld ",
-      |                                                  ~~~~^
-      |                                                      |
-      |                                                      long long int
-      |                                                  %9ld
-kernel/sched/extension/debug_aee.c:81:38: warning: format ‘%ld’ expects argument of type ‘long int’, but argument 7 has type ‘long long int’ [-Wformat=]
-   81 |                 SEQ_printf_at_AEE(m, "R %15s %5d %9lld.%06ld %9lld ",
-      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-......
-   85 |                         (long long)(p->nvcsw + p->nivcsw));
-      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      |                         |
-      |                         long long int
-kernel/sched/extension/debug_aee.c:71:68: note: in definition of macro ‘SEQ_printf_at_AEE’
-   71 |         snprintf(print_at_AEE_buffer, sizeof(print_at_AEE_buffer), x);  \
-      |                                                                    ^
-kernel/sched/extension/debug_aee.c:81:60: note: format string is defined here
-   81 |                 SEQ_printf_at_AEE(m, "R %15s %5d %9lld.%06ld %9lld ",
-      |                                                        ~~~~^
-      |                                                            |
-      |                                                            long int
-      |                                                        %06lld
-kernel/sched/extension/debug_aee.c:81:38: warning: format ‘%lld’ expects a matching ‘long long int’ argument [-Wformat=]
-   81 |                 SEQ_printf_at_AEE(m, "R %15s %5d %9lld.%06ld %9lld ",
-      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-kernel/sched/extension/debug_aee.c:71:68: note: in definition of macro ‘SEQ_printf_at_AEE’
-   71 |         snprintf(print_at_AEE_buffer, sizeof(print_at_AEE_buffer), x);  \
-      |                                                                    ^
-kernel/sched/extension/debug_aee.c:81:66: note: format string is defined here
-   81 |                 SEQ_printf_at_AEE(m, "R %15s %5d %9lld.%06ld %9lld ",
-      |                                                              ~~~~^
-      |                                                                  |
-      |                                                                  long long int
-kernel/sched/extension/debug_aee.c:89:38: warning: format ‘%lld’ expects argument of type ‘long long int’, but argument 4 has type ‘long unsigned int’ [-Wformat=]
-   89 |                 SEQ_printf_at_AEE(m, "%9lld.%06ld %9lld.%06ld %9lld.%06ld ",
-      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-kernel/sched/extension/debug_aee.c:71:68: note: in definition of macro ‘SEQ_printf_at_AEE’
-   71 |         snprintf(print_at_AEE_buffer, sizeof(print_at_AEE_buffer), x);  \
-      |                                                                    ^
-kernel/sched/extension/debug_aee.c:89:43: note: format string is defined here
-   89 |                 SEQ_printf_at_AEE(m, "%9lld.%06ld %9lld.%06ld %9lld.%06ld ",
-      |                                       ~~~~^
-      |                                           |
-      |                                           long long int
-      |                                       %9ld
-kernel/sched/extension/debug_aee.c:89:38: warning: format ‘%lld’ expects argument of type ‘long long int’, but argument 6 has type ‘long unsigned int’ [-Wformat=]
-   89 |                 SEQ_printf_at_AEE(m, "%9lld.%06ld %9lld.%06ld %9lld.%06ld ",
-      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-kernel/sched/extension/debug_aee.c:71:68: note: in definition of macro ‘SEQ_printf_at_AEE’
-   71 |         snprintf(print_at_AEE_buffer, sizeof(print_at_AEE_buffer), x);  \
-      |                                                                    ^
-kernel/sched/extension/debug_aee.c:89:55: note: format string is defined here
-   89 |                 SEQ_printf_at_AEE(m, "%9lld.%06ld %9lld.%06ld %9lld.%06ld ",
-      |                                                   ~~~~^
-      |                                                       |
-      |                                                       long long int
-      |                                                   %9ld
-kernel/sched/extension/debug_aee.c:89:38: warning: format ‘%ld’ expects a matching ‘long int’ argument [-Wformat=]
-   89 |                 SEQ_printf_at_AEE(m, "%9lld.%06ld %9lld.%06ld %9lld.%06ld ",
-      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-kernel/sched/extension/debug_aee.c:71:68: note: in definition of macro ‘SEQ_printf_at_AEE’
-   71 |         snprintf(print_at_AEE_buffer, sizeof(print_at_AEE_buffer), x);  \
-      |                                                                    ^
-kernel/sched/extension/debug_aee.c:89:61: note: format string is defined here
-   89 |                 SEQ_printf_at_AEE(m, "%9lld.%06ld %9lld.%06ld %9lld.%06ld ",
-      |                                                         ~~~~^
-      |                                                             |
-      |                                                             long int
-kernel/sched/extension/debug_aee.c:89:38: warning: format ‘%lld’ expects a matching ‘long long int’ argument [-Wformat=]
-   89 |                 SEQ_printf_at_AEE(m, "%9lld.%06ld %9lld.%06ld %9lld.%06ld ",
-      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-kernel/sched/extension/debug_aee.c:71:68: note: in definition of macro ‘SEQ_printf_at_AEE’
-   71 |         snprintf(print_at_AEE_buffer, sizeof(print_at_AEE_buffer), x);  \
-      |                                                                    ^
-kernel/sched/extension/debug_aee.c:89:67: note: format string is defined here
-   89 |                 SEQ_printf_at_AEE(m, "%9lld.%06ld %9lld.%06ld %9lld.%06ld ",
-      |                                                               ~~~~^
-      |                                                                   |
-      |                                                                   long long int
-kernel/sched/extension/debug_aee.c:89:38: warning: format ‘%ld’ expects a matching ‘long int’ argument [-Wformat=]
-   89 |                 SEQ_printf_at_AEE(m, "%9lld.%06ld %9lld.%06ld %9lld.%06ld ",
-      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-kernel/sched/extension/debug_aee.c:71:68: note: in definition of macro ‘SEQ_printf_at_AEE’
-   71 |         snprintf(print_at_AEE_buffer, sizeof(print_at_AEE_buffer), x);  \
-      |                                                                    ^
-kernel/sched/extension/debug_aee.c:89:73: note: format string is defined here
-   89 |                 SEQ_printf_at_AEE(m, "%9lld.%06ld %9lld.%06ld %9lld.%06ld ",
-      |                                                                     ~~~~^
-      |                                                                         |
-      |                                                                         long int
-kernel/sched/extension/debug_aee.c:115:38: warning: format ‘%lld’ expects argument of type ‘long long int’, but argument 6 has type ‘long unsigned int’ [-Wformat=]
-  115 |                 SEQ_printf_at_AEE(m, "R %15s %5d %9lld.%06ld %9lld ",
-      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-kernel/sched/extension/debug_aee.c:71:68: note: in definition of macro ‘SEQ_printf_at_AEE’
-   71 |         snprintf(print_at_AEE_buffer, sizeof(print_at_AEE_buffer), x);  \
-      |                                                                    ^
-kernel/sched/extension/debug_aee.c:115:54: note: format string is defined here
-  115 |                 SEQ_printf_at_AEE(m, "R %15s %5d %9lld.%06ld %9lld ",
-      |                                                  ~~~~^
-      |                                                      |
-      |                                                      long long int
-      |                                                  %9ld
-kernel/sched/extension/debug_aee.c:115:38: warning: format ‘%ld’ expects argument of type ‘long int’, but argument 7 has type ‘long long int’ [-Wformat=]
-  115 |                 SEQ_printf_at_AEE(m, "R %15s %5d %9lld.%06ld %9lld ",
-      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-......
-  119 |                         (long long)(p->nvcsw + p->nivcsw));
-      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      |                         |
-      |                         long long int
-kernel/sched/extension/debug_aee.c:71:68: note: in definition of macro ‘SEQ_printf_at_AEE’
-   71 |         snprintf(print_at_AEE_buffer, sizeof(print_at_AEE_buffer), x);  \
-      |                                                                    ^
-kernel/sched/extension/debug_aee.c:115:60: note: format string is defined here
-  115 |                 SEQ_printf_at_AEE(m, "R %15s %5d %9lld.%06ld %9lld ",
-      |                                                        ~~~~^
-      |                                                            |
-      |                                                            long int
-      |                                                        %06lld
-kernel/sched/extension/debug_aee.c:115:38: warning: format ‘%lld’ expects a matching ‘long long int’ argument [-Wformat=]
-  115 |                 SEQ_printf_at_AEE(m, "R %15s %5d %9lld.%06ld %9lld ",
-      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-kernel/sched/extension/debug_aee.c:71:68: note: in definition of macro ‘SEQ_printf_at_AEE’
-   71 |         snprintf(print_at_AEE_buffer, sizeof(print_at_AEE_buffer), x);  \
-      |                                                                    ^
-kernel/sched/extension/debug_aee.c:115:66: note: format string is defined here
-  115 |                 SEQ_printf_at_AEE(m, "R %15s %5d %9lld.%06ld %9lld ",
-      |                                                              ~~~~^
-      |                                                                  |
-      |                                                                  long long int
-kernel/sched/extension/debug_aee.c:123:38: warning: format ‘%lld’ expects argument of type ‘long long int’, but argument 4 has type ‘long unsigned int’ [-Wformat=]
-  123 |                 SEQ_printf_at_AEE(m, "%9lld.%06ld %9lld.%06ld %9lld.%06ld ",
-      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-kernel/sched/extension/debug_aee.c:71:68: note: in definition of macro ‘SEQ_printf_at_AEE’
-   71 |         snprintf(print_at_AEE_buffer, sizeof(print_at_AEE_buffer), x);  \
-      |                                                                    ^
-kernel/sched/extension/debug_aee.c:123:43: note: format string is defined here
-  123 |                 SEQ_printf_at_AEE(m, "%9lld.%06ld %9lld.%06ld %9lld.%06ld ",
-      |                                       ~~~~^
-      |                                           |
-      |                                           long long int
-      |                                       %9ld
-kernel/sched/extension/debug_aee.c:123:38: warning: format ‘%lld’ expects argument of type ‘long long int’, but argument 6 has type ‘long unsigned int’ [-Wformat=]
-  123 |                 SEQ_printf_at_AEE(m, "%9lld.%06ld %9lld.%06ld %9lld.%06ld ",
-      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-kernel/sched/extension/debug_aee.c:71:68: note: in definition of macro ‘SEQ_printf_at_AEE’
-   71 |         snprintf(print_at_AEE_buffer, sizeof(print_at_AEE_buffer), x);  \
-      |                                                                    ^
-kernel/sched/extension/debug_aee.c:123:55: note: format string is defined here
-  123 |                 SEQ_printf_at_AEE(m, "%9lld.%06ld %9lld.%06ld %9lld.%06ld ",
-      |                                                   ~~~~^
-      |                                                       |
-      |                                                       long long int
-      |                                                   %9ld
-kernel/sched/extension/debug_aee.c:123:38: warning: format ‘%ld’ expects a matching ‘long int’ argument [-Wformat=]
-  123 |                 SEQ_printf_at_AEE(m, "%9lld.%06ld %9lld.%06ld %9lld.%06ld ",
-      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-kernel/sched/extension/debug_aee.c:71:68: note: in definition of macro ‘SEQ_printf_at_AEE’
-   71 |         snprintf(print_at_AEE_buffer, sizeof(print_at_AEE_buffer), x);  \
-      |                                                                    ^
-kernel/sched/extension/debug_aee.c:123:61: note: format string is defined here
-  123 |                 SEQ_printf_at_AEE(m, "%9lld.%06ld %9lld.%06ld %9lld.%06ld ",
-      |                                                         ~~~~^
-      |                                                             |
-      |                                                             long int
-kernel/sched/extension/debug_aee.c:123:38: warning: format ‘%lld’ expects a matching ‘long long int’ argument [-Wformat=]
-  123 |                 SEQ_printf_at_AEE(m, "%9lld.%06ld %9lld.%06ld %9lld.%06ld ",
-      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-kernel/sched/extension/debug_aee.c:71:68: note: in definition of macro ‘SEQ_printf_at_AEE’
-   71 |         snprintf(print_at_AEE_buffer, sizeof(print_at_AEE_buffer), x);  \
-      |                                                                    ^
-kernel/sched/extension/debug_aee.c:123:67: note: format string is defined here
-  123 |                 SEQ_printf_at_AEE(m, "%9lld.%06ld %9lld.%06ld %9lld.%06ld ",
-      |                                                               ~~~~^
-      |                                                                   |
-      |                                                                   long long int
-kernel/sched/extension/debug_aee.c:123:38: warning: format ‘%ld’ expects a matching ‘long int’ argument [-Wformat=]
-  123 |                 SEQ_printf_at_AEE(m, "%9lld.%06ld %9lld.%06ld %9lld.%06ld ",
-      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-kernel/sched/extension/debug_aee.c:71:68: note: in definition of macro ‘SEQ_printf_at_AEE’
-   71 |         snprintf(print_at_AEE_buffer, sizeof(print_at_AEE_buffer), x);  \
-      |                                                                    ^
-kernel/sched/extension/debug_aee.c:123:73: note: format string is defined here
-  123 |                 SEQ_printf_at_AEE(m, "%9lld.%06ld %9lld.%06ld %9lld.%06ld ",
-      |                                                                     ~~~~^
-      |                                                                         |
-      |                                                                         long int
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+In file included from kernel/sched/cpupri.c:31:
+./include/linux/sched_assist/sched_assist_common.h:347:20: warning: ‘is_launcher’ declared ‘static’ but never defined [-Wunused-function]
+  347 | static inline bool is_launcher(struct task_struct *p);
+      |                    ^~~~~~~~~~~
+./include/linux/sched_assist/sched_assist_common.h:348:20: warning: ‘ux_debug_enable’ declared ‘static’ but never defined [-Wunused-function]
+  348 | static inline bool ux_debug_enable(void);
+      |                    ^~~~~~~~~~~~~~~
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+In file included from kernel/sched/walt.c:34:
+./include/linux/sched_assist/sched_assist_common.h:347:20: warning: ‘is_launcher’ declared ‘static’ but never defined [-Wunused-function]
+  347 | static inline bool is_launcher(struct task_struct *p);
+      |                    ^~~~~~~~~~~
+./include/linux/sched_assist/sched_assist_common.h:348:20: warning: ‘ux_debug_enable’ declared ‘static’ but never defined [-Wunused-function]
+  348 | static inline bool ux_debug_enable(void);
+      |                    ^~~~~~~~~~~~~~~
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
 make: *** [Makefile:1212: kernel] Error 2
