@@ -3792,7 +3792,7 @@ extern unsigned long read_zram_used_pages(int inx);
 extern bool chp_handle_prctl_user_addrs(const char __user *name,
 					unsigned long start, unsigned long len);
 
-extern inline bool handle_chp_ext_cmd(struct sysinfo *si);
+bool handle_chp_ext_cmd(struct sysinfo *si);
 #endif /* CONFIG_CONT_PTE_HUGEPAGE */
 
 #ifdef CONFIG_HYBRIDSWAP
