@@ -6,7 +6,7 @@
 #include <linux/device.h>
 #include <linux/sysfs.h>
 
-#include <helio-dvfsrc.h>
+#include "helio-dvfsrc.h>
 #if defined(CONFIG_MTK_DRAMC)
 #include <mtk_dramc.h>
 #endif
@@ -15,7 +15,7 @@
 #include "mtk_dvfsrc_reg.h"
 
 #include <linux/pm_qos.h>
-#include <helio-dvfsrc-opp.h>
+#include "helio-dvfsrc-opp.h>
 #include <mtk_vcorefs_governor.h>
 
 static struct pm_qos_request dvfsrc_emi_request;

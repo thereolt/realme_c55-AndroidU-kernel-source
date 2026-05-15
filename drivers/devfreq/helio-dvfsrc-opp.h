@@ -7,41 +7,41 @@
 #define __HELIO_DVFSRC_OPP_H
 
 #if defined(CONFIG_MACH_MT6775)
-#include <helio-dvfsrc-opp-mt6775.h>
+#include "helio-dvfsrc-opp-mt6775.h>
 #elif defined(CONFIG_MACH_MT6771)
-#include <helio-dvfsrc-opp-mt6771.h>
+#include "helio-dvfsrc-opp-mt6771.h>
 #elif defined(CONFIG_MACH_MT6768)
-#include <helio-dvfsrc-opp-mt6768.h>
+#include "helio-dvfsrc-opp-mt6768.h>
 #elif defined(CONFIG_MACH_MT6765)
-#include <helio-dvfsrc-opp-mt6765.h>
+#include "helio-dvfsrc-opp-mt6765.h>
 #elif defined(CONFIG_MACH_MT6785)
 	#if defined(CONFIG_MTK_DVFSRC_MT6781_PRETEST)
-	#include <helio-dvfsrc-opp-v6781.h>
+	#include "helio-dvfsrc-opp-v6781.h>
 	#else
-	#include <helio-dvfsrc-opp-mt6785.h>
+	#include "helio-dvfsrc-opp-mt6785.h>
 	#endif
 #elif defined(CONFIG_MACH_MT6885)
-#include <helio-dvfsrc-opp-mt6885.h>
+#include "helio-dvfsrc-opp-mt6885.h>
 #elif defined(CONFIG_MACH_MT6873)
-#include <helio-dvfsrc-opp-mt6873.h>
+#include "helio-dvfsrc-opp-mt6873.h>
 #elif defined(CONFIG_MACH_MT6853)
 	#if defined(CONFIG_MTK_DVFSRC_MT6833_PRETEST)
-	#include <helio-dvfsrc-opp-mt6833.h>
+	#include "helio-dvfsrc-opp-mt6833.h>
 	#elif defined(CONFIG_MTK_DVFSRC_MT6877_PRETEST)
-	#include <helio-dvfsrc-opp-v6877.h>
+	#include "helio-dvfsrc-opp-v6877.h>
 	#else
-	#include <helio-dvfsrc-opp-mt6853.h>
+	#include "helio-dvfsrc-opp-mt6853.h>
 	#endif
 #elif defined(CONFIG_MACH_MT6893)
-#include <helio-dvfsrc-opp-mt6893.h>
+#include "helio-dvfsrc-opp-mt6893.h>
 #elif defined(CONFIG_MACH_MT6833)
-#include <helio-dvfsrc-opp-mt6833.h>
+#include "helio-dvfsrc-opp-mt6833.h>
 #elif defined(CONFIG_MACH_MT6877)
-#include <helio-dvfsrc-opp-v6877.h>
+#include "helio-dvfsrc-opp-v6877.h>
 #elif defined(CONFIG_MACH_MT6781)
-#include <helio-dvfsrc-opp-v6781.h>
+#include "helio-dvfsrc-opp-v6781.h>
 #else
-#include <helio-dvfsrc-opp-mt67xx.h>
+#include "helio-dvfsrc-opp-mt67xx.h>
 #endif
 
 #if defined(CONFIG_MACH_MT6768) || defined(CONFIG_MACH_MT6785) \

@@ -20,9 +20,9 @@
 
 #include "governor.h"
 
-#include <helio-dvfsrc.h>
-#include <helio-dvfsrc-opp.h>
-#include <mtk_dvfsrc_reg.h>
+#include "helio-dvfsrc.h>
+#include "helio-dvfsrc-opp.h>
+#include "mtk_dvfsrc_reg.h>
 #include <mtk_spm_vcore_dvfs.h>
 #include <mtk_spm_vcore_dvfs_ipi.h>
 #ifdef CONFIG_MTK_TINYSYS_SSPM_SUPPORT
