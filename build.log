@@ -64,901 +64,163 @@ OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_HEALTHINFO
 OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_DISPLAY
 OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_KMSG_WB
 OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_DATA_MODULE
-In file included from kernel/locking/rwsem-xadd.c:32:
-./include/linux/sched_assist/sched_assist_common.h:347:20: warning: ‘is_launcher’ declared ‘static’ but never defined [-Wunused-function]
-  347 | static inline bool is_launcher(struct task_struct *p);
-      |                    ^~~~~~~~~~~
-./include/linux/sched_assist/sched_assist_common.h:348:20: warning: ‘ux_debug_enable’ declared ‘static’ but never defined [-Wunused-function]
-  348 | static inline bool ux_debug_enable(void);
-      |                    ^~~~~~~~~~~~~~~
-./kernel/gen_kheaders.sh: line 62: /tools/build/cpio: No such file or directory
-make[1]: *** [kernel/Makefile:152: kernel/kheaders_data.tar.xz] Error 127
-make[1]: *** Waiting for unfinished jobs....
-In file included from kernel/cgroup/cgroup-v1.c:23:
-./include/linux/sched_assist/sched_assist_common.h:347:20: warning: ‘is_launcher’ declared ‘static’ but never defined [-Wunused-function]
-  347 | static inline bool is_launcher(struct task_struct *p);
-      |                    ^~~~~~~~~~~
-./include/linux/sched_assist/sched_assist_common.h:348:20: warning: ‘ux_debug_enable’ declared ‘static’ but never defined [-Wunused-function]
-  348 | static inline bool ux_debug_enable(void);
-      |                    ^~~~~~~~~~~~~~~
-In file included from ./include/trace/define_trace.h:96,
-                 from ./include/trace/events/sched.h:1325,
-                 from kernel/sched/core.c:27:
-./include/trace/events/sched.h: In function ‘trace_raw_output_sched_blocked_reason’:
-./include/trace/events/sched.h:493:19: warning: format ‘%p’ expects argument of type ‘void *’, but argument 6 has type ‘long unsigned int’ [-Wformat=]
-  493 |         TP_printk("pid=%d iowait=%d caller=%pS layer1=%pS layer2=%pS layer3=%pS layer4=%pS",
-      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-./include/trace/trace_events.h:360:29: note: in definition of macro ‘DECLARE_EVENT_CLASS’
-  360 |         trace_seq_printf(s, print);                                     \
-      |                             ^~~~~
-./include/trace/trace_events.h:79:30: note: in expansion of macro ‘PARAMS’
-   79 |                              PARAMS(print));                   \
-      |                              ^~~~~~
-./include/trace/events/sched.h:468:1: note: in expansion of macro ‘TRACE_EVENT’
-  468 | TRACE_EVENT(sched_blocked_reason,
-      | ^~~~~~~~~~~
-./include/trace/events/sched.h:493:9: note: in expansion of macro ‘TP_printk’
-  493 |         TP_printk("pid=%d iowait=%d caller=%pS layer1=%pS layer2=%pS layer3=%pS layer4=%pS",
-      |         ^~~~~~~~~
-In file included from ./include/trace/trace_events.h:394:
-./include/trace/events/sched.h:493:56: note: format string is defined here
-  493 |         TP_printk("pid=%d iowait=%d caller=%pS layer1=%pS layer2=%pS layer3=%pS layer4=%pS",
-      |                                                       ~^
-      |                                                        |
-      |                                                        void *
-      |                                                       %ld
-./include/trace/events/sched.h:493:19: warning: format ‘%p’ expects argument of type ‘void *’, but argument 7 has type ‘long unsigned int’ [-Wformat=]
-  493 |         TP_printk("pid=%d iowait=%d caller=%pS layer1=%pS layer2=%pS layer3=%pS layer4=%pS",
-      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-./include/trace/trace_events.h:360:29: note: in definition of macro ‘DECLARE_EVENT_CLASS’
-  360 |         trace_seq_printf(s, print);                                     \
-      |                             ^~~~~
-./include/trace/trace_events.h:79:30: note: in expansion of macro ‘PARAMS’
-   79 |                              PARAMS(print));                   \
-      |                              ^~~~~~
-./include/trace/events/sched.h:468:1: note: in expansion of macro ‘TRACE_EVENT’
-  468 | TRACE_EVENT(sched_blocked_reason,
-      | ^~~~~~~~~~~
-./include/trace/events/sched.h:493:9: note: in expansion of macro ‘TP_printk’
-  493 |         TP_printk("pid=%d iowait=%d caller=%pS layer1=%pS layer2=%pS layer3=%pS layer4=%pS",
-      |         ^~~~~~~~~
-./include/trace/events/sched.h:493:67: note: format string is defined here
-  493 |         TP_printk("pid=%d iowait=%d caller=%pS layer1=%pS layer2=%pS layer3=%pS layer4=%pS",
-      |                                                                  ~^
-      |                                                                   |
-      |                                                                   void *
-      |                                                                  %ld
-./include/trace/events/sched.h:493:19: warning: format ‘%p’ expects argument of type ‘void *’, but argument 8 has type ‘long unsigned int’ [-Wformat=]
-  493 |         TP_printk("pid=%d iowait=%d caller=%pS layer1=%pS layer2=%pS layer3=%pS layer4=%pS",
-      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-./include/trace/trace_events.h:360:29: note: in definition of macro ‘DECLARE_EVENT_CLASS’
-  360 |         trace_seq_printf(s, print);                                     \
-      |                             ^~~~~
-./include/trace/trace_events.h:79:30: note: in expansion of macro ‘PARAMS’
-   79 |                              PARAMS(print));                   \
-      |                              ^~~~~~
-./include/trace/events/sched.h:468:1: note: in expansion of macro ‘TRACE_EVENT’
-  468 | TRACE_EVENT(sched_blocked_reason,
-      | ^~~~~~~~~~~
-./include/trace/events/sched.h:493:9: note: in expansion of macro ‘TP_printk’
-  493 |         TP_printk("pid=%d iowait=%d caller=%pS layer1=%pS layer2=%pS layer3=%pS layer4=%pS",
-      |         ^~~~~~~~~
-./include/trace/events/sched.h:493:78: note: format string is defined here
-  493 |         TP_printk("pid=%d iowait=%d caller=%pS layer1=%pS layer2=%pS layer3=%pS layer4=%pS",
-      |                                                                             ~^
-      |                                                                              |
-      |                                                                              void *
-      |                                                                             %ld
-./include/trace/events/sched.h:493:19: warning: format ‘%p’ expects argument of type ‘void *’, but argument 9 has type ‘long unsigned int’ [-Wformat=]
-  493 |         TP_printk("pid=%d iowait=%d caller=%pS layer1=%pS layer2=%pS layer3=%pS layer4=%pS",
-      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-./include/trace/trace_events.h:360:29: note: in definition of macro ‘DECLARE_EVENT_CLASS’
-  360 |         trace_seq_printf(s, print);                                     \
-      |                             ^~~~~
-./include/trace/trace_events.h:79:30: note: in expansion of macro ‘PARAMS’
-   79 |                              PARAMS(print));                   \
-      |                              ^~~~~~
-./include/trace/events/sched.h:468:1: note: in expansion of macro ‘TRACE_EVENT’
-  468 | TRACE_EVENT(sched_blocked_reason,
-      | ^~~~~~~~~~~
-./include/trace/events/sched.h:493:9: note: in expansion of macro ‘TP_printk’
-  493 |         TP_printk("pid=%d iowait=%d caller=%pS layer1=%pS layer2=%pS layer3=%pS layer4=%pS",
-      |         ^~~~~~~~~
-./include/trace/events/sched.h:493:89: note: format string is defined here
-  493 |         TP_printk("pid=%d iowait=%d caller=%pS layer1=%pS layer2=%pS layer3=%pS layer4=%pS",
-      |                                                                                        ~^
-      |                                                                                         |
-      |                                                                                         void *
-      |                                                                                        %ld
-In file included from kernel/sched/core.c:36:
-./include/linux/sched_assist/sched_assist_common.h: At top level:
-./include/linux/sched_assist/sched_assist_common.h:347:20: warning: ‘is_launcher’ declared ‘static’ but never defined [-Wunused-function]
-  347 | static inline bool is_launcher(struct task_struct *p);
-      |                    ^~~~~~~~~~~
-./include/linux/sched_assist/sched_assist_common.h:348:20: warning: ‘ux_debug_enable’ declared ‘static’ but never defined [-Wunused-function]
-  348 | static inline bool ux_debug_enable(void);
-      |                    ^~~~~~~~~~~~~~~
-kernel/sched/core.c: In function ‘uclamp_task’:
-kernel/sched/core.c:1289:14: warning: ‘util’ is used uninitialized [-Wuninitialized]
- 1289 |         util += schedtune_task_margin(p);
-      |              ^~
-kernel/sched/core.c:1286:23: note: ‘util’ was declared here
- 1286 |         unsigned long util;
-      |                       ^~~~
-In file included from kernel/cpu.c:41:
-./include/linux/sched_assist/sched_assist_common.h:347:20: warning: ‘is_launcher’ declared ‘static’ but never defined [-Wunused-function]
-  347 | static inline bool is_launcher(struct task_struct *p);
-      |                    ^~~~~~~~~~~
-./include/linux/sched_assist/sched_assist_common.h:348:20: warning: ‘ux_debug_enable’ declared ‘static’ but never defined [-Wunused-function]
-  348 | static inline bool ux_debug_enable(void);
-      |                    ^~~~~~~~~~~~~~~
-In file included from ./include/trace/define_trace.h:96,
-                 from ./include/trace/uxio_first_opt_trace.h:46,
-                 from block/uxio_first/uxio_first_opt.c:17:
-./include/trace/../../block/uxio_first/trace/uxio_first_opt_trace.h: In function ‘trace_raw_output_block_uxio_first_peek_req’:
-./include/trace/../../block/uxio_first/trace/uxio_first_opt_trace.h:41:19: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 5 has type ‘long int’ [-Wformat=]
-   41 |         TP_printk("%s (%d), req_addr %x task_group:%s, inflight(%u,%u,%u)",
-      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-./include/trace/trace_events.h:360:29: note: in definition of macro ‘DECLARE_EVENT_CLASS’
-  360 |         trace_seq_printf(s, print);                                     \
-      |                             ^~~~~
-./include/trace/trace_events.h:79:30: note: in expansion of macro ‘PARAMS’
-   79 |                              PARAMS(print));                   \
-      |                              ^~~~~~
-./include/trace/../../block/uxio_first/trace/uxio_first_opt_trace.h:15:1: note: in expansion of macro ‘TRACE_EVENT’
-   15 | TRACE_EVENT(block_uxio_first_peek_req,
-      | ^~~~~~~~~~~
-./include/trace/../../block/uxio_first/trace/uxio_first_opt_trace.h:41:9: note: in expansion of macro ‘TP_printk’
-   41 |         TP_printk("%s (%d), req_addr %x task_group:%s, inflight(%u,%u,%u)",
-      |         ^~~~~~~~~
-In file included from ./include/trace/trace_events.h:394:
-./include/trace/../../block/uxio_first/trace/uxio_first_opt_trace.h:41:39: note: format string is defined here
-   41 |         TP_printk("%s (%d), req_addr %x task_group:%s, inflight(%u,%u,%u)",
-      |                                      ~^
-      |                                       |
-      |                                       unsigned int
-      |                                      %lx
-In file included from ./include/linux/list.h:9,
-                 from ./include/linux/rculist.h:10,
-                 from ./include/linux/pid.h:5,
-                 from ./include/linux/sched.h:14,
-                 from kernel/sched/sched.h:7,
-                 from kernel/sched/fair.c:23:
-kernel/sched/fair.c: In function ‘find_energy_efficient_cpu’:
-./include/linux/kernel.h:819:43: warning: comparison of distinct pointer types lacks a cast [-Wcompare-distinct-pointer-types]
-  819 |                 (!!(sizeof((typeof(x) *)1 == (typeof(y) *)1)))
-      |                                           ^~
-./include/linux/kernel.h:833:18: note: in expansion of macro ‘__typecheck’
-  833 |                 (__typecheck(x, y) && __no_side_effects(x, y))
-      |                  ^~~~~~~~~~~
-./include/linux/kernel.h:843:31: note: in expansion of macro ‘__safe_cmp’
-  843 |         __builtin_choose_expr(__safe_cmp(x, y), \
-      |                               ^~~~~~~~~~
-./include/linux/kernel.h:859:25: note: in expansion of macro ‘__careful_cmp’
-  859 | #define max(x, y)       __careful_cmp(x, y, >)
-      |                         ^~~~~~~~~~~~~
-kernel/sched/fair.c:7988:65: note: in expansion of macro ‘max’
- 7988 |                                 if((best_energy - cur_energy) > max(1, (best_energy >> 4))) {
-      |                                                                 ^~~
-kernel/sched/fair.c: In function ‘SELECT_TASK_RQ_FAIR’:
-kernel/sched/fair.c:8088:29: warning: unused variable ‘rd’ [-Wunused-variable]
- 8088 |         struct root_domain *rd = cpu_rq(smp_processor_id())->rd;
-      |                             ^~
-kernel/sched/fair.c: In function ‘ux_task_misfit’:
-kernel/sched/fair.c:12011:13: warning: unused variable ‘num_mincpu’ [-Wunused-variable]
-12011 |         int num_mincpu = cpumask_weight(topology_core_cpumask(0));
-      |             ^~~~~~~~~~
-In file included from kernel/sched/fair.c:31:
-./include/linux/sched_assist/sched_assist_common.h: At top level:
-./include/linux/sched_assist/sched_assist_common.h:347:20: warning: ‘is_launcher’ declared ‘static’ but never defined [-Wunused-function]
-  347 | static inline bool is_launcher(struct task_struct *p);
-      |                    ^~~~~~~~~~~
-./include/linux/sched_assist/sched_assist_common.h:348:20: warning: ‘ux_debug_enable’ declared ‘static’ but never defined [-Wunused-function]
-  348 | static inline bool ux_debug_enable(void);
-      |                    ^~~~~~~~~~~~~~~
-drivers/android/binder.c:3342:20: warning: ‘is_launcher’ used but never defined
- 3342 | extern inline bool is_launcher(struct task_struct *p);
-      |                    ^~~~~~~~~~~
-drivers/android/binder.c:3343:20: warning: ‘ux_debug_enable’ used but never defined
- 3343 | extern inline bool ux_debug_enable(void);
-      |                    ^~~~~~~~~~~~~~~
-In file included from ./include/linux/printk.h:7,
-                 from ./include/linux/kernel.h:13,
-                 from ./include/linux/list.h:9,
-                 from ./include/linux/kobject.h:19,
-                 from ./include/linux/device.h:16,
-                 from ./include/linux/platform_device.h:14,
-                 from sound/soc/codecs/audio/driver/audio_extend_drv.c:14:
-sound/soc/codecs/audio/driver/audio_extend_drv.c: In function ‘extend_codec_prop_parse’:
-./include/linux/kern_levels.h:5:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘const char *’ [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:12:25: note: in expansion of macro ‘KERN_SOH’
-   12 | #define KERN_WARNING    KERN_SOH "4"    /* warning conditions */
-      |                         ^~~~~~~~
-./include/linux/printk.h:361:16: note: in expansion of macro ‘KERN_WARNING’
-  361 |         printk(KERN_WARNING pr_fmt(fmt), ##__VA_ARGS__)
-      |                ^~~~~~~~~~~~
-./include/linux/printk.h:362:17: note: in expansion of macro ‘pr_warning’
-  362 | #define pr_warn pr_warning
-      |                 ^~~~~~~~~~
-sound/soc/codecs/audio/driver/audio_extend_drv.c:142:17: note: in expansion of macro ‘pr_warn’
-  142 |                 pr_warn("%s: Invalid number of codecs, ret=%d\n",
-      |                 ^~~~~~~
-./include/linux/kern_levels.h:5:25: error: too many arguments for format [-Werror=format-extra-args]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:12:25: note: in expansion of macro ‘KERN_SOH’
-   12 | #define KERN_WARNING    KERN_SOH "4"    /* warning conditions */
-      |                         ^~~~~~~~
-./include/linux/printk.h:361:16: note: in expansion of macro ‘KERN_WARNING’
-  361 |         printk(KERN_WARNING pr_fmt(fmt), ##__VA_ARGS__)
-      |                ^~~~~~~~~~~~
-./include/linux/printk.h:362:17: note: in expansion of macro ‘pr_warning’
-  362 | #define pr_warn pr_warning
-      |                 ^~~~~~~~~~
-sound/soc/codecs/audio/driver/audio_extend_drv.c:142:17: note: in expansion of macro ‘pr_warn’
-  142 |                 pr_warn("%s: Invalid number of codecs, ret=%d\n",
-      |                 ^~~~~~~
-sound/soc/codecs/audio/driver/audio_extend_drv.c: In function ‘extend_codec_be_dailink’:
-./include/linux/kern_levels.h:5:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 4 has type ‘size_t’ {aka ‘long unsigned int’} [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-./include/linux/printk.h:366:16: note: in expansion of macro ‘KERN_INFO’
-  366 |         printk(KERN_INFO pr_fmt(fmt), ##__VA_ARGS__)
-      |                ^~~~~~~~~
-sound/soc/codecs/audio/driver/audio_extend_drv.c:196:9: note: in expansion of macro ‘pr_info’
-  196 |         pr_info("%s: i2s_id=%d, size=%d!\n", __func__, i2s_id, size);
-      |         ^~~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 5 has type ‘size_t’ {aka ‘long unsigned int’} [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-./include/linux/printk.h:366:16: note: in expansion of macro ‘KERN_INFO’
-  366 |         printk(KERN_INFO pr_fmt(fmt), ##__VA_ARGS__)
-      |                ^~~~~~~~~
-sound/soc/codecs/audio/driver/audio_extend_drv.c:204:9: note: in expansion of macro ‘pr_info’
-  204 |         pr_info("%s: b_ivdata_support=%d, i2s_id_in=%d, size=%d!\n", __func__, b_ivdata_support, i2s_id_in, size);
-      |         ^~~~~~~
-drivers/android/binder.c: In function ‘binder_proc_transaction’:
-drivers/android/binder.c:3342:20: error: inlining failed in call to ‘always_inline’ ‘is_launcher’: function body not available
- 3342 | extern inline bool is_launcher(struct task_struct *p);
-      |                    ^~~~~~~~~~~
-drivers/android/binder.c:3470:37: note: called from here
- 3470 |                                 if (is_launcher(grp_leader)) {
-      |                                     ^~~~~~~~~~~~~~~~~~~~~~~
-drivers/android/binder.c:3343:20: error: inlining failed in call to ‘always_inline’ ‘ux_debug_enable’: function body not available
- 3343 | extern inline bool ux_debug_enable(void);
-      |                    ^~~~~~~~~~~~~~~
-drivers/android/binder.c:3474:45: note: called from here
- 3474 |                                         if (ux_debug_enable())
-      |                                             ^~~~~~~~~~~~~~~~~
-drivers/android/binder.c:3343:20: error: inlining failed in call to ‘always_inline’ ‘ux_debug_enable’: function body not available
- 3343 | extern inline bool ux_debug_enable(void);
-      |                    ^~~~~~~~~~~~~~~
-drivers/android/binder.c:3474:45: note: called from here
- 3474 |                                         if (ux_debug_enable())
-      |                                             ^~~~~~~~~~~~~~~~~
-cc1: all warnings being treated as errors
-make[5]: *** [scripts/Makefile.build:334: sound/soc/codecs/audio/driver/audio_extend_drv.o] Error 1
-make[4]: *** [scripts/Makefile.build:637: sound/soc/codecs/audio/driver] Error 2
-make[4]: *** Waiting for unfinished jobs....
-make[2]: *** [scripts/Makefile.build:334: drivers/android/binder.o] Error 1
-make[2]: *** Waiting for unfinished jobs....
-In file included from ./include/linux/printk.h:7,
-                 from ./include/linux/kernel.h:13,
-                 from ./include/linux/list.h:9,
-                 from ./include/linux/kobject.h:19,
-                 from ./include/linux/device.h:16,
-                 from sound/soc/codecs/richtek_spm_cls.c:7:
-sound/soc/codecs/richtek_spm_cls.c: In function ‘richtek_spm_class_attr_show’:
-./include/linux/kern_levels.h:5:25: error: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘ptrdiff_t’ {aka ‘long int’} [-Werror=format=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-./include/linux/printk.h:366:16: note: in expansion of macro ‘KERN_INFO’
-  366 |         printk(KERN_INFO pr_fmt(fmt), ##__VA_ARGS__)
-      |                ^~~~~~~~~
-sound/soc/codecs/richtek_spm_cls.c:83:9: note: in expansion of macro ‘pr_info’
-   83 |         pr_info("%s: %d\n", __func__, offset);
-      |         ^~~~~~~
-sound/soc/codecs/richtek_spm_cls.c: In function ‘richtek_spm_class_attr_store’:
-./include/linux/kern_levels.h:5:25: error: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘ptrdiff_t’ {aka ‘long int’} [-Werror=format=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-./include/linux/printk.h:366:16: note: in expansion of macro ‘KERN_INFO’
-  366 |         printk(KERN_INFO pr_fmt(fmt), ##__VA_ARGS__)
-      |                ^~~~~~~~~
-sound/soc/codecs/richtek_spm_cls.c:229:9: note: in expansion of macro ‘pr_info’
-  229 |         pr_info("%s: %d\n", __func__, offset);
-      |         ^~~~~~~
-sound/soc/codecs/richtek_spm_cls.c: In function ‘richtek_spm_dev_attr_show’:
-sound/soc/codecs/richtek_spm_cls.c:374:23: error: format ‘%d’ expects argument of type ‘int’, but argument 4 has type ‘ptrdiff_t’ {aka ‘long int’} [-Werror=format=]
-  374 |         dev_info(dev, "%s: %d\n", __func__, offset);
-      |                       ^~~~~~~~~~
-./include/linux/device.h:1461:22: note: in definition of macro ‘dev_fmt’
- 1461 | #define dev_fmt(fmt) fmt
-      |                      ^~~
-sound/soc/codecs/richtek_spm_cls.c:374:9: note: in expansion of macro ‘dev_info’
-  374 |         dev_info(dev, "%s: %d\n", __func__, offset);
-      |         ^~~~~~~~
-sound/soc/codecs/richtek_spm_cls.c:374:29: note: format string is defined here
-  374 |         dev_info(dev, "%s: %d\n", __func__, offset);
-      |                            ~^
-      |                             |
-      |                             int
-      |                            %ld
-cc1: all warnings being treated as errors
-make[3]: *** [scripts/Makefile.build:333: sound/soc/codecs/richtek_spm_cls.o] Error 1
-make[3]: *** Waiting for unfinished jobs....
-make[1]: *** [scripts/Makefile.build:637: drivers/android] Error 2
-make[1]: *** Waiting for unfinished jobs....
-In file included from ./include/linux/printk.h:7,
-                 from ./include/linux/kernel.h:13,
-                 from ./include/linux/list.h:9,
-                 from ./include/linux/kobject.h:19,
-                 from ./include/linux/device.h:16,
-                 from ./include/linux/i2c.h:30,
-                 from sound/soc/codecs/audio/sia81xx/sia81xx.c:19:
-sound/soc/codecs/audio/sia81xx/sia81xx.c: In function ‘sia81xx_volme_boost_set’:
-./include/linux/kern_levels.h:5:25: error: format ‘%ld’ expects argument of type ‘long int’, but argument 4 has type ‘unsigned int’ [-Werror=format=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:11:25: note: in expansion of macro ‘KERN_SOH’
-   11 | #define KERN_ERR        KERN_SOH "3"    /* error conditions */
-      |                         ^~~~~~~~
-./include/linux/printk.h:359:16: note: in expansion of macro ‘KERN_ERR’
-  359 |         printk(KERN_ERR pr_fmt(fmt), ##__VA_ARGS__)
-      |                ^~~~~~~~
-sound/soc/codecs/audio/sia81xx/sia81xx.c:1817:13: note: in expansion of macro ‘pr_err’
- 1817 |             pr_err("[err][%s] %s: index = %ld, rst = %d ucontrol_value is Invalid parameter\r\n",
-      |             ^~~~~~
-sound/soc/codecs/audio/sia81xx/sia81xx.c: At top level:
-sound/soc/codecs/audio/sia81xx/sia81xx.c:1893:6: error: function declaration isn’t a prototype [-Werror=strict-prototypes]
- 1893 | void sia81xx_start(){
-      |      ^~~~~~~~~~~~~
-sound/soc/codecs/audio/sia81xx/sia81xx.c:1896:6: error: function declaration isn’t a prototype [-Werror=strict-prototypes]
- 1896 | void sia81xx_stop(){
-      |      ^~~~~~~~~~~~
-net/8021q/vlan_core.c: In function ‘vlan_do_receive’:
-net/8021q/vlan_core.c:36:21: warning: ‘ether_addr_equal_64bits’ reading 8 bytes from a region of size 6 [-Wstringop-overread]
-   36 |                 if (ether_addr_equal_64bits(eth_hdr(skb)->h_dest, vlan_dev->dev_addr))
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-net/8021q/vlan_core.c:36:21: note: referencing argument 1 of type ‘const u8[8]’ {aka ‘const unsigned char[8]’}
-net/8021q/vlan_core.c:36:21: note: referencing argument 2 of type ‘const u8[8]’ {aka ‘const unsigned char[8]’}
-In file included from ./include/linux/if_vlan.h:16,
-                 from net/8021q/vlan_core.c:4:
-./include/linux/etherdevice.h:347:20: note: in a call to function ‘ether_addr_equal_64bits’
-  347 | static inline bool ether_addr_equal_64bits(const u8 addr1[6+2],
-      |                    ^~~~~~~~~~~~~~~~~~~~~~~
-cc1: all warnings being treated as errors
-make[5]: *** [scripts/Makefile.build:333: sound/soc/codecs/audio/sia81xx/sia81xx.o] Error 1
-make[5]: *** Waiting for unfinished jobs....
-make[4]: *** [scripts/Makefile.build:637: sound/soc/codecs/audio/sia81xx] Error 2
-make[3]: *** [scripts/Makefile.build:637: sound/soc/codecs/audio] Error 2
-make[2]: *** [scripts/Makefile.build:637: sound/soc/codecs] Error 2
-make[1]: *** [scripts/Makefile.build:637: sound/soc] Error 2
-make: *** [Makefile:1212: sound] Error 2
-make: *** Waiting for unfinished jobs....
-In file included from ./include/linux/printk.h:7,
-                 from ./include/linux/kernel.h:13,
-                 from ./include/asm-generic/bug.h:18,
-                 from ./arch/arm64/include/asm/bug.h:37,
-                 from ./include/linux/bug.h:5,
-                 from ./include/linux/mmdebug.h:5,
-                 from ./include/linux/gfp.h:5,
-                 from ./include/linux/slab.h:15,
-                 from drivers/block/zram/hybridswap/hybridmain.c:8:
-drivers/block/zram/hybridswap/hybridmain.c: In function ‘mem_cgroup_force_shrink_anon’:
-./include/linux/kern_levels.h:5:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 10 has type ‘long unsigned int’ [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
-   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
-      |                        ^~~~~~~~~
-drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
-   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
-      |                          ^~~~
-drivers/block/zram/hybridswap/hybridmain.c:518:9: note: in expansion of macro ‘log_info’
-  518 |         log_info("%s try to reclaim %d pages and reclaim %d pages\n",
-      |         ^~~~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 11 has type ‘long unsigned int’ [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
-   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
-      |                        ^~~~~~~~~
-drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
-   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
-      |                          ^~~~
-drivers/block/zram/hybridswap/hybridmain.c:518:9: note: in expansion of macro ‘log_info’
-  518 |         log_info("%s try to reclaim %d pages and reclaim %d pages\n",
-      |         ^~~~~~~~
-drivers/block/zram/hybridswap/hybridmain.c: In function ‘mem_cgroup_force_shrink_file’:
-./include/linux/kern_levels.h:5:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 10 has type ‘long unsigned int’ [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
-   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
-      |                        ^~~~~~~~~
-drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
-   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
-      |                          ^~~~
-drivers/block/zram/hybridswap/hybridmain.c:537:9: note: in expansion of macro ‘log_info’
-  537 |         log_info("%s try to reclaim %d pages and reclaim %d pages\n",
-      |         ^~~~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 11 has type ‘long unsigned int’ [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
-   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
-      |                        ^~~~~~~~~
-drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
-   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
-      |                          ^~~~
-drivers/block/zram/hybridswap/hybridmain.c:537:9: note: in expansion of macro ‘log_info’
-  537 |         log_info("%s try to reclaim %d pages and reclaim %d pages\n",
-      |         ^~~~~~~~
-drivers/block/zram/hybridswap/hybridswapd.c: In function ‘avail_buffers_params_show’:
-drivers/block/zram/hybridswap/hybridswapd.c:252:48: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘long unsigned int’ [-Wformat=]
-  252 |         seq_printf(m, "free_swap_threshold: %llu\n",
-      |                                             ~~~^
-      |                                                |
-      |                                                long long unsigned int
-      |                                             %lu
-  253 |                         (atomic64_read(&free_swap_threshold) * PAGE_SIZE / SZ_1M));
-      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      |                                                                          |
-      |                                                                          long unsigned int
-In file included from ./include/linux/printk.h:7,
-                 from ./include/linux/kernel.h:13,
-                 from ./include/linux/list.h:9,
-                 from ./include/linux/rculist.h:10,
-                 from ./include/linux/pid.h:5,
-                 from ./include/linux/sched.h:14,
-                 from drivers/block/zram/hybridswap/hybridswapd.c:9:
-drivers/block/zram/hybridswap/hybridswapd.c: In function ‘get_hs_swap_anon_refault_status’:
-./include/linux/kern_levels.h:5:25: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 12 has type ‘long unsigned int’ [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
-   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
-      |                        ^~~~~~~~~
-drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
-   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
-      |                          ^~~~
-drivers/block/zram/hybridswap/hybridswapd.c:918:9: note: in expansion of macro ‘log_info’
-  918 |         log_info("current %llu t %llu last %llu t %llu ratio %llu refault_ratio %llu\n",
-      |         ^~~~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 14 has type ‘atomic64_t’ [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
-   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
-      |                        ^~~~~~~~~
-drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
-   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
-      |                          ^~~~
-drivers/block/zram/hybridswap/hybridswapd.c:918:9: note: in expansion of macro ‘log_info’
-  918 |         log_info("current %llu t %llu last %llu t %llu ratio %llu refault_ratio %llu\n",
-      |         ^~~~~~~~
-drivers/block/zram/hybridswap/hybridswapd.c: In function ‘calc_shrink_ratio’:
-./include/linux/kern_levels.h:5:25: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 10 has type ‘long long int’ [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
-   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
-      |                        ^~~~~~~~~
-drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
-   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
-      |                          ^~~~
-drivers/block/zram/hybridswap/hybridswapd.c:1507:17: note: in expansion of macro ‘log_info’
- 1507 |                 log_info("memcg %s can_reclaimed %lu nr_anon %lu zram %lu eswap %lu total %lu ratio %lu thresh %lu\n",
-      |                 ^~~~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 11 has type ‘s64’ {aka ‘long long int’} [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
-   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
-      |                        ^~~~~~~~~
-drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
-   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
-      |                          ^~~~
-drivers/block/zram/hybridswap/hybridswapd.c:1507:17: note: in expansion of macro ‘log_info’
- 1507 |                 log_info("memcg %s can_reclaimed %lu nr_anon %lu zram %lu eswap %lu total %lu ratio %lu thresh %lu\n",
-      |                 ^~~~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 12 has type ‘s64’ {aka ‘long long int’} [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
-   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
-      |                        ^~~~~~~~~
-drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
-   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
-      |                          ^~~~
-drivers/block/zram/hybridswap/hybridswapd.c:1507:17: note: in expansion of macro ‘log_info’
- 1507 |                 log_info("memcg %s can_reclaimed %lu nr_anon %lu zram %lu eswap %lu total %lu ratio %lu thresh %lu\n",
-      |                 ^~~~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 13 has type ‘s64’ {aka ‘long long int’} [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
-   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
-      |                        ^~~~~~~~~
-drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
-   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
-      |                          ^~~~
-drivers/block/zram/hybridswap/hybridswapd.c:1507:17: note: in expansion of macro ‘log_info’
- 1507 |                 log_info("memcg %s can_reclaimed %lu nr_anon %lu zram %lu eswap %lu total %lu ratio %lu thresh %lu\n",
-      |                 ^~~~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 14 has type ‘s64’ {aka ‘long long int’} [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
-   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
-      |                        ^~~~~~~~~
-drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
-   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
-      |                          ^~~~
-drivers/block/zram/hybridswap/hybridswapd.c:1507:17: note: in expansion of macro ‘log_info’
- 1507 |                 log_info("memcg %s can_reclaimed %lu nr_anon %lu zram %lu eswap %lu total %lu ratio %lu thresh %lu\n",
-      |                 ^~~~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 15 has type ‘s64’ {aka ‘long long int’} [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
-   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
-      |                        ^~~~~~~~~
-drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
-   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
-      |                          ^~~~
-drivers/block/zram/hybridswap/hybridswapd.c:1507:17: note: in expansion of macro ‘log_info’
- 1507 |                 log_info("memcg %s can_reclaimed %lu nr_anon %lu zram %lu eswap %lu total %lu ratio %lu thresh %lu\n",
-      |                 ^~~~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 16 has type ‘s64’ {aka ‘long long int’} [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
-   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
-      |                        ^~~~~~~~~
-drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
-   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
-      |                          ^~~~
-drivers/block/zram/hybridswap/hybridswapd.c:1507:17: note: in expansion of macro ‘log_info’
- 1507 |                 log_info("memcg %s can_reclaimed %lu nr_anon %lu zram %lu eswap %lu total %lu ratio %lu thresh %lu\n",
-      |                 ^~~~~~~~
-drivers/block/zram/hybridswap/hybridswapd.c: In function ‘swapd_shrink_anon’:
-./include/linux/kern_levels.h:5:25: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 12 has type ‘u64’ {aka ‘long long unsigned int’} [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
-   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
-      |                        ^~~~~~~~~
-drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
-   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
-      |                          ^~~~
-drivers/block/zram/hybridswap/hybridswapd.c:1585:9: note: in expansion of macro ‘log_info’
- 1585 |         log_info("total_reclaim %lu nr_to_reclaim %lu from memcg %lu total_can_reclaimed %lu\n",
-      |         ^~~~~~~~
-drivers/block/zram/hybridswap/hybridswapd.c: In function ‘swapd_shrink_node’:
-./include/linux/kern_levels.h:5:25: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 10 has type ‘unsigned int’ [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
-   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
-      |                        ^~~~~~~~~
-drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
-   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
-      |                          ^~~~
-drivers/block/zram/hybridswap/hybridswapd.c:1655:9: note: in expansion of macro ‘log_info’
- 1655 |         log_info("total_reclaimed %lu KB, avail buffer %lu %lu MB, swapd_skip_interval %llu\n",
-      |         ^~~~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 11 has type ‘unsigned int’ [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
-   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
-      |                        ^~~~~~~~~
-drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
-   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
-      |                          ^~~~
-drivers/block/zram/hybridswap/hybridswapd.c:1655:9: note: in expansion of macro ‘log_info’
- 1655 |         log_info("total_reclaimed %lu KB, avail buffer %lu %lu MB, swapd_skip_interval %llu\n",
-      |         ^~~~~~~~
-drivers/block/zram/hybridswap/hybridswapd.c: In function ‘swapd’:
-./include/linux/kern_levels.h:5:25: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 9 has type ‘u64’ {aka ‘long long unsigned int’} [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
-   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
-      |                        ^~~~~~~~~
-drivers/block/zram/hybridswap/internal.h:76:25: note: in expansion of macro ‘hybp’
-   76 | #define log_dbg(f, ...) hybp(HS_LOG_DEBUG, f, ##__VA_ARGS__)
-      |                         ^~~~
-drivers/block/zram/hybridswap/hybridswapd.c:1717:33: note: in expansion of macro ‘log_dbg’
- 1717 |                                 log_dbg("SWAPD_SWAPOUT curr %u avail %lu size %lu maybe swapout %lu\n",
-      |                                 ^~~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 10 has type ‘u64’ {aka ‘long long unsigned int’} [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
-   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
-      |                        ^~~~~~~~~
-drivers/block/zram/hybridswap/internal.h:76:25: note: in expansion of macro ‘hybp’
-   76 | #define log_dbg(f, ...) hybp(HS_LOG_DEBUG, f, ##__VA_ARGS__)
-      |                         ^~~~
-drivers/block/zram/hybridswap/hybridswapd.c:1717:33: note: in expansion of macro ‘log_dbg’
- 1717 |                                 log_dbg("SWAPD_SWAPOUT curr %u avail %lu size %lu maybe swapout %lu\n",
-      |                                 ^~~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 11 has type ‘u64’ {aka ‘long long unsigned int’} [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
-   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
-      |                        ^~~~~~~~~
-drivers/block/zram/hybridswap/internal.h:76:25: note: in expansion of macro ‘hybp’
-   76 | #define log_dbg(f, ...) hybp(HS_LOG_DEBUG, f, ##__VA_ARGS__)
-      |                         ^~~~
-drivers/block/zram/hybridswap/hybridswapd.c:1717:33: note: in expansion of macro ‘log_dbg’
- 1717 |                                 log_dbg("SWAPD_SWAPOUT curr %u avail %lu size %lu maybe swapout %lu\n",
-      |                                 ^~~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 12 has type ‘u64’ {aka ‘long long unsigned int’} [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
-   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
-      |                        ^~~~~~~~~
-drivers/block/zram/hybridswap/internal.h:76:25: note: in expansion of macro ‘hybp’
-   76 | #define log_dbg(f, ...) hybp(HS_LOG_DEBUG, f, ##__VA_ARGS__)
-      |                         ^~~~
-drivers/block/zram/hybridswap/hybridswapd.c:1717:33: note: in expansion of macro ‘log_dbg’
- 1717 |                                 log_dbg("SWAPD_SWAPOUT curr %u avail %lu size %lu maybe swapout %lu\n",
-      |                                 ^~~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 9 has type ‘u64’ {aka ‘long long unsigned int’} [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
-   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
-      |                        ^~~~~~~~~
-drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
-   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
-      |                          ^~~~
-drivers/block/zram/hybridswap/hybridswapd.c:1721:33: note: in expansion of macro ‘log_info’
- 1721 |                                 log_info("SWAPD_SKIP_SWAPOUT curr %u avail %lu\n",
-      |                                 ^~~~~~~~
-./include/linux/kern_levels.h:5:25: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 10 has type ‘u64’ {aka ‘long long unsigned int’} [-Wformat=]
-    5 | #define KERN_SOH        "\001"          /* ASCII Start Of Header */
-      |                         ^~~~~~
-./include/linux/kern_levels.h:14:25: note: in expansion of macro ‘KERN_SOH’
-   14 | #define KERN_INFO       KERN_SOH "6"    /* informational */
-      |                         ^~~~~~~~
-drivers/block/zram/hybridswap/internal.h:66:24: note: in expansion of macro ‘KERN_INFO’
-   66 |                 printk(KERN_INFO "%s %5d %5d %c %-16s: %s:%d "f,        \
-      |                        ^~~~~~~~~
-drivers/block/zram/hybridswap/internal.h:75:26: note: in expansion of macro ‘hybp’
-   75 | #define log_info(f, ...) hybp(HS_LOG_INFO, f, ##__VA_ARGS__)
-      |                          ^~~~
-drivers/block/zram/hybridswap/hybridswapd.c:1721:33: note: in expansion of macro ‘log_info’
- 1721 |                                 log_info("SWAPD_SKIP_SWAPOUT curr %u avail %lu\n",
-      |                                 ^~~~~~~~
-In file included from ./include/linux/export.h:45,
-                 from ./include/linux/linkage.h:7,
-                 from ./include/linux/kernel.h:6,
-                 from ./include/linux/list.h:9,
-                 from ./include/linux/module.h:9,
-                 from net/ethernet/eth.c:40:
-net/ethernet/eth.c: In function ‘eth_type_trans’:
-net/ethernet/eth.c:168:22: warning: ‘is_multicast_ether_addr_64bits’ reading 8 bytes from a region of size 6 [-Wstringop-overread]
-  168 |         if (unlikely(is_multicast_ether_addr_64bits(eth->h_dest))) {
-./include/linux/compiler.h:77:45: note: in definition of macro ‘unlikely’
-   77 | # define unlikely(x)    __builtin_expect(!!(x), 0)
-      |                                             ^
-net/ethernet/eth.c:168:22: note: referencing argument 1 of type ‘const u8[8]’ {aka ‘const unsigned char[8]’}
-  168 |         if (unlikely(is_multicast_ether_addr_64bits(eth->h_dest))) {
-./include/linux/compiler.h:77:45: note: in definition of macro ‘unlikely’
-   77 | # define unlikely(x)    __builtin_expect(!!(x), 0)
-      |                                             ^
-In file included from net/ethernet/eth.c:50:
-./include/linux/etherdevice.h:133:20: note: in a call to function ‘is_multicast_ether_addr_64bits’
-  133 | static inline bool is_multicast_ether_addr_64bits(const u8 addr[6+2])
-      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-net/ethernet/eth.c:169:21: warning: ‘ether_addr_equal_64bits’ reading 8 bytes from a region of size 6 [-Wstringop-overread]
-  169 |                 if (ether_addr_equal_64bits(eth->h_dest, dev->broadcast))
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-net/ethernet/eth.c:169:21: note: referencing argument 1 of type ‘const u8[8]’ {aka ‘const unsigned char[8]’}
-net/ethernet/eth.c:169:21: note: referencing argument 2 of type ‘const u8[8]’ {aka ‘const unsigned char[8]’}
-./include/linux/etherdevice.h:347:20: note: in a call to function ‘ether_addr_equal_64bits’
-  347 | static inline bool ether_addr_equal_64bits(const u8 addr1[6+2],
-      |                    ^~~~~~~~~~~~~~~~~~~~~~~
-net/ethernet/eth.c:174:28: warning: ‘ether_addr_equal_64bits’ reading 8 bytes from a region of size 6 [-Wstringop-overread]
-  174 |         else if (unlikely(!ether_addr_equal_64bits(eth->h_dest,
-      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  175 |                                                    dev->dev_addr)))
-      |                                                    ~~~~~~~~~~~~~~
-./include/linux/compiler.h:77:45: note: in definition of macro ‘unlikely’
-   77 | # define unlikely(x)    __builtin_expect(!!(x), 0)
-      |                                             ^
-net/ethernet/eth.c:174:28: note: referencing argument 1 of type ‘const u8[8]’ {aka ‘const unsigned char[8]’}
-  174 |         else if (unlikely(!ether_addr_equal_64bits(eth->h_dest,
-      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  175 |                                                    dev->dev_addr)))
-      |                                                    ~~~~~~~~~~~~~~
-./include/linux/compiler.h:77:45: note: in definition of macro ‘unlikely’
-   77 | # define unlikely(x)    __builtin_expect(!!(x), 0)
-      |                                             ^
-net/ethernet/eth.c:174:28: note: referencing argument 2 of type ‘const u8[8]’ {aka ‘const unsigned char[8]’}
-  174 |         else if (unlikely(!ether_addr_equal_64bits(eth->h_dest,
-      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  175 |                                                    dev->dev_addr)))
-      |                                                    ~~~~~~~~~~~~~~
-./include/linux/compiler.h:77:45: note: in definition of macro ‘unlikely’
-   77 | # define unlikely(x)    __builtin_expect(!!(x), 0)
-      |                                             ^
-./include/linux/etherdevice.h:347:20: note: in a call to function ‘ether_addr_equal_64bits’
-  347 | static inline bool ether_addr_equal_64bits(const u8 addr1[6+2],
-      |                    ^~~~~~~~~~~~~~~~~~~~~~~
-drivers/block/zram/hybridswap/hybridswapd_chp.c: In function ‘avail_buffers_params_show’:
-drivers/block/zram/hybridswap/hybridswapd_chp.c:241:48: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘long unsigned int’ [-Wformat=]
-  241 |         seq_printf(m, "free_swap_threshold: %llu\n",
-      |                                             ~~~^
-      |                                                |
-      |                                                long long unsigned int
-      |                                             %lu
-  242 |                    (atomic64_read(&free_swap_threshold) * PAGE_SIZE / SZ_1M));
-      |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      |                                                                     |
-      |                                                                     long unsigned int
-In file included from ./include/linux/list.h:9,
-                 from ./include/linux/rculist.h:10,
-                 from ./include/linux/pid.h:5,
-                 from ./include/linux/sched.h:14,
-                 from drivers/block/zram/hybridswap/hybridswapd_chp.c:9:
-drivers/block/zram/hybridswap/hybridswapd_chp.c: In function ‘get_hybridswapd_reclaim_type’:
-drivers/block/zram/hybridswap/hybridswapd_chp.c:1247:22: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 4 has type ‘int’ [-Wformat=]
- 1247 |         trace_printk("@ %s:%d cma_count:%lu anon_pg: %lu anon_chp_pg: %lu swap_pg: %lu "
-      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-......
- 1250 |                      __func__, __LINE__, pool->cma_count / 3, anon_pg, anon_chp_pg, swap_pg, swap_chp_pg, base_factor,
-      |                                          ~~~~~~~~~~~~~~~~~~~
-      |                                                          |
-      |                                                          int
-./include/linux/kernel.h:656:47: note: in definition of macro ‘__trace_printk_check_format’
-  656 |                 ____trace_printk_check_format(fmt, ##args);             \
-      |                                               ^~~
-./include/linux/kernel.h:693:17: note: in expansion of macro ‘do_trace_printk’
-  693 |                 do_trace_printk(fmt, ##__VA_ARGS__);    \
-      |                 ^~~~~~~~~~~~~~~
-drivers/block/zram/hybridswap/hybridswapd_chp.c:1247:9: note: in expansion of macro ‘trace_printk’
- 1247 |         trace_printk("@ %s:%d cma_count:%lu anon_pg: %lu anon_chp_pg: %lu swap_pg: %lu "
-      |         ^~~~~~~~~~~~
-drivers/block/zram/hybridswap/hybridswapd_chp.c:1247:43: note: format string is defined here
- 1247 |         trace_printk("@ %s:%d cma_count:%lu anon_pg: %lu anon_chp_pg: %lu swap_pg: %lu "
-      |                                         ~~^
-      |                                           |
-      |                                           long unsigned int
-      |                                         %u
-drivers/block/zram/hybridswap/hybridswapd_chp.c:1247:22: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 5 has type ‘int’ [-Wformat=]
- 1247 |         trace_printk("@ %s:%d cma_count:%lu anon_pg: %lu anon_chp_pg: %lu swap_pg: %lu "
-      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-......
- 1250 |                      __func__, __LINE__, pool->cma_count / 3, anon_pg, anon_chp_pg, swap_pg, swap_chp_pg, base_factor,
-      |                                          ~~~~~~~~~~~~~~~~~~~
-      |                                                          |
-      |                                                          int
-./include/linux/kernel.h:709:43: note: in definition of macro ‘do_trace_printk’
-  709 |                 __trace_printk(_THIS_IP_, fmt, ##args);                 \
-      |                                           ^~~
-drivers/block/zram/hybridswap/hybridswapd_chp.c:1247:9: note: in expansion of macro ‘trace_printk’
- 1247 |         trace_printk("@ %s:%d cma_count:%lu anon_pg: %lu anon_chp_pg: %lu swap_pg: %lu "
-      |         ^~~~~~~~~~~~
-drivers/block/zram/hybridswap/hybridswapd_chp.c:1247:43: note: format string is defined here
- 1247 |         trace_printk("@ %s:%d cma_count:%lu anon_pg: %lu anon_chp_pg: %lu swap_pg: %lu "
-      |                                         ~~^
-      |                                           |
-      |                                           long unsigned int
-      |                                         %u
-In file included from drivers/block/zram/hybridswap/hybridswapd_chp.c:27:
-drivers/block/zram/hybridswap/../zram_drv_internal.h: In function ‘zram_compressed_pages’:
-drivers/block/zram/hybridswap/../zram_drv_internal.h:59:29: error: inlining failed in call to ‘always_inline’ ‘zram_page_state’: function body not available
-   59 | extern inline unsigned long zram_page_state(struct zram *zram, int type);
-      |                             ^~~~~~~~~~~~~~~
-drivers/block/zram/hybridswap/hybridswapd_chp.c:1104:24: note: called from here
- 1104 |                 ret += zram_page_state(zram_arr[i], ZRAM_STATE_COMPRESSED_PAGE);
-      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-make[3]: *** [scripts/Makefile.build:333: drivers/block/zram/hybridswap/hybridswapd_chp.o] Error 1
-make[2]: *** [scripts/Makefile.build:637: drivers/block/zram] Error 2
-make[1]: *** [scripts/Makefile.build:637: drivers/block] Error 2
-make: *** [Makefile:1212: drivers] Error 2
-At top level:
-cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
-cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
-In file included from kernel/sched/cpupri.c:31:
-./include/linux/sched_assist/sched_assist_common.h:347:20: warning: ‘is_launcher’ declared ‘static’ but never defined [-Wunused-function]
-  347 | static inline bool is_launcher(struct task_struct *p);
-      |                    ^~~~~~~~~~~
-./include/linux/sched_assist/sched_assist_common.h:348:20: warning: ‘ux_debug_enable’ declared ‘static’ but never defined [-Wunused-function]
-  348 | static inline bool ux_debug_enable(void);
-      |                    ^~~~~~~~~~~~~~~
-cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
-In file included from kernel/sched/walt.c:34:
-./include/linux/sched_assist/sched_assist_common.h:347:20: warning: ‘is_launcher’ declared ‘static’ but never defined [-Wunused-function]
-  347 | static inline bool is_launcher(struct task_struct *p);
-      |                    ^~~~~~~~~~~
-./include/linux/sched_assist/sched_assist_common.h:348:20: warning: ‘ux_debug_enable’ declared ‘static’ but never defined [-Wunused-function]
-  348 | static inline bool ux_debug_enable(void);
-      |                    ^~~~~~~~~~~~~~~
-cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
-make: *** [Makefile:1212: kernel] Error 2
+scripts/kconfig/conf -s --syncconfig Kconfig
+arch/arm64/kernel/rootguard/Kconfig:1:warning: ignoring unsupported character ''
+arch/arm64/kernel/rootguard/Kconfig:2:warning: ignoring unsupported character ''
+arch/arm64/kernel/rootguard/Kconfig:3:warning: ignoring unsupported character ''
+arch/arm64/kernel/rootguard/Kconfig:4:warning: ignoring unsupported character ''
+mm/malloc_track/Kconfig.compat:6: warning: ignoring unknown option env
+drivers/misc/mediatek/base/power/Kconfig:90:warning: ignoring type redefinition of 'MTK_QOS_FRAMEWORK' from 'tristate' to 'bool'
+drivers/misc/mediatek/sensor/2.0/mtk_nanohub/Kconfig:3:warning: ignoring type redefinition of 'CUSTOM_KERNEL_SENSORHUB' from 'bool' to 'tristate'
+drivers/input/touchscreen/mediatek/goodix_berlin_driver/Kconfig:4:warning: ignoring type redefinition of 'TOUCHSCREEN_GOODIX_BRL' from 'bool' to 'tristate'
+drivers/power/supply/mediatek/charger/Kconfig:199:warning: ignoring type redefinition of 'CHARGER_BQ25890' from 'tristate' to 'bool'
+drivers/power/supply/mediatek/charger/Kconfig:199:warning: ignoring type redefinition of 'CHARGER_BQ25890' from 'tristate' to 'bool'
+drivers/power/supply/mediatek/charger/Kconfig:199:warning: ignoring type redefinition of 'CHARGER_BQ25890' from 'tristate' to 'bool'
+drivers/power/supply/mediatek/charger/Kconfig:199:warning: ignoring type redefinition of 'CHARGER_BQ25890' from 'tristate' to 'bool'
+drivers/power/supply/mediatek/charger/Kconfig:199:warning: ignoring type redefinition of 'CHARGER_BQ25890' from 'tristate' to 'bool'
+drivers/power/supply/mediatek/charger/Kconfig:199:warning: ignoring type redefinition of 'CHARGER_BQ25890' from 'tristate' to 'bool'
+drivers/power/supply/mediatek/charger/Kconfig:199:warning: ignoring type redefinition of 'CHARGER_BQ25890' from 'tristate' to 'bool'
+drivers/power/supply/mediatek/charger/Kconfig:199:warning: ignoring type redefinition of 'CHARGER_BQ25890' from 'tristate' to 'bool'
+drivers/power/supply/mediatek/charger/Kconfig:199:warning: ignoring type redefinition of 'CHARGER_BQ25890' from 'tristate' to 'bool'
+drivers/power/supply/mediatek/charger/Kconfig:199:warning: ignoring type redefinition of 'CHARGER_BQ25890' from 'tristate' to 'bool'
+drivers/power/supply/mediatek/charger/Kconfig:199:warning: ignoring type redefinition of 'CHARGER_BQ25890' from 'tristate' to 'bool'
+sound/soc/codecs/audio/Kconfig:17:warning: ignoring type redefinition of 'SND_SOC_AW87339' from 'tristate' to 'bool'
+drivers/soc/mediatek/Kconfig:7:warning: ignoring type redefinition of 'MTK_CMDQ' from 'bool' to 'tristate'
+drivers/soc/oplus/system/Kconfig:24:warning: prompt redefined
+drivers/soc/oplus/system/Kconfig:22:warning: ignoring type redefinition of 'OPPO_DEVICE_IFNO' from 'bool' to 'tristate'
+drivers/input/touchscreen/mediatek/hxchipset_hx83102p/Kconfig:19:warning: choice value used outside its choice group
+drivers/input/touchscreen/mediatek/hxchipset_hx83102p/Kconfig:28:warning: choice value used outside its choice group
+drivers/input/touchscreen/mediatek/hxchipset_hx83102p/Kconfig:16:warning: choice default symbol 'TOUCHSCREEN_HIMAX_INCELL' is not contained in the choice
+
+WARNING: unmet direct dependencies detected for MTK_PID_MAP
+  Depends on [n]: (MTK_GMO_RAM_OPTIMIZE [=n] && MTK_ENG_BUILD [=n] || !MTK_GMO_RAM_OPTIMIZE [=n]) && DEBUG_FS [=n]
+  Selected by [y]:
+  - MACH_MT6768 [=y]
+
+WARNING: unmet direct dependencies detected for MTK_CACHE_PARITY_CHECK
+  Depends on [n]: MTK_SDA [=n]
+  Selected by [y]:
+  - MACH_MT6768 [=y]
+
+WARNING: unmet direct dependencies detected for MTK_PID_MAP
+  Depends on [n]: (MTK_GMO_RAM_OPTIMIZE [=n] && MTK_ENG_BUILD [=n] || !MTK_GMO_RAM_OPTIMIZE [=n]) && DEBUG_FS [=n]
+  Selected by [y]:
+  - MACH_MT6768 [=y]
+
+WARNING: unmet direct dependencies detected for MTK_CACHE_PARITY_CHECK
+  Depends on [n]: MTK_SDA [=n]
+  Selected by [y]:
+  - MACH_MT6768 [=y]
+
+WARNING: unmet direct dependencies detected for MTK_PID_MAP
+  Depends on [n]: (MTK_GMO_RAM_OPTIMIZE [=n] && MTK_ENG_BUILD [=n] || !MTK_GMO_RAM_OPTIMIZE [=n]) && DEBUG_FS [=n]
+  Selected by [y]:
+  - MACH_MT6768 [=y]
+
+WARNING: unmet direct dependencies detected for MTK_CACHE_PARITY_CHECK
+  Depends on [n]: MTK_SDA [=n]
+  Selected by [y]:
+  - MACH_MT6768 [=y]
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_HANS_FREEZE
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_STORAGE_TOOL
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MMC_DRIVER
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_UFS_DRIVER
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_UFS_SHOW_LATENCY
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_AOD
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_DC
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_ENABLE_MODEM_DB
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_ENGINEERTOOLS
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_FACERECOGNITION
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_FASTBOOT_UNLOCK_VERIFY
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_FG_IO_OPT
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SDCARD_INFO
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_FINGERPRINT
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_HEALTHINFO
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_TASK_CPUSTATS
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MIPICLKCHANGE
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MULTI_FREEAREA
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MULTI_KSWAPD
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_NFC_CONSOFT
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_ONSCREENFINGERPRINT
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_OSC
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_PHOENIX
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_AGINGTEST
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_PROCESS_RECLAIM
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_RESET_ROLLBACK_INDEX
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SELINUX_CONTROL_LOG
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SENSOR
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SENSOR_ALGORITHM
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SENSOR_SMEM
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SENSOR_WISELIGHT
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_IOMONITOR
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SPEAKER_MUTE
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MM_FEEDBACK
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_TP_BSPFWUPDATE
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_TP_BASIC
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_CHG_BASIC
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SCHED_ASSIST
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SIGKILL_DIAGNOSIS
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_VIRTUAL_RESERVE_MEMORY
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MEMLEAK_DETECT
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_MTUDETECT
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_RUSUPGRADE
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_SLA
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_DATA_EVAL
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_ZRAM_OPT
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_EXFAT_SUPPORT
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SDCARDFS_SUPPORT
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_PERFORMANCE
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_BUG_COMPATIBILITY
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_BUG_STABILITY
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_BUG_DEBUG
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_ARCH_INJECT
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_ARCH_EXTENDS
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_LOWMEM_DBG
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_BUG_STABILITY
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_POWERINFO_STANDBY
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_CAMERA_COMMON
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MTK_ION_SEPARATE_LOCK
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_THEIA
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_APP_MONITOR
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SCHEDUTIL_USE_TL
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_HEALTHINFO
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_DISPLAY
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_KMSG_WB
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_DATA_MODULE
+$GED: CONFIG_MTK_PLATFORM is ["mt6768"]
+*MTK_GPU_VERSION 2 = valhall
+*MTK_GPU_VERSION 3 = r32p1
+mali MTK evironment, building r32p1 DDK
+mtk-Kbuild CONFIG_MALI_PLATFORM_THIRDPARTY := y
+mtk-Kbuild CONFIG_MALI_PLATFORM_THIRDPARTY_NAME := "mt6768"
+mali MTK evironment, building r32p1 DDK
+mtk-Kbuild CONFIG_MALI_PLATFORM_THIRDPARTY := y
+mtk-Kbuild CONFIG_MALI_PLATFORM_THIRDPARTY_NAME := "mt6768"
+mali MTK evironment, building r32p1 DDK
+mtk-Kbuild CONFIG_MALI_PLATFORM_THIRDPARTY := y
+mtk-Kbuild CONFIG_MALI_PLATFORM_THIRDPARTY_NAME := "mt6768"
+ION:enable mtk ion
+drivers/misc/mediatek/base/power/cpufreq_v1/src/Makefile:89: "use CONFIG_MTK_TINYSYS_SSPM_V1"
+.
+FDVT: Drv use 4.0 folder
+.
+.
+drivers/misc/mediatek/ccu/src/Makefile:33: CCU_MAKE_FILE_CALLED
+drivers/misc/mediatek/ccu/src/1.2/Makefile:28: CCU_INC=./drivers/misc/mediatek/ccu/src/mt6768/ccu_ext_interface
+drivers/misc/mediatek/base/power/ppm_v3/src/Makefile:110: USE_PPM_CPI
+CONFIG_MTK_PLATFORM_CCCI := mt6768
+CONFIG_MTK_PLATFORM_CCCI := "mt6768"
+MTK_PLATFORM_CCCI := mt6768
+************  drivers/trusty/mtee-kree mk ************
+M4U platform folder:"mt6768"
+M4U version:2.0
+imgsensor drv by common ../common/v1/s5k2t7sp_mipi_raw/ ../common/v1/s5k2p7_mipi_raw/ ../common/v1/ov8856_mipi_raw/ ../common/v1/imx386_mipi_raw/ ../common/v1/imx398_mipi_raw/ ../common/v1/s5k2l7_mipi_raw/ ../common/v1/even_qtech_main_s5kgm1st03/ ../common/v1/even_qtech_main_ov13b10/ ../common/v1/even_hlt_front_s5k4h7/ ../common/v1/even_hlt_depth_gc02m1b/ ../common/v1/even_shengtai_macro_ov02b10/ ../common/v1/even_shengtai_front_ov8856/
+imgsensor drv by platform imx519_mipi_raw/
+TCORE_UT_TESTS_SUPPORT = n
+TCORE_PROFILING_SUPPORT = n
+TCORE_PROFILING_AUTO_DUMP = n
+TCORE_MEMORY_LEAK_DETECTION_SUPPORT = n
+kernel/signal.c:1064:9: warning: ISO C90 forbids mixing declarations and code [-Wdeclaration-after-statement]
+                        bool is_key = is_key_process(t);
+                             ^
+1 warning generated.
