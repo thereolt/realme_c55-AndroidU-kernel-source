@@ -54,3 +54,4 @@ ccflags-y += -DCONFIG_MTK_QOS_SUPPORT
 obj-$(CONFIG_MACH_MT6768) += mtk_gpu_bw.o
 endif
 endif
+ccflags-y += -I$(srctree)/drivers/gpu/mediatek/gpufreq/mt6768

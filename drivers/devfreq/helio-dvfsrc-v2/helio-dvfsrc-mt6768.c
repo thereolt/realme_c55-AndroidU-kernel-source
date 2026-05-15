@@ -13,9 +13,9 @@
 #include <mt_emi_api.h>
 #include <mt-plat/mtk_devinfo.h>
 
-#include "helio-dvfsrc_v2.h>
-#include "helio-dvfsrc-opp.h>
-#include "mtk_dvfsrc_reg.h>
+#include "helio-dvfsrc_v2.h"
+#include "helio-dvfsrc-opp.h"
+#include "mtk_dvfsrc_reg.h"
 #include <mtk_spm_internal.h>
 #include <spm/mtk_vcore_dvfs.h>
 #include <mtk_gpufreq.h>

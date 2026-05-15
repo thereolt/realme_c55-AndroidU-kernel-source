@@ -35,3 +35,4 @@ ccflags-y += -I$(srctree)/drivers/misc/mediatek/imgsensor/inc
 #obj-$(CONFIG_MTK_VPU) += ccu_hw.o
 obj-y += ccu_hw.o ccu_reg.o ccu_kd_mailbox.o ccu_i2c_hw.o ccu_sw_ver.o
 
+ccflags-y += -I$(srctree)/drivers/misc/mediatek/ccu/src/mt6768

@@ -9,8 +9,8 @@
 #include <linux/pm_qos.h>
 #include <linux/sysfs.h>
 #include <linux/mutex.h>
-#include "helio-dvfsrc_v2.h>
-#include "helio-dvfsrc-opp.h>
+#include "helio-dvfsrc_v2.h"
+#include "helio-dvfsrc-opp.h"
 
 __weak void dvfsrc_enable_dvfs_freq_hopping(int gps_on)
 {

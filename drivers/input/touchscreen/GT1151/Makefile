@@ -13,3 +13,5 @@ obj-y   +=  tpd_default.o
 obj-y   +=  tpd_misc.o
 obj-y   +=  tpd_setting.o
 
+ccflags-y += -I$(srctree)/drivers/input/touchscreen/GT1151
+ccflags-y += -I$(srctree)/drivers/input/touchscreen/GT1151
