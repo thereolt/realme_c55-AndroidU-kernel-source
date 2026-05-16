@@ -52,3 +52,4 @@ obj-y += models/mtk_idle_dram.o
 obj-y += models/mtk_idle_syspll.o
 obj-y += models/mtk_idle_bus26m.o
 ccflags-y += -I$(srctree)/drivers/misc/mediatek/base/power/spm/mt6768
+ccflags-y += -I$(srctree)/drivers/misc/mediatek/base/power/spm/mt6768

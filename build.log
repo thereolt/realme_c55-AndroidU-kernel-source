@@ -81,59 +81,44 @@ mtk-Kbuild CONFIG_MALI_PLATFORM_THIRDPARTY_NAME := "mt6768"
 drivers/misc/mediatek/base/power/cpufreq_v1/src/Makefile:89: "use CONFIG_MTK_TINYSYS_SSPM_V1"
 .
 FDVT: Drv use 4.0 folder
+.
+.
 drivers/misc/mediatek/ccu/src/Makefile:33: CCU_MAKE_FILE_CALLED
-.
 drivers/misc/mediatek/ccu/src/1.2/Makefile:28: CCU_INC=./drivers/misc/mediatek/ccu/src/mt6768/ccu_ext_interface
+drivers/misc/mediatek/base/power/ppm_v3/src/Makefile:110: USE_PPM_CPI
 ION:enable mtk ion
-.
+drivers/misc/mediatek/base/power/upower_v2/Makefile:33: extraneous text after 'ifeq' directive
 drivers/tee/gud/Makefile.include:2: "CONFIG_MTK_PLATFORM: "mt6768""
 drivers/tee/gud/Makefile.include:3: "CONFIG_TRUSTONIC_TEE_VERSION: "500""
-drivers/misc/mediatek/base/power/ppm_v3/src/Makefile:110: USE_PPM_CPI
-drivers/misc/mediatek/base/power/spm/mt6768/mtk_spm.c:351:10: error: implicit declaration of function 'spm_read' [-Werror,-Wimplicit-function-declaration]
-                return spm_read(PWR_STATUS);
-                       ^
-drivers/misc/mediatek/base/power/spm/mt6768/mtk_spm.c:351:19: error: use of undeclared identifier 'PWR_STATUS'; did you mean 'NR_STATS'?
-                return spm_read(PWR_STATUS);
-                                ^~~~~~~~~~
-                                NR_STATS
-./include/linux/kernel_stat.h:31:2: note: 'NR_STATS' declared here
-        NR_STATS,
-        ^
-drivers/misc/mediatek/base/power/spm/mt6768/mtk_spm.c:353:19: error: use of undeclared identifier 'MD1_PWR_CON'
-                return spm_read(MD1_PWR_CON);
-                                ^
-drivers/misc/mediatek/base/power/spm/mt6768/mtk_spm.c:355:19: error: use of undeclared identifier 'PCM_REG13_DATA'
-                return spm_read(PCM_REG13_DATA);
-                                ^
-drivers/misc/mediatek/base/power/spm/mt6768/mtk_spm.c:357:19: error: use of undeclared identifier 'SPARE_ACK_MASK'; did you mean 'SPM_SPARE_ACK_MASK'?
-                return spm_read(SPARE_ACK_MASK);
-                                ^~~~~~~~~~~~~~
-                                SPM_SPARE_ACK_MASK
-./drivers/misc/mediatek/base/power/include/spm_v1/mtk_spm.h:33:2: note: 'SPM_SPARE_ACK_MASK' declared here
-        SPM_SPARE_ACK_MASK,
-        ^
-5 errors generated.
-make[7]: *** [scripts/Makefile.build:333: drivers/misc/mediatek/base/power/spm/mt6768/mtk_spm.o] Error 1
-make[6]: *** [scripts/Makefile.build:637: drivers/misc/mediatek/base/power/spm/mt6768] Error 2
-make[6]: *** Waiting for unfinished jobs....
-drivers/misc/mediatek/base/power/upower_v2/Makefile:33: extraneous text after 'ifeq' directive
-drivers/misc/mediatek/base/power/spm/common_v1/mtk_idle_select.c:120:43: error: too few arguments provided to function-like macro invocation
-        __profile_idle_start(PIDX_SELECT_TO_ENTER);
-                                                 ^
-./drivers/misc/mediatek/base/power/spm/common/mtk_idle_internal.h:198:9: note: macro '__profile_idle_start' defined here
-#define __profile_idle_start(idle_type, idx) \
-        ^
-drivers/misc/mediatek/base/power/spm/common_v1/mtk_idle_select.c:120:2: error: use of undeclared identifier '__profile_idle_start'
-        __profile_idle_start(PIDX_SELECT_TO_ENTER);
-        ^
-2 errors generated.
-make[7]: *** [scripts/Makefile.build:333: drivers/misc/mediatek/base/power/spm/common_v1/mtk_idle_select.o] Error 1
-make[7]: *** Waiting for unfinished jobs....
-make[6]: *** [scripts/Makefile.build:637: drivers/misc/mediatek/base/power/spm/common_v1] Error 2
-make[5]: *** [scripts/Makefile.build:637: drivers/misc/mediatek/base/power/spm] Error 2
-make[5]: *** Waiting for unfinished jobs....
-make[4]: *** [scripts/Makefile.build:637: drivers/misc/mediatek/base/power] Error 2
-make[3]: *** [scripts/Makefile.build:637: drivers/misc/mediatek/base] Error 2
+CONFIG_MTK_PLATFORM_CCCI := mt6768
+CONFIG_MTK_PLATFORM_CCCI := "mt6768"
+MTK_PLATFORM_CCCI := mt6768
+CONFIG_MTK_PLATFORM := mt6768
+CONFIG_MTK_PLATFORM := "mt6768"
+MTK_PLATFORM := "mt6768"
+CONFIG_MTK_PLATFORM := mt6768
+CONFIG_MTK_PLATFORM := "mt6768"
+MTK_PLATFORM := "mt6768"
+************  drivers/trusty/mtee-kree mk ************
+drivers/tee/gud/Makefile.include:2: "CONFIG_MTK_PLATFORM: "mt6768""
+drivers/tee/gud/Makefile.include:3: "CONFIG_TRUSTONIC_TEE_VERSION: "500""
+imgsensor drv by common ../common/v1/s5k2t7sp_mipi_raw/ ../common/v1/s5k2p7_mipi_raw/ ../common/v1/ov8856_mipi_raw/ ../common/v1/imx386_mipi_raw/ ../common/v1/imx398_mipi_raw/ ../common/v1/s5k2l7_mipi_raw/ ../common/v1/even_qtech_main_s5kgm1st03/ ../common/v1/even_qtech_main_ov13b10/ ../common/v1/even_hlt_front_s5k4h7/ ../common/v1/even_hlt_depth_gc02m1b/ ../common/v1/even_shengtai_macro_ov02b10/ ../common/v1/even_shengtai_front_ov8856/
+imgsensor drv by platform imx519_mipi_raw/
+drivers/misc/mediatek/leds/mtk_leds_drv.c:19:10: error: 'mtk_leds_drv.h' file not found with <angled> include; use "quotes" instead
+#include <mtk_leds_drv.h>
+         ^~~~~~~~~~~~~~~~
+         "mtk_leds_drv.h"
+In file included from drivers/misc/mediatek/leds/mt6768/mtk_leds.c:46:
+drivers/misc/mediatek/leds/mt6768/../mtk_leds_drv.h:8:10: fatal error: 'mtk_leds_hal.h' file not found
+#include <mtk_leds_hal.h>
+         ^~~~~~~~~~~~~~~~
+1 error generated.
+make[5]: *** [scripts/Makefile.build:334: drivers/misc/mediatek/leds/mt6768/mtk_leds.o] Error 1
+make[4]: *** [scripts/Makefile.build:637: drivers/misc/mediatek/leds/mt6768] Error 2
+make[4]: *** Waiting for unfinished jobs....
+1 error generated.
+make[4]: *** [scripts/Makefile.build:334: drivers/misc/mediatek/leds/mtk_leds_drv.o] Error 1
+make[3]: *** [scripts/Makefile.build:637: drivers/misc/mediatek/leds] Error 2
 make[3]: *** Waiting for unfinished jobs....
 make[2]: *** [scripts/Makefile.build:637: drivers/misc/mediatek] Error 2
 make[1]: *** [scripts/Makefile.build:637: drivers/misc] Error 2

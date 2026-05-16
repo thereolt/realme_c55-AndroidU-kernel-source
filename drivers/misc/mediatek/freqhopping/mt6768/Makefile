@@ -22,3 +22,4 @@ else
 obj-y := mtk_freqhopping.o
 endif
 
+ccflags-y += -I$(srctree)/drivers/misc/mediatek/freqhopping/mt6768

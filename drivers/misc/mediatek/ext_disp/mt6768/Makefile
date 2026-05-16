@@ -64,3 +64,4 @@ obj-y :=  \
     extd_lcm.o \
     extd_multi_control.o \
     extd_factory.o
+ccflags-y += -I$(srctree)/drivers/misc/mediatek/ext_disp/mt6768

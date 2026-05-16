@@ -37,3 +37,4 @@ ccci_hif_all-y += ccci_ringbuf.o ccci_hif_ccif.o
 endif
 
 ccflags-y += -Wno-error=pointer-to-int-cast
+ccflags-y += -I$(srctree)/drivers/misc/mediatek/eccci/hif

@@ -1,3 +1,4 @@
+ccflags-y += -I$(srctree)/drivers/misc/mediatek/base/power/spm/common_v1/
 ccflags-y += -I$(srctree)/drivers/misc/mediatek/base/power/spm/$(MTK_PLATFORM)/
 ccflags-y += -I$(srctree)/drivers/misc/mediatek/include/
 ccflags-y += -I$(srctree)/drivers/misc/mediatek/base/power/include/
@@ -53,3 +54,4 @@ obj-y += mtk_sleep_init.o
 obj-y += mtk_vcore_dvfs.o
 obj-y += mtk_idle_module.o
 obj-y += mtk_idle_export_legacy.o
+ccflags-y += -I$(srctree)/drivers/misc/mediatek/base/power/spm/mt6768

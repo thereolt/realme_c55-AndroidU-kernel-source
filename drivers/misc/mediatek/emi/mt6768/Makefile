@@ -28,3 +28,4 @@ obj-y += ../submodule/mpu_v1.o
 obj-y += ../submodule/elm_v2.o
 obj-y += ../submodule/pasr_api_v1.o
 
+ccflags-y += -I$(srctree)/drivers/misc/mediatek/emi/mt6768

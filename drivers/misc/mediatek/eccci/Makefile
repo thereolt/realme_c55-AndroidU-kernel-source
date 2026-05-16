@@ -188,3 +188,5 @@ endif
 
 endif
 ccflags-y += -I$(srctree)/drivers/misc/mediatek/eccci/mt6768
+ccflags-y += -I$(srctree)/drivers/misc/mediatek/eccci/inc
+ccflags-y += -I$(srctree)/drivers/misc/mediatek/eccci
