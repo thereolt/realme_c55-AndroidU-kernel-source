@@ -246,3 +246,4 @@ endif
 endif
 
 obj-$(CONFIG_MTK_MMDVFS) += mmdvfs_wrapper.o
+ccflags-y += -I$(srctree)/drivers/misc/mediatek/mmdvfs

@@ -14,3 +14,5 @@
 obj-$(CONFIG_MTK_LEDS) := mtk_leds.o
 
 ccflags-y += -I$(srctree)/drivers/misc/mediatek/video/include
+ccflags-y += -I$(srctree)/drivers/misc/mediatek/leds/mt6768
+ccflags-y += -I$(srctree)/drivers/misc/mediatek/leds

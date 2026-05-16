@@ -74,3 +74,4 @@ endif
 
 subdir-ccflags-$(CONFIG_MACH_MT6781) += -DUSB2_PHY_V2
 subdir-ccflags-$(CONFIG_MACH_MT6833) += -DUSB2_PHY_V2
+ccflags-y += -I$(srctree)/drivers/misc/mediatek/usb20

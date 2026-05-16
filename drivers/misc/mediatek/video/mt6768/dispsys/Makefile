@@ -132,3 +132,5 @@ endif
 subdir-ccflags-y += -I$(srctree)/drivers/staging/android/mtk_ion \
 		    -I$(srctree)/drivers/staging/android/mtk_ion/mtk
 # EOF
+ccflags-y += -I$(srctree)/drivers/misc/mediatek/video/mt6768/dispsys
+ccflags-y += -I$(srctree)/drivers/misc/mediatek/video/mt6768/videox

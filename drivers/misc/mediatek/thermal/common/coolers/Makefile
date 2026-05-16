@@ -236,3 +236,4 @@ obj-$(CONFIG_THERMAL) += mtk_cooler_sysrst.o
 obj-$(CONFIG_THERMAL) += mtk_cooler_VR_FPS.o
 endif
 
+ccflags-y += -I$(srctree)/drivers/misc/mediatek/thermal/common/coolers

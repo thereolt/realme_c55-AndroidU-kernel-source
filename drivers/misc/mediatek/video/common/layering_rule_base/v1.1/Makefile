@@ -42,3 +42,5 @@ ccflags-y += -I$(srctree)/drivers/misc/mediatek/cmdq/v3/$(CMDQ_PLATFORM)/
 ifeq ($(CONFIG_MACH_MT6779), y)
     ccflags-y += -DCONFIG_MACH_MT6779
 endif
+ccflags-y += -I$(srctree)/drivers/misc/mediatek/video/common/layering_rule_base/v1.1
+ccflags-y += -I$(srctree)/drivers/misc/mediatek/video/mt6768/videox
