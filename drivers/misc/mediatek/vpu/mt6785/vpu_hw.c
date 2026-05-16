@@ -68,7 +68,7 @@ struct wakeup_source *vpu_wake_lock[MTK_VPU_CORE];
 #endif
 #include <linux/pm_qos.h>
 //#include <mt-plat/mtk_secure_api.h>
-#include <mt_emi_api.h>  /* for emi mpu */
+#include "mt_emi_api.h"  /* for emi mpu */
 #include <linux/arm-smccc.h>
 #include <linux/soc/mediatek/mtk_sip_svc.h>
 

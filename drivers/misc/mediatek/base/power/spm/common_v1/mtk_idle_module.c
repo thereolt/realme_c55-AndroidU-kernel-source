@@ -3,7 +3,7 @@
  * Copyright (c) 2019 MediaTek Inc.
 */
 
-#include <mtk_idle_module.h>
+#include "mtk_idle_module.h"
 #include <linux/printk.h>
 #include <linux/mutex.h>
 #include <linux/delay.h>

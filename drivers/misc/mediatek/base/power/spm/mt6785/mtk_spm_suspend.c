@@ -33,7 +33,7 @@
 #include <mtk_hps_internal.h>
 #endif
 #include <mtk_sleep_internal.h>
-#include <mtk_idle_module.h>
+#include "mtk_idle_module.h"
 #include <mtk_power_gs_api.h>
 
 static int spm_dormant_sta;

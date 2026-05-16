@@ -187,3 +187,4 @@ obj-$(CCCI_OBJ) += $(MTK_PLATFORM)/
 endif
 
 endif
+ccflags-y += -I$(srctree)/drivers/misc/mediatek/eccci/mt6768

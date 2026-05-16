@@ -1,7 +1,7 @@
 #include <linux/module.h>
 #include <linux/slab.h>
 #include <soc/oplus/mmkey_log.h>
-#include <criticallog_class.h>
+#include "criticallog_class.h"
 #include <linux/kthread.h>
 #include <linux/wait.h>
 

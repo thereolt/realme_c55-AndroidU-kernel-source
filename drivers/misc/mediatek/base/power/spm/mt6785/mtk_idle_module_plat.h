@@ -7,7 +7,7 @@
 #define __MTK_IDLE_MODULE_PLAT_H__
 
 #include <mtk_idle_internal.h>
-#include <mtk_idle_module.h>
+#include "mtk_idle_module.h"
 
 
 enum mtk_idle_module_type_support {

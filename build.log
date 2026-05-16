@@ -64,152 +64,6 @@ OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_HEALTHINFO
 OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_DISPLAY
 OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_KMSG_WB
 OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_DATA_MODULE
-scripts/kconfig/conf -s --syncconfig Kconfig
-arch/arm64/kernel/rootguard/Kconfig:1:warning: ignoring unsupported character ''
-arch/arm64/kernel/rootguard/Kconfig:2:warning: ignoring unsupported character ''
-arch/arm64/kernel/rootguard/Kconfig:3:warning: ignoring unsupported character ''
-arch/arm64/kernel/rootguard/Kconfig:4:warning: ignoring unsupported character ''
-mm/malloc_track/Kconfig.compat:6: warning: ignoring unknown option env
-drivers/misc/mediatek/base/power/Kconfig:90:warning: ignoring type redefinition of 'MTK_QOS_FRAMEWORK' from 'tristate' to 'bool'
-drivers/misc/mediatek/sensor/2.0/mtk_nanohub/Kconfig:3:warning: ignoring type redefinition of 'CUSTOM_KERNEL_SENSORHUB' from 'bool' to 'tristate'
-drivers/input/touchscreen/mediatek/goodix_berlin_driver/Kconfig:4:warning: ignoring type redefinition of 'TOUCHSCREEN_GOODIX_BRL' from 'bool' to 'tristate'
-drivers/power/supply/mediatek/charger/Kconfig:199:warning: ignoring type redefinition of 'CHARGER_BQ25890' from 'tristate' to 'bool'
-drivers/power/supply/mediatek/charger/Kconfig:199:warning: ignoring type redefinition of 'CHARGER_BQ25890' from 'tristate' to 'bool'
-drivers/power/supply/mediatek/charger/Kconfig:199:warning: ignoring type redefinition of 'CHARGER_BQ25890' from 'tristate' to 'bool'
-drivers/power/supply/mediatek/charger/Kconfig:199:warning: ignoring type redefinition of 'CHARGER_BQ25890' from 'tristate' to 'bool'
-drivers/power/supply/mediatek/charger/Kconfig:199:warning: ignoring type redefinition of 'CHARGER_BQ25890' from 'tristate' to 'bool'
-drivers/power/supply/mediatek/charger/Kconfig:199:warning: ignoring type redefinition of 'CHARGER_BQ25890' from 'tristate' to 'bool'
-drivers/power/supply/mediatek/charger/Kconfig:199:warning: ignoring type redefinition of 'CHARGER_BQ25890' from 'tristate' to 'bool'
-drivers/power/supply/mediatek/charger/Kconfig:199:warning: ignoring type redefinition of 'CHARGER_BQ25890' from 'tristate' to 'bool'
-drivers/power/supply/mediatek/charger/Kconfig:199:warning: ignoring type redefinition of 'CHARGER_BQ25890' from 'tristate' to 'bool'
-drivers/power/supply/mediatek/charger/Kconfig:199:warning: ignoring type redefinition of 'CHARGER_BQ25890' from 'tristate' to 'bool'
-drivers/power/supply/mediatek/charger/Kconfig:199:warning: ignoring type redefinition of 'CHARGER_BQ25890' from 'tristate' to 'bool'
-sound/soc/codecs/audio/Kconfig:17:warning: ignoring type redefinition of 'SND_SOC_AW87339' from 'tristate' to 'bool'
-drivers/soc/mediatek/Kconfig:7:warning: ignoring type redefinition of 'MTK_CMDQ' from 'bool' to 'tristate'
-drivers/soc/oplus/system/Kconfig:24:warning: prompt redefined
-drivers/soc/oplus/system/Kconfig:22:warning: ignoring type redefinition of 'OPPO_DEVICE_IFNO' from 'bool' to 'tristate'
-drivers/input/touchscreen/mediatek/hxchipset_hx83102p/Kconfig:19:warning: choice value used outside its choice group
-drivers/input/touchscreen/mediatek/hxchipset_hx83102p/Kconfig:28:warning: choice value used outside its choice group
-drivers/input/touchscreen/mediatek/hxchipset_hx83102p/Kconfig:16:warning: choice default symbol 'TOUCHSCREEN_HIMAX_INCELL' is not contained in the choice
-
-WARNING: unmet direct dependencies detected for MTK_PID_MAP
-  Depends on [n]: (MTK_GMO_RAM_OPTIMIZE [=n] && MTK_ENG_BUILD [=n] || !MTK_GMO_RAM_OPTIMIZE [=n]) && DEBUG_FS [=n]
-  Selected by [y]:
-  - MACH_MT6768 [=y]
-
-WARNING: unmet direct dependencies detected for MTK_CACHE_PARITY_CHECK
-  Depends on [n]: MTK_SDA [=n]
-  Selected by [y]:
-  - MACH_MT6768 [=y]
-
-WARNING: unmet direct dependencies detected for MTK_PID_MAP
-  Depends on [n]: (MTK_GMO_RAM_OPTIMIZE [=n] && MTK_ENG_BUILD [=n] || !MTK_GMO_RAM_OPTIMIZE [=n]) && DEBUG_FS [=n]
-  Selected by [y]:
-  - MACH_MT6768 [=y]
-
-WARNING: unmet direct dependencies detected for MTK_CACHE_PARITY_CHECK
-  Depends on [n]: MTK_SDA [=n]
-  Selected by [y]:
-  - MACH_MT6768 [=y]
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_HANS_FREEZE
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_STORAGE_TOOL
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MMC_DRIVER
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_UFS_DRIVER
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_UFS_SHOW_LATENCY
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_AOD
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_DC
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_ENABLE_MODEM_DB
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_ENGINEERTOOLS
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_FACERECOGNITION
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_FASTBOOT_UNLOCK_VERIFY
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_FG_IO_OPT
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SDCARD_INFO
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_FINGERPRINT
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_HEALTHINFO
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_TASK_CPUSTATS
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MIPICLKCHANGE
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MULTI_FREEAREA
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MULTI_KSWAPD
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_NFC_CONSOFT
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_ONSCREENFINGERPRINT
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_OSC
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_PHOENIX
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_AGINGTEST
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_PROCESS_RECLAIM
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_RESET_ROLLBACK_INDEX
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SELINUX_CONTROL_LOG
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SENSOR
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SENSOR_ALGORITHM
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SENSOR_SMEM
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SENSOR_WISELIGHT
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_IOMONITOR
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SPEAKER_MUTE
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MM_FEEDBACK
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_TP_BSPFWUPDATE
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_TP_BASIC
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_CHG_BASIC
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SCHED_ASSIST
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SIGKILL_DIAGNOSIS
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_VIRTUAL_RESERVE_MEMORY
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MEMLEAK_DETECT
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_MTUDETECT
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_RUSUPGRADE
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_SLA
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_DATA_EVAL
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_ZRAM_OPT
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_EXFAT_SUPPORT
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SDCARDFS_SUPPORT
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_PERFORMANCE
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_BUG_COMPATIBILITY
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_BUG_STABILITY
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_BUG_DEBUG
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_ARCH_INJECT
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_ARCH_EXTENDS
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_LOWMEM_DBG
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_BUG_STABILITY
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_POWERINFO_STANDBY
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_CAMERA_COMMON
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MTK_ION_SEPARATE_LOCK
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_THEIA
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_APP_MONITOR
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SCHEDUTIL_USE_TL
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_HEALTHINFO
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_DISPLAY
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_KMSG_WB
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_DATA_MODULE
-$GED: CONFIG_MTK_PLATFORM is ["mt6768"]
-*MTK_GPU_VERSION 2 = valhall
-*MTK_GPU_VERSION 3 = r32p1
-mali MTK evironment, building r32p1 DDK
-mtk-Kbuild CONFIG_MALI_PLATFORM_THIRDPARTY := y
-mtk-Kbuild CONFIG_MALI_PLATFORM_THIRDPARTY_NAME := "mt6768"
-mali MTK evironment, building r32p1 DDK
-mtk-Kbuild CONFIG_MALI_PLATFORM_THIRDPARTY := y
-mtk-Kbuild CONFIG_MALI_PLATFORM_THIRDPARTY_NAME := "mt6768"
-mali MTK evironment, building r32p1 DDK
-mtk-Kbuild CONFIG_MALI_PLATFORM_THIRDPARTY := y
-mtk-Kbuild CONFIG_MALI_PLATFORM_THIRDPARTY_NAME := "mt6768"
-ION:enable mtk ion
-drivers/misc/mediatek/base/power/cpufreq_v1/src/Makefile:89: "use CONFIG_MTK_TINYSYS_SSPM_V1"
-.
-FDVT: Drv use 4.0 folder
-.
-.
-drivers/misc/mediatek/base/power/ppm_v3/src/Makefile:110: USE_PPM_CPI
-drivers/misc/mediatek/ccu/src/Makefile:33: CCU_MAKE_FILE_CALLED
-drivers/misc/mediatek/ccu/src/1.2/Makefile:28: CCU_INC=./drivers/misc/mediatek/ccu/src/mt6768/ccu_ext_interface
-CONFIG_MTK_PLATFORM_CCCI := mt6768
-CONFIG_MTK_PLATFORM_CCCI := "mt6768"
-MTK_PLATFORM_CCCI := mt6768
-************  drivers/trusty/mtee-kree mk ************
-imgsensor drv by common ../common/v1/s5k2t7sp_mipi_raw/ ../common/v1/s5k2p7_mipi_raw/ ../common/v1/ov8856_mipi_raw/ ../common/v1/imx386_mipi_raw/ ../common/v1/imx398_mipi_raw/ ../common/v1/s5k2l7_mipi_raw/ ../common/v1/even_qtech_main_s5kgm1st03/ ../common/v1/even_qtech_main_ov13b10/ ../common/v1/even_hlt_front_s5k4h7/ ../common/v1/even_hlt_depth_gc02m1b/ ../common/v1/even_shengtai_macro_ov02b10/ ../common/v1/even_shengtai_front_ov8856/
-imgsensor drv by platform imx519_mipi_raw/
-M4U platform folder:"mt6768"
-M4U version:2.0
-TCORE_UT_TESTS_SUPPORT = n
-TCORE_PROFILING_SUPPORT = n
-TCORE_PROFILING_AUTO_DUMP = n
-TCORE_MEMORY_LEAK_DETECTION_SUPPORT = n
 drivers/tee/gud/Makefile.include:2: "CONFIG_MTK_PLATFORM: "mt6768""
 drivers/tee/gud/Makefile.include:3: "CONFIG_TRUSTONIC_TEE_VERSION: "500""
 $GED: CONFIG_MTK_PLATFORM is ["mt6768"]
@@ -225,269 +79,62 @@ mali MTK evironment, building r32p1 DDK
 mtk-Kbuild CONFIG_MALI_PLATFORM_THIRDPARTY := y
 mtk-Kbuild CONFIG_MALI_PLATFORM_THIRDPARTY_NAME := "mt6768"
 drivers/misc/mediatek/base/power/cpufreq_v1/src/Makefile:89: "use CONFIG_MTK_TINYSYS_SSPM_V1"
-drivers/mmc/host/mtk-sd-dbg.c:313:16: warning: unused variable 'base' [-Wunused-variable]
-        void __iomem *base = host->base;
-                      ^
-drivers/mmc/host/mtk-sd-dbg.c:383:18: warning: unused variable 'p4' [-Wunused-variable]
-        int p1, p2, p3, p4, p5, p6, p7, p8;
-                        ^
-drivers/mmc/host/mtk-sd-dbg.c:390:15: warning: unused variable 'reg_value' [-Wunused-variable]
-        unsigned int reg_value;
-                     ^
-drivers/mmc/host/mtk-sd-dbg.c:389:15: warning: unused variable 'offset' [-Wunused-variable]
-        unsigned int offset = 0;
-                     ^
-drivers/mmc/host/mtk-sd-dbg.c:383:22: warning: unused variable 'p5' [-Wunused-variable]
-        int p1, p2, p3, p4, p5, p6, p7, p8;
-                            ^
-drivers/mmc/host/mtk-sd-dbg.c:388:8: warning: unused variable 'data_for_wr' [-Wunused-variable]
-        ulong data_for_wr;
-              ^
-drivers/mmc/host/mtk-sd-dbg.c:383:10: warning: unused variable 'p2' [-Wunused-variable]
-        int p1, p2, p3, p4, p5, p6, p7, p8;
-                ^
-drivers/mmc/host/mtk-sd-dbg.c:383:14: warning: unused variable 'p3' [-Wunused-variable]
-        int p1, p2, p3, p4, p5, p6, p7, p8;
-                    ^
-drivers/mmc/host/mtk-sd-dbg.c:383:6: warning: unused variable 'p1' [-Wunused-variable]
-        int p1, p2, p3, p4, p5, p6, p7, p8;
-            ^
-drivers/mmc/host/mtk-sd-dbg.c:387:16: warning: unused variable 'base' [-Wunused-variable]
-        void __iomem *base = NULL;
-                      ^
-drivers/mmc/host/mtk-sd-dbg.c:386:33: warning: unused variable 'multi_address' [-Wunused-variable]
-        int thread_num, compare_count, multi_address;
-                                       ^
-drivers/mmc/host/mtk-sd-dbg.c:381:6: warning: unused variable 'cmd' [-Wunused-variable]
-        int cmd = -1;
-            ^
-drivers/mmc/host/mtk-sd-dbg.c:382:6: warning: unused variable 'sscanf_num' [-Wunused-variable]
-        int sscanf_num;
-            ^
-drivers/mmc/host/mtk-sd-dbg.c:386:18: warning: unused variable 'compare_count' [-Wunused-variable]
-        int thread_num, compare_count, multi_address;
-                        ^
-drivers/mmc/host/mtk-sd-dbg.c:385:6: warning: unused variable 'mode' [-Wunused-variable]
-        int mode;
-            ^
-drivers/mmc/host/mtk-sd-dbg.c:386:6: warning: unused variable 'thread_num' [-Wunused-variable]
-        int thread_num, compare_count, multi_address;
-            ^
-drivers/mmc/host/mtk-sd-dbg.c:384:10: warning: unused variable 'zone' [-Wunused-variable]
-        int id, zone;
-                ^
-drivers/mmc/host/mtk-sd-dbg.c:396:6: warning: unused variable 'dma_status' [-Wunused-variable]
-        int dma_status;
-            ^
-drivers/mmc/host/mtk-sd-dbg.c:383:34: warning: unused variable 'p8' [-Wunused-variable]
-        int p1, p2, p3, p4, p5, p6, p7, p8;
-                                        ^
-drivers/mmc/host/mtk-sd-dbg.c:384:6: warning: unused variable 'id' [-Wunused-variable]
-        int id, zone;
-            ^
-drivers/mmc/host/mtk-sd-dbg.c:392:20: warning: unused variable 'host' [-Wunused-variable]
-        struct msdc_host *host = NULL;
-                          ^
-drivers/mmc/host/mtk-sd-dbg.c:391:6: warning: unused variable 'spd_mode' [-Wunused-variable]
-        int spd_mode = MMC_TIMING_LEGACY;
-            ^
-drivers/mmc/host/mtk-sd-dbg.c:383:26: warning: unused variable 'p6' [-Wunused-variable]
-        int p1, p2, p3, p4, p5, p6, p7, p8;
-                                ^
-drivers/mmc/host/mtk-sd-dbg.c:383:30: warning: unused variable 'p7' [-Wunused-variable]
-        int p1, p2, p3, p4, p5, p6, p7, p8;
-                                    ^
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_interface.c:154:3: error: implicit declaration of function 'cpuhvfs_set_dvfs_stress' [-Werror,-Wimplicit-function-declaration]
-                cpuhvfs_set_dvfs_stress(do_stress);
-                ^
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_interface.c:206:5: error: implicit declaration of function 'cpuhvfs_set_freq' [-Werror,-Wimplicit-function-declaration]
-                                cpuhvfs_set_freq(
-                                ^
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_interface.c:311:6: error: implicit declaration of function 'cpuhvfs_set_freq' [-Werror,-Wimplicit-function-declaration]
-                                        cpuhvfs_set_freq(
-                                        ^
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_interface.c:434:4: error: implicit declaration of function 'cpuhvfs_set_turbo_disable' [-Werror,-Wimplicit-function-declaration]
-                        cpuhvfs_set_turbo_disable(1);
-                        ^
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_interface.c:435:4: error: implicit declaration of function 'cpuhvfs_set_turbo_mode' [-Werror,-Wimplicit-function-declaration]
-                        cpuhvfs_set_turbo_mode(0, 0, 0);
-                        ^
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_interface.c:435:4: note: did you mean 'cpuhvfs_set_power_mode'?
-./drivers/misc/mediatek/base/power/include/mtk_cpufreq_hybrid.h:260:20: note: 'cpuhvfs_set_power_mode' declared here
-static inline void cpuhvfs_set_power_mode(enum power_mode mode)         {}
-                   ^
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_interface.c:452:6: error: implicit declaration of function 'cpuhvfs_get_sched_dvfs_disable' [-Werror,-Wimplicit-function-declaration]
-        r = cpuhvfs_get_sched_dvfs_disable();
-            ^
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_interface.c:475:3: error: implicit declaration of function 'cpuhvfs_set_sched_dvfs_disable' [-Werror,-Wimplicit-function-declaration]
-                cpuhvfs_set_sched_dvfs_disable(sched_disable);
-                ^
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_interface.c:497:2: error: implicit declaration of function 'cpuhvfs_get_time_profile' [-Werror,-Wimplicit-function-declaration]
-        cpuhvfs_get_time_profile();
+.
+FDVT: Drv use 4.0 folder
+drivers/misc/mediatek/ccu/src/Makefile:33: CCU_MAKE_FILE_CALLED
+.
+drivers/misc/mediatek/ccu/src/1.2/Makefile:28: CCU_INC=./drivers/misc/mediatek/ccu/src/mt6768/ccu_ext_interface
+ION:enable mtk ion
+.
+drivers/tee/gud/Makefile.include:2: "CONFIG_MTK_PLATFORM: "mt6768""
+drivers/tee/gud/Makefile.include:3: "CONFIG_TRUSTONIC_TEE_VERSION: "500""
+drivers/misc/mediatek/base/power/ppm_v3/src/Makefile:110: USE_PPM_CPI
+drivers/misc/mediatek/base/power/spm/mt6768/mtk_spm.c:351:10: error: implicit declaration of function 'spm_read' [-Werror,-Wimplicit-function-declaration]
+                return spm_read(PWR_STATUS);
+                       ^
+drivers/misc/mediatek/base/power/spm/mt6768/mtk_spm.c:351:19: error: use of undeclared identifier 'PWR_STATUS'; did you mean 'NR_STATS'?
+                return spm_read(PWR_STATUS);
+                                ^~~~~~~~~~
+                                NR_STATS
+./include/linux/kernel_stat.h:31:2: note: 'NR_STATS' declared here
+        NR_STATS,
         ^
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_interface.c:550:14: error: implicit declaration of function 'cpuhvfs_get_cci_result' [-Werror,-Wimplicit-function-declaration]
-                                result = cpuhvfs_get_cci_result(i, j, k);
-                                         ^
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_interface.c:550:14: note: did you mean 'cpuhvfs_get_curr_volt'?
-./drivers/misc/mediatek/base/power/include/mtk_cpufreq_hybrid.h:206:28: note: 'cpuhvfs_get_curr_volt' declared here
-static inline unsigned int cpuhvfs_get_curr_volt(unsigned int cluster)
-                           ^
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_interface.c:579:3: error: implicit declaration of function 'cpuhvfs_update_cci_map_tbl' [-Werror,-Wimplicit-function-declaration]
-                cpuhvfs_update_cci_map_tbl(idx_1,
-                ^
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_interface.c:579:3: note: did you mean 'mt_cpufreq_update_cci_map_tbl'?
-./drivers/misc/mediatek/include/mt-plat/mt6768/include/mach/mtk_cpufreq_api.h:83:13: note: 'mt_cpufreq_update_cci_map_tbl' declared here
-extern void mt_cpufreq_update_cci_map_tbl(unsigned int idx_1,
-            ^
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_interface.c:594:9: error: implicit declaration of function 'cpuhvfs_get_cci_mode' [-Werror,-Wimplicit-function-declaration]
-        mode = cpuhvfs_get_cci_mode();
-               ^
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_interface.c:623:3: error: implicit declaration of function 'cpuhvfs_update_cci_mode' [-Werror,-Wimplicit-function-declaration]
-                cpuhvfs_update_cci_mode(mode, 0);
-                ^
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_interface.c:623:3: note: did you mean 'mt_cpufreq_update_cci_mode'?
-./drivers/misc/mediatek/include/mt-plat/mt6768/include/mach/mtk_cpufreq_api.h:86:13: note: 'mt_cpufreq_update_cci_mode' declared here
-extern void mt_cpufreq_update_cci_mode(unsigned int mode,
-            ^
-12 errors generated.
-make[7]: *** [scripts/Makefile.build:333: drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_interface.o] Error 1
+drivers/misc/mediatek/base/power/spm/mt6768/mtk_spm.c:353:19: error: use of undeclared identifier 'MD1_PWR_CON'
+                return spm_read(MD1_PWR_CON);
+                                ^
+drivers/misc/mediatek/base/power/spm/mt6768/mtk_spm.c:355:19: error: use of undeclared identifier 'PCM_REG13_DATA'
+                return spm_read(PCM_REG13_DATA);
+                                ^
+drivers/misc/mediatek/base/power/spm/mt6768/mtk_spm.c:357:19: error: use of undeclared identifier 'SPARE_ACK_MASK'; did you mean 'SPM_SPARE_ACK_MASK'?
+                return spm_read(SPARE_ACK_MASK);
+                                ^~~~~~~~~~~~~~
+                                SPM_SPARE_ACK_MASK
+./drivers/misc/mediatek/base/power/include/spm_v1/mtk_spm.h:33:2: note: 'SPM_SPARE_ACK_MASK' declared here
+        SPM_SPARE_ACK_MASK,
+        ^
+5 errors generated.
+make[7]: *** [scripts/Makefile.build:333: drivers/misc/mediatek/base/power/spm/mt6768/mtk_spm.o] Error 1
+make[6]: *** [scripts/Makefile.build:637: drivers/misc/mediatek/base/power/spm/mt6768] Error 2
+make[6]: *** Waiting for unfinished jobs....
+drivers/misc/mediatek/base/power/upower_v2/Makefile:33: extraneous text after 'ifeq' directive
+drivers/misc/mediatek/base/power/spm/common_v1/mtk_idle_select.c:120:43: error: too few arguments provided to function-like macro invocation
+        __profile_idle_start(PIDX_SELECT_TO_ENTER);
+                                                 ^
+./drivers/misc/mediatek/base/power/spm/common/mtk_idle_internal.h:198:9: note: macro '__profile_idle_start' defined here
+#define __profile_idle_start(idle_type, idx) \
+        ^
+drivers/misc/mediatek/base/power/spm/common_v1/mtk_idle_select.c:120:2: error: use of undeclared identifier '__profile_idle_start'
+        __profile_idle_start(PIDX_SELECT_TO_ENTER);
+        ^
+2 errors generated.
+make[7]: *** [scripts/Makefile.build:333: drivers/misc/mediatek/base/power/spm/common_v1/mtk_idle_select.o] Error 1
 make[7]: *** Waiting for unfinished jobs....
-24 warnings generated.
-drivers/pinctrl/mediatek/mtk-eint.c:147:13: warning: unused function 'mtk_eint_set_sw_debounce' [-Wunused-function]
-static void mtk_eint_set_sw_debounce(struct irq_data *d,
-            ^
-drivers/pinctrl/mediatek/mtk-eint.c:176:13: warning: unused function 'mtk_eint_sw_debounce_start' [-Wunused-function]
-static void mtk_eint_sw_debounce_start(struct mtk_eint *eint,
-            ^
-In file included from drivers/power/oplus/v1/adapter_ic/oplus_stm.c:23:
-In file included from drivers/power/oplus/v1/adapter_ic/../oplus_charger.h:45:
-drivers/power/oplus/v1/adapter_ic/../charger_ic/oplus_battery_mtk6769R.h:46:10: fatal error: '../../../../kernel-4.19/drivers/misc/mediatek/typec/tcpc/inc/tcpm.h' file not found
-#include "../../../../kernel-4.19/drivers/misc/mediatek/typec/tcpc/inc/tcpm.h"
-         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_main.c:184:2: error: implicit declaration of function 'cpuhvfs_set_dvfs' [-Werror,-Wimplicit-function-declaration]
-        cpuhvfs_set_dvfs(cpufreq_get_cluster_id(p->cpu_id), target_khz);
-        ^
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_main.c:1158:4: error: implicit declaration of function 'cpuhvfs_set_min_max' [-Werror,-Wimplicit-function-declaration]
-                        cpuhvfs_set_min_max(i,
-                        ^
-1 error generated.
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_main.c:1165:3: error: implicit declaration of function 'cpuhvfs_write_advise_freq' [-Werror,-Wimplicit-function-declaration]
-                cpuhvfs_write_advise_freq(i, ppm->cpu_limit[i].has_advise_freq);
-                ^
-make[5]: *** [scripts/Makefile.build:334: drivers/power/oplus/v1/adapter_ic/oplus_stm.o] Error 1
-make[4]: *** [scripts/Makefile.build:637: drivers/power/oplus/v1/adapter_ic] Error 2
-2 warnings generated.
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_api.c:53:2: error: implicit declaration of function 'cpuhvfs_set_dvfs' [-Werror,-Wimplicit-function-declaration]
-        cpuhvfs_set_dvfs(id, freq);
-        ^
-make[4]: *** Waiting for unfinished jobs....
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_main.c:1349:3: error: implicit declaration of function 'cpuhvfs_set_cluster_on_off' [-Werror,-Wimplicit-function-declaration]
-                cpuhvfs_set_cluster_on_off(cpufreq_get_cluster_id(p->cpu_id),
-                ^
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_api.c:77:2: error: implicit declaration of function 'cpuhvfs_set_cluster_load_freq' [-Werror,-Wimplicit-function-declaration]
-        cpuhvfs_set_cluster_load_freq(id, freq);
-        ^
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_main.c:1349:3: note: did you mean 'cpuhvfs_notify_cluster_off'?
-./drivers/misc/mediatek/base/power/include/mtk_cpufreq_hybrid.h:161:13: note: 'cpuhvfs_notify_cluster_off' declared here
-extern void cpuhvfs_notify_cluster_off(unsigned int cluster);
-            ^
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_main.c:1358:2: error: implicit declaration of function 'srate_doe' [-Werror,-Wimplicit-function-declaration]
-        srate_doe();
-        ^
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_main.c:1506:4: error: implicit declaration of function 'cpuhvfs_set_cluster_on_off' [-Werror,-Wimplicit-function-declaration]
-                        cpuhvfs_set_cluster_on_off(
-                        ^
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_main.c:1697:2: error: implicit declaration of function 'cpuhvfs_set_init_sta' [-Werror,-Wimplicit-function-declaration]
-        cpuhvfs_set_init_sta();
-        ^
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_api.c:126:3: error: implicit declaration of function 'cpuhvfs_set_set_cci_volt' [-Werror,-Wimplicit-function-declaration]
-                cpuhvfs_set_set_cci_volt(volt);
-                ^
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_main.c:1699:2: error: implicit declaration of function 'cpuhvfs_set_sched_dvfs_disable' [-Werror,-Wimplicit-function-declaration]
-        cpuhvfs_set_sched_dvfs_disable(1);
-        ^
-8 errors generated.
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_api.c:126:3: note: did you mean 'cpuhvfs_get_curr_volt'?
-./drivers/misc/mediatek/base/power/include/mtk_cpufreq_hybrid.h:206:28: note: 'cpuhvfs_get_curr_volt' declared here
-static inline unsigned int cpuhvfs_get_curr_volt(unsigned int cluster)
-                           ^
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_api.c:145:2: error: implicit declaration of function 'cpuhvfs_set_iccs_freq' [-Werror,-Wimplicit-function-declaration]
-        cpuhvfs_set_iccs_freq(id, freq);
-        ^
-make[7]: *** [scripts/Makefile.build:333: drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_main.o] Error 1
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_api.c:171:2: error: implicit declaration of function 'cpuhvfs_update_volt' [-Werror,-Wimplicit-function-declaration]
-        cpuhvfs_update_volt((unsigned int)id, volt_tbl, nr_volt_tbl);
-        ^
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_api.c:184:2: error: implicit declaration of function 'cpuhvfs_update_cci_map_tbl' [-Werror,-Wimplicit-function-declaration]
-        cpuhvfs_update_cci_map_tbl(idx_1, idx_2, result, mode, use_id);
-        ^
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_api.c:184:2: note: did you mean 'mt_cpufreq_update_cci_map_tbl'?
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_api.c:180:6: note: 'mt_cpufreq_update_cci_map_tbl' declared here
-void mt_cpufreq_update_cci_map_tbl(unsigned int idx_1, unsigned int idx_2,
-     ^
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_api.c:192:2: error: implicit declaration of function 'cpuhvfs_update_cci_mode' [-Werror,-Wimplicit-function-declaration]
-        cpuhvfs_update_cci_mode(mode, use_id);
-        ^
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_api.c:192:2: note: did you mean 'mt_cpufreq_update_cci_mode'?
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_api.c:189:6: note: 'mt_cpufreq_update_cci_mode' declared here
-void mt_cpufreq_update_cci_mode(unsigned int mode, unsigned int use_id)
-     ^
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_api.c:251:9: error: implicit declaration of function 'cpuhvfs_get_cur_volt' [-Werror,-Wimplicit-function-declaration]
-        return cpuhvfs_get_cur_volt(id);
-               ^
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_api.c:251:9: note: did you mean 'cpuhvfs_get_curr_volt'?
-./drivers/misc/mediatek/base/power/include/mtk_cpufreq_hybrid.h:206:28: note: 'cpuhvfs_get_curr_volt' declared here
-static inline unsigned int cpuhvfs_get_curr_volt(unsigned int cluster)
-                           ^
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_api.c:279:13: error: implicit declaration of function 'cpuhvfs_get_cur_dvfs_freq_idx' [-Werror,-Wimplicit-function-declaration]
-        freq_idx = cpuhvfs_get_cur_dvfs_freq_idx((enum mt_cpu_dvfs_id)id);
-                   ^
-drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_api.c:315:13: error: implicit declaration of function 'cpuhvfs_get_cur_dvfs_freq_idx' [-Werror,-Wimplicit-function-declaration]
-        freq_idx = cpuhvfs_get_cur_dvfs_freq_idx(id);
-                   ^
-10 errors generated.
-make[7]: *** [scripts/Makefile.build:333: drivers/misc/mediatek/base/power/cpufreq_v1/src/v2/mtk_cpufreq_api.o] Error 1
-make[6]: *** [scripts/Makefile.build:637: drivers/misc/mediatek/base/power/cpufreq_v1/src] Error 2
-make[5]: *** [scripts/Makefile.build:637: drivers/misc/mediatek/base/power/cpufreq_v1] Error 2
+make[6]: *** [scripts/Makefile.build:637: drivers/misc/mediatek/base/power/spm/common_v1] Error 2
+make[5]: *** [scripts/Makefile.build:637: drivers/misc/mediatek/base/power/spm] Error 2
+make[5]: *** Waiting for unfinished jobs....
 make[4]: *** [scripts/Makefile.build:637: drivers/misc/mediatek/base/power] Error 2
 make[3]: *** [scripts/Makefile.build:637: drivers/misc/mediatek/base] Error 2
+make[3]: *** Waiting for unfinished jobs....
 make[2]: *** [scripts/Makefile.build:637: drivers/misc/mediatek] Error 2
 make[1]: *** [scripts/Makefile.build:637: drivers/misc] Error 2
-make[1]: *** Waiting for unfinished jobs....
-drivers/power/supply/mediatek/battery/mtk_battery.c:60:10: error: 'mtk_gauge_class.h' file not found with <angled> include; use "quotes" instead
-#include <mtk_gauge_class.h>
-         ^~~~~~~~~~~~~~~~~~~
-         "mtk_gauge_class.h"
-In file included from drivers/power/supply/mediatek/battery/mtk_battery.c:61:
-drivers/power/supply/mediatek/battery/mtk_battery_internal.h:19:10: error: 'mtk_gauge_class.h' file not found with <angled> include; use "quotes" instead
-#include <mtk_gauge_class.h>
-         ^~~~~~~~~~~~~~~~~~~
-         "mtk_gauge_class.h"
-In file included from drivers/power/oplus/v1/chargepump_ic/oplus_sc8571_master.c:35:
-In file included from drivers/power/oplus/v1/chargepump_ic/../oplus_charger.h:45:
-drivers/power/oplus/v1/chargepump_ic/../charger_ic/oplus_battery_mtk6769R.h:46:10: fatal error: '../../../../kernel-4.19/drivers/misc/mediatek/typec/tcpc/inc/tcpm.h' file not found
-#include "../../../../kernel-4.19/drivers/misc/mediatek/typec/tcpc/inc/tcpm.h"
-         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2 errors generated.
-1 error generated.
-make[5]: *** [scripts/Makefile.build:333: drivers/power/supply/mediatek/battery/mtk_battery.o] Error 1
-make[4]: *** [scripts/Makefile.build:637: drivers/power/supply/mediatek/battery] Error 2
-make[4]: *** Waiting for unfinished jobs....
-make[5]: *** [scripts/Makefile.build:333: drivers/power/oplus/v1/chargepump_ic/oplus_sc8571_master.o] Error 1
-make[4]: *** [scripts/Makefile.build:637: drivers/power/oplus/v1/chargepump_ic] Error 2
-make[3]: *** [scripts/Makefile.build:637: drivers/power/oplus/v1] Error 2
-make[2]: *** [scripts/Makefile.build:637: drivers/power/oplus] Error 2
-make[2]: *** Waiting for unfinished jobs....
-drivers/pinctrl/mediatek/pinctrl-mtk-common-v2_debug.c:14:10: error: '../../gpio/gpiolib.h' file not found with <angled> include; use "quotes" instead
-#include <../../gpio/gpiolib.h>
-         ^~~~~~~~~~~~~~~~~~~~~~
-         "../../gpio/gpiolib.h"
-1 error generated.
-make[3]: *** [scripts/Makefile.build:333: drivers/pinctrl/mediatek/pinctrl-mtk-common-v2_debug.o] Error 1
-make[2]: *** [scripts/Makefile.build:637: drivers/pinctrl/mediatek] Error 2
-make[2]: *** Waiting for unfinished jobs....
-make[1]: *** [scripts/Makefile.build:637: drivers/pinctrl] Error 2
-make[3]: *** [scripts/Makefile.build:637: drivers/power/supply/mediatek] Error 2
-make[2]: *** [scripts/Makefile.build:637: drivers/power/supply] Error 2
-make[1]: *** [scripts/Makefile.build:637: drivers/power] Error 2
 make: *** [Makefile:1212: drivers] Error 2

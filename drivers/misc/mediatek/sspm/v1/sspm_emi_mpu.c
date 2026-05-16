@@ -9,7 +9,7 @@
 
 
 #if SSPM_EMI_PROTECTION_SUPPORT
-#include <mt_emi_api.h>
+#include "mt_emi_api.h"
 
 void sspm_set_emi_mpu(phys_addr_t base, phys_addr_t size)
 {

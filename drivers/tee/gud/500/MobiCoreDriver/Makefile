@@ -55,3 +55,5 @@ endif
 
 # timesync to get boot time
 ccflags-y += -I$(srctree)/drivers/misc/mediatek/timer/timesync/
+ccflags-y += -I$(srctree)/drivers/tee/gud/500/MobiCoreDriver/public
+ccflags-y += -I$(srctree)/drivers/tee/gud/500/MobiCoreDriver

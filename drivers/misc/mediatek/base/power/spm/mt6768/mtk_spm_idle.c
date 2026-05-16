@@ -21,7 +21,7 @@
 
 #include "pwr_ctrl.h"
 
-#include <mtk_idle_module.h>
+#include "mtk_idle_module.h"
 #include <mtk_idle_module_plat.h>
 
 #define MTK_IDLE_GS_DUMP_READY	(1)

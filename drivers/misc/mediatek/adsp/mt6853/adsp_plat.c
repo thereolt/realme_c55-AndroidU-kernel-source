@@ -40,7 +40,7 @@
 #include "adsp_dvfs.h"
 
 #if ENABLE_ADSP_EMI_PROTECTION
-#include <mt_emi_api.h>
+#include "mt_emi_api.h"
 #endif
 
 #ifdef CONFIG_ARM64

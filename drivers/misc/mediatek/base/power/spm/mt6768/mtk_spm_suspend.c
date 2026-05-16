@@ -14,7 +14,7 @@
 #include <linux/interrupt.h>
 #include <linux/wakeup_reason.h>
 #include <asm/setup.h>
-#include <mtk_spm_internal.h>
+#include "mtk_spm_internal.h"
 
 #if defined(CONFIG_MTK_WATCHDOG) && defined(CONFIG_MTK_WD_KICKER)
 #include <mt-plat/mtk_wd_api.h>
@@ -22,7 +22,7 @@
 #if defined(CONFIG_MTK_PMIC) || defined(CONFIG_MTK_PMIC_NEW_ARCH)
 #include <mt-plat/upmu_common.h>
 #endif
-#include <mtk_spm_irq.h>
+#include "mtk_spm_irq.h"
 
 
 #include <mtk_spm_suspend_internal.h>
@@ -39,7 +39,7 @@
 #include <mtk_hps_internal.h>
 #endif
 #include <mtk_sleep_internal.h>
-#include <mtk_idle_module.h>
+#include "mtk_idle_module.h"
 
 static int spm_dormant_sta;
 int spm_ap_mdsrc_req_cnt;

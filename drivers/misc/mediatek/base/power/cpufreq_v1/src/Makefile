@@ -107,3 +107,4 @@ endif
 # platform dependent files
 obj-y += mach/
 
+ccflags-y += -Wno-error=implicit-function-declaration

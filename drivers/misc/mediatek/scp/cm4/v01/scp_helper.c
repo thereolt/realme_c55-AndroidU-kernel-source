@@ -44,7 +44,7 @@
 
 #if ENABLE_SCP_EMI_PROTECTION
 #ifdef CONFIG_MTK_EMI_LEGACY
-#include <mt_emi_api.h>
+#include "mt_emi_api.h"
 #else
 #include "memory/mediatek/emi.h"
 #endif

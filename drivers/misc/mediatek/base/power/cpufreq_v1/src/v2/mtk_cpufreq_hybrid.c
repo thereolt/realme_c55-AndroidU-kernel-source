@@ -64,6 +64,7 @@
 
 #include <mt-plat/met_drv.h>
 
+#include "../mtk_cpufreq_hybrid.h"
 #include "mtk_cpufreq_internal.h"
 #include "mtk_cpufreq_platform.h"
 #include "mtk_cpufreq_hybrid.h"

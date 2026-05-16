@@ -23,7 +23,7 @@
 #endif
 
 #include <mtk_idle_profile.h>
-#include <mtk_idle_module.h>
+#include "mtk_idle_module.h"
 
 /* [ByChip] Internal weak function: implemented in mtk_idle_cond_check.c */
 int __attribute__((weak)) mtk_idle_cond_append_info(

@@ -3,7 +3,7 @@
  * Copyright (c) 2019 MediaTek Inc.
 */
 
-#include <mtk_idle_module.h>
+#include "mtk_idle_module.h"
 #include <mtk_idle.h>
 #include <mtk_lp_dts.h>
 #include <mtk_idle_module_plat.h>

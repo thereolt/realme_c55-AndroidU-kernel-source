@@ -30,7 +30,7 @@
 #endif
 
 #ifdef EMI_READY
-#include <mt_emi_api.h>
+#include "mt_emi_api.h"
 #endif
 
 #ifdef CONFIG_OF_RESERVED_MEM

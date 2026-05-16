@@ -16,7 +16,7 @@
 #endif
 
 #include <mtk_gauge_time_service.h>
-#include <mtk_gauge_class.h>
+#include "mtk_gauge_class.h"
 
 
 /* ============================================================ */

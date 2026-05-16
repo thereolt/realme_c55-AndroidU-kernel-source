@@ -7,7 +7,7 @@
 #include <mt-plat/sync_write.h>
 
 #ifdef CONFIG_MTK_EMI_LEGACY
-#include <mt_emi_api.h>
+#include "mt_emi_api.h"
 #elif CONFIG_MTK_EMI
 #include <memory/mediatek/emi.h>
 #endif

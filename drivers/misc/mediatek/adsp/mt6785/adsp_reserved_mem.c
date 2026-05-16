@@ -14,7 +14,7 @@
 #include "adsp_core.h"
 
 #if ADSP_EMI_PROTECTION_ENABLE
-#include <mt_emi_api.h>
+#include "mt_emi_api.h"
 #endif
 
 #define ADSP_RESERVE_MEMORY_BLOCK(xname) \

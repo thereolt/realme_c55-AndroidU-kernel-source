@@ -12,7 +12,7 @@
 #endif
 
 #include "mtk_gauge_class.h"
-#include <mtk_battery_internal.h>
+#include "mtk_battery_internal.h"
 
 void __attribute__ ((weak)) 
 		pmic_register_interrupt_callback(unsigned int intNo,

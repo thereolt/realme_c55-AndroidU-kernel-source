@@ -27,3 +27,4 @@ obj-$(CONFIG_OPLUS_HEALTHINFO) += oplus_ion/
 #ifdef OPLUS_FEATURE_MTK_ION_SEPARATE_LOCK
 obj-$(CONFIG_MTK_ION) += oplus_ion/
 #ifdef OPLUS_FEATURE_MTK_ION_SEPARATE_LOCK
+ccflags-y += -I$(srctree)/drivers/staging/android/mtk_ion

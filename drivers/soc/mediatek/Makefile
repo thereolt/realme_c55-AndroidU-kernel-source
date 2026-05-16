@@ -23,3 +23,4 @@ obj-$(CONFIG_MTK_MBOX) += mtk-mbox.o
 obj-$(CONFIG_MTK_IPI) += mtk_tinysys_ipi.o
 
 ccflags-y += -I$(srctree)/drivers/misc/mediatek/include
+ccflags-y += -I$(srctree)/drivers/soc/mediatek
