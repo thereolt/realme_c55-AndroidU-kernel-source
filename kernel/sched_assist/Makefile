@@ -1,18 +1,32 @@
-# SPDX-License-Identifier: GPL-2.0-only
-# Copyright (C) 2018-2020 Oplus. All rights reserved.
+# project: oplus/kernel/cpu
+obj-y += sched_assist_common.o
+obj-y += sched_assist_workqueue.o
+obj-y += sched_assist_rt.o
+#ifdef CONFIG_OPLUS_FEATURE_CPU_JANKINFO
+obj-y += sa_jankinfo.o
+#endif
+obj-$(CONFIG_LOCKING_PROTECT) += sched_assist_locking.o
 
-LINUXINCLUDE += -I$(srctree)/
+#qcom
+ifeq ($(CONFIG_OPLUS_SYSTEM_KERNEL_QCOM), y)
+ifeq ($(VERSION).$(PATCHLEVEL), 5.4)
+obj-y += sched_assist_slide.o
+endif
+#mtk
+else
+obj-$(CONFIG_SCHED_WALT) += sched_assist_slide_v1.o
+endif
 
-obj-$(CONFIG_OPLUS_FEATURE_SCHED_ASSIST) += oplus_bsp_sched_assist.o
-oplus_bsp_sched_assist-y += sched_assist.o
-oplus_bsp_sched_assist-y += sa_common.o
-oplus_bsp_sched_assist-y += sa_sysfs.o
-oplus_bsp_sched_assist-y += sa_exec.o
-oplus_bsp_sched_assist-y += sa_fair.o
-oplus_bsp_sched_assist-y += sa_jankinfo.o
-oplus_bsp_sched_assist-y += sa_oemdata.o
-oplus_bsp_sched_assist-y += sa_priority.o
-oplus_bsp_sched_assist-y += sched_assist_locking.o
-oplus_bsp_sched_assist-$(CONFIG_OPLUS_CPU_AUDIO_PERF) += sa_audio.o
-oplus_bsp_sched_assist-$(CONFIG_OPLUS_FEATURE_LOADBALANCE) += sa_balance.o
-oplus_bsp_sched_assist-$(CONFIG_OPLUS_FEATURE_PIPELINE) += sa_pipeline.o
+obj-$(CONFIG_OPLUS_CPU_AUDIO_PERF) += sched_assist_audio.o
+
+# project: oplus/kernel/synchronize
+obj-$(CONFIG_OPLUS_LOCKING_STRATEGY) += oplus_locking_strategy.o
+oplus_locking_strategy-y += sync/locking_main.o
+oplus_locking_strategy-y += sync/futex.o
+oplus_locking_strategy-y += sync/sysfs.o
+oplus_locking_strategy-y += sync/mutex.o
+oplus_locking_strategy-y += sync/rwsem.o
+oplus_locking_strategy-$(CONFIG_OPLUS_LOCKING_MONITOR) += sync/kern_lock_stat.o
+
+obj-$(CONFIG_OPLUS_FEATURE_EAS_OPT) += eas_opt/
+ccflags-y += -I$(srctree)/kernel/sched_assist

@@ -1,69 +1,57 @@
-// SPDX-License-Identifier: GPL-2.0-only
-/*
- * Copyright (C) 2022 Oplus. All rights reserved.
- */
-#ifdef CONFIG_LOCKING_PROTECT
-#define pr_fmt(fmt) "dstate_opt: " fmt
-
+#include <linux/version.h>
 #include <linux/sched.h>
-#include <linux/mutex.h>
-#include <linux/rwsem.h>
-#include <linux/ww_mutex.h>
-#include <linux/sched/signal.h>
-#include <linux/sched/rt.h>
-#include <linux/sched/wake_q.h>
-#include <linux/sched/debug.h>
-#include <linux/export.h>
-#include <linux/spinlock.h>
-#include <linux/interrupt.h>
-#include <linux/debug_locks.h>
-#include <linux/osq_lock.h>
-#include <linux/sched_clock.h>
+#include <linux/list.h>
 #include <linux/jiffies.h>
+#include <trace/events/sched.h>
 #include <../kernel/sched/sched.h>
-#include <trace/hooks/vendor_hooks.h>
-#include <trace/hooks/sched.h>
-#include <trace/hooks/dtask.h>
-#include <trace/hooks/binder.h>
-#include <trace/hooks/rwsem.h>
-#include <trace/hooks/futex.h>
-#include <trace/hooks/fpsimd.h>
-#include <trace/hooks/topology.h>
-#include <trace/hooks/debug.h>
-#include <trace/hooks/wqlockup.h>
-#include <trace/hooks/cgroup.h>
-#include <trace/hooks/sys.h>
-#include <trace/hooks/mm.h>
-#include "trace_sched_assist.h"
-#include <../../sched/sched_assist/sa_common.h>
+#include <linux/fs.h>
+#include <linux/proc_fs.h>
+#include <linux/seq_file.h>
+#include <../fs/proc/internal.h>
+#include <linux/sched/signal.h>
 
-bool locking_protect_disable = false;
+#include <linux/mm.h>
+#include <linux/rwsem.h>
 
-unsigned int locking_wakeup_preepmt_enable;
+#include "sched_assist_trace.h"
+#include "sched_assist_common.h"
+
+#define RQ_LOCKING_TASK_LIMIT (5)
+static bool locking_protect_disable = false;
+
+static int debug_locking_enable = 0;
+module_param(debug_locking_enable, uint, 0644);
+
+void sched_locking_target_comm(struct task_struct *p)
+{
+	/* vts kernel_net_test close locking_protect */
+	if (locking_protect_disable == false) {
+		if(strstr(p->comm, "kernel_net_tes")) {
+			locking_protect_disable = true;
+		}
+	}
+}
 
 static DEFINE_PER_CPU(int, prev_locking_state);
 static DEFINE_PER_CPU(int, prev_locking_depth);
 #define LK_STATE_UNLOCK  (0)
 #define LK_STATE_LOCK    (1)
-#define LK_STATE_INVALID (2)
+#define MAX_SHOW_DEPTH   (128)
+
+static noinline int tracing_mark_write(const char *buf)
+{
+	trace_printk(buf);
+	return 0;
+}
+
 void locking_state_systrace_c(unsigned int cpu, struct task_struct *p)
 {
-	struct oplus_task_struct *ots;
 	int locking_state, locking_depth;
 
-	ots = get_oplus_task_struct(p);
-	/*
-	 * 0: ots alloced but not locking, not be protected.
-	 * 1: ots alloced and locking, preempt protected.
-	 * 2: ots not alloc, not be protected.
-	 */
-	if (IS_ERR_OR_NULL(ots)) {
-		locking_state = p->pid ? LK_STATE_INVALID : LK_STATE_UNLOCK;
-		locking_depth = 0;
-	} else {
-		locking_state = (ots->locking_start_time > 0 ? LK_STATE_LOCK : LK_STATE_UNLOCK);
-		locking_depth = ots->locking_depth;
-	}
+	if (likely(!debug_locking_enable))
+		return;
+
+	locking_state = (p->locking_time_start > 0 ? LK_STATE_LOCK : LK_STATE_UNLOCK);
 
 	if (per_cpu(prev_locking_state, cpu) != locking_state) {
 		char buf[256];
@@ -74,6 +62,10 @@ void locking_state_systrace_c(unsigned int cpu, struct task_struct *p)
 		per_cpu(prev_locking_state, cpu) = locking_state;
 	}
 
+	locking_depth = p->locking_depth;
+	if (unlikely(locking_depth > MAX_SHOW_DEPTH))
+		locking_depth = MAX_SHOW_DEPTH;
+
 	if (per_cpu(prev_locking_depth, cpu) != locking_depth) {
 		char buf[256];
 
@@ -83,177 +75,43 @@ void locking_state_systrace_c(unsigned int cpu, struct task_struct *p)
 		per_cpu(prev_locking_depth, cpu) = locking_depth;
 	}
 }
+EXPORT_SYMBOL_GPL(locking_state_systrace_c);
 
 static inline struct task_struct *task_of(struct sched_entity *se)
 {
 	return container_of(se, struct task_struct, se);
 }
 
-bool task_skip_protect(struct task_struct *p)
+inline bool task_skip_protect(struct task_struct *p)
 {
 	return test_task_ux(p);
 }
 
-#define MAX_PROTECT_NESTED_DEPTCH (8)
-bool task_inlock(struct oplus_task_struct *ots)
+void locking_init_rq_data(struct rq *rq)
 {
-	if (global_sched_assist_enabled == 0)
-		return false;
+	if (!rq)
+		return;
 
-	if (locking_protect_disable ==  true) {
-		locking_wakeup_preepmt_enable = 0;
-		return false;
-	}
-
-	if (unlikely(ots->locking_depth >= MAX_PROTECT_NESTED_DEPTCH))
-		return false;
-
-	return ots->locking_start_time > 0;
+	INIT_LIST_HEAD(&rq->locking_thread_list);
+	rq->rq_locking_task = 0;
+	rq->rq_picked_locking_cont = 0;
 }
 
-void enqueue_locking_thread(struct rq *rq, struct task_struct *p)
+static inline bool test_task_is_rt(struct task_struct *p)
 {
-	struct oplus_task_struct *ots = NULL;
-	struct oplus_rq *orq = NULL;
-	struct list_head *pos, *n;
-
-	if (!rq || !p || locking_protect_disable)
-		return;
-
-	ots = get_oplus_task_struct(p);
-	orq = (struct oplus_rq *) rq->android_oem_data1;
-
-	if (IS_ERR_OR_NULL(ots) || !orq)
-		return;
-
-	if (!oplus_list_empty(&ots->locking_entry))
-		return;
-
-	if (task_inlock(ots)) {
-		bool exist = false;
-
-		list_for_each_safe(pos, n, &orq->locking_thread_list) {
-			if (pos == &ots->locking_entry) {
-				exist = true;
-				break;
-			}
-		}
-		if (!exist) {
-			list_add_tail(&ots->locking_entry, &orq->locking_thread_list);
-			orq->rq_locking_task++;
-			get_task_struct(p);
-			trace_enqueue_locking_thread(p, ots->locking_depth, orq->rq_locking_task);
-		}
-	}
+	/* valid RT priority is 0..MAX_RT_PRIO-1 */
+	return (p->prio >= 0) && (p->prio <= MAX_RT_PRIO-1);
 }
 
-void dequeue_locking_thread(struct rq *rq, struct task_struct *p)
+/*
+ * This function would be called by the below two cases:
+ * @in_cs = true: current has acquired the lock and enter critical section.
+ * @in_cs = false: current failed to get lock and add into the waiting list.
+ */
+void update_locking_time(unsigned long time, bool in_cs)
 {
-	struct oplus_task_struct *ots = NULL;
-	struct oplus_rq *orq = NULL;
-	struct list_head *pos, *n;
-
-	if (!rq || !p || locking_protect_disable)
-		return;
-
-	ots = get_oplus_task_struct(p);
-	orq = (struct oplus_rq *) rq->android_oem_data1;
-
-	if (IS_ERR_OR_NULL(ots) || !orq)
-		return;
-
-	if (!oplus_list_empty(&ots->locking_entry)) {
-		list_for_each_safe(pos, n, &orq->locking_thread_list) {
-			if (pos == &ots->locking_entry) {
-				list_del_init(&ots->locking_entry);
-				orq->rq_locking_task--;
-				trace_dequeue_locking_thread(p, ots->locking_depth, orq->rq_locking_task);
-				put_task_struct(p);
-				return;
-			}
-		}
-		/* Task p is not in this rq? */
-		pr_err("Can not find real rq, p->cpu=%d curr_rq=%d smpcpu=%d\n", task_cpu(p), cpu_of(rq), smp_processor_id());
-	}
-}
-
-static inline bool orq_has_locking_tasks(struct oplus_rq *orq)
-{
-	bool ret = false;
-
-	if (!orq)
-		return false;
-	ret = !oplus_list_empty(&orq->locking_thread_list);
-
-	return ret;
-}
-
-void oplus_replace_locking_task_fair(struct rq *rq, struct task_struct **p,
-					struct sched_entity **se, bool *repick)
-{
-	struct oplus_rq *orq = NULL;
-	struct list_head *pos = NULL;
-	struct list_head *n = NULL;
-	struct sched_entity *key_se;
-	struct task_struct *key_task;
-	struct oplus_task_struct *key_ots;
-
-	if (unlikely(!global_sched_assist_enabled))
-		return;
-
-	if (!rq || !p || !se || locking_protect_disable)
-		return;
-
-	orq = (struct oplus_rq *)rq->android_oem_data1;
-	if (!orq_has_locking_tasks(orq))
-		return;
-
-	list_for_each_safe(pos, n, &orq->locking_thread_list) {
-		key_ots = list_entry(pos, struct oplus_task_struct, locking_entry);
-
-		if (IS_ERR_OR_NULL(key_ots))
-			continue;
-
-		key_task = ots_to_ts(key_ots);
-
-		if (IS_ERR_OR_NULL(key_task)) {
-			list_del_init(&key_ots->locking_entry);
-			orq->rq_locking_task--;
-			continue;
-		}
-
-		key_se = &key_task->se;
-
-		if (!test_task_is_fair(key_task) || !task_inlock(key_ots)
-			|| (key_task->flags & PF_EXITING) || unlikely(!key_se) || test_task_ux(key_task)) {
-			list_del_init(&key_ots->locking_entry);
-			orq->rq_locking_task--;
-			put_task_struct(key_task);
-			continue;
-		}
-
-		if (unlikely(task_cpu(key_task) != rq->cpu))
-			continue;
-
-		*p = key_task;
-		*se = key_se;
-		*repick = true;
-		trace_select_locking_thread(key_task, key_ots->locking_depth, orq->rq_locking_task);
-
-		break;
-	}
-}
-
-static inline void update_locking_time(unsigned long time, bool in_cs)
-{
-	struct oplus_task_struct *ots;
-
 	/* Rt thread do not need our help. */
 	if (test_task_is_rt(current))
-		return;
-
-	ots = get_oplus_task_struct(current);
-	if (IS_ERR_OR_NULL(ots))
 		return;
 
 	if (!in_cs)
@@ -264,7 +122,7 @@ static inline void update_locking_time(unsigned long time, bool in_cs)
 	 * The depth over one means current hold more than one lock.
 	 */
 	if (time > 0) {
-		ots->locking_depth++;
+		current->locking_depth++;
 		goto set;
 	}
 
@@ -272,201 +130,166 @@ static inline void update_locking_time(unsigned long time, bool in_cs)
 	 * Current has released the lock, decrease it's locking depth.
 	 * The depth become zero means current has leave all the critical section.
 	 */
-	if (unlikely(ots->locking_depth <= 0)) {
-		ots->locking_depth = 0;
+	if (unlikely(current->locking_depth <= 0)) {
+		current->locking_depth = 0;
 		goto set;
 	}
 
-	if (--(ots->locking_depth))
+	if (--(current->locking_depth))
 		return;
 
 set:
-	ots->locking_start_time = time;
+	current->locking_time_start = time;
 }
+EXPORT_SYMBOL_GPL(update_locking_time);
 
-static void android_vh_mutex_wait_start_handler(void *unused, struct mutex *lock)
-{
-	update_locking_time(jiffies, false);
-}
-
-static void android_vh_rtmutex_wait_start_handler(void *unused, struct rt_mutex *lock)
-{
-	update_locking_time(jiffies, false);
-}
-
-static void record_lock_start_end_handler(void *unused,
-			struct task_struct *tsk, unsigned long settime)
+void record_locking_info(struct task_struct *p, unsigned long settime)
 {
 	update_locking_time(settime, true);
 }
 
-static void record_lock_start_handler(void *unused,
-			struct task_struct *tsk, unsigned long settime)
+inline void clear_locking_info(struct task_struct *p)
 {
-	/* For mutex/rwsem, use rwsem_up_write_end/rwsem_up_read_end instead. */
-	if (settime != 0)
-		update_locking_time(settime, true);
+	p->locking_time_start = 0;
 }
 
-static void android_vh_alter_rwsem_list_add_handler(void *unused, struct rwsem_waiter *waiter,
-			struct rw_semaphore *sem, bool *already_on_list)
+inline bool task_inlock(struct task_struct *p)
 {
-	update_locking_time(jiffies, false);
+	if (unlikely(locking_protect_disable == true))
+		return false;
+
+	return p->locking_time_start > 0;
 }
 
-static void rwsem_up_read_end_handler(void *unused, struct rw_semaphore *sem)
+#define MAX_PROTECT_NESTED_DEPTCH (8)
+static inline bool task_inlock_with_depth_check(struct task_struct *p)
 {
-	update_locking_time(0, true);
+	if (unlikely(p->locking_depth >= MAX_PROTECT_NESTED_DEPTCH))
+		return false;
+
+	return task_inlock(p);
 }
 
-static void rwsem_up_write_end_handler(void *unused, struct rw_semaphore *sem)
+inline bool locking_protect_outtime(struct task_struct *p)
 {
-	update_locking_time(0, true);
+	return time_after(jiffies, p->locking_time_start);
 }
 
-void check_preempt_tick_handler_locking(struct task_struct *p,
-			unsigned long *ideal_runtime, bool *skip_preempt,
-			unsigned long delta_exec, struct cfs_rq *cfs_rq,
-			struct sched_entity *curr, unsigned int granularity)
+void enqueue_locking_thread(struct rq *rq, struct task_struct *p)
 {
-	struct task_struct *curr_task = entity_is_task(curr) ? task_of(curr) : NULL;
-	struct oplus_task_struct *ots;
+	struct list_head *pos, *n;
+	bool exist = false;
 
-	if (NULL == curr_task)
+	if (!rq || !p || !list_empty(&p->locking_entry) || unlikely(locking_protect_disable))
 		return;
 
-	ots = get_oplus_task_struct(curr_task);
-	if (IS_ERR_OR_NULL(ots))
+	if (p->locking_time_start) {
+		list_for_each_safe(pos, n, &rq->locking_thread_list) {
+			if (pos == &p->locking_entry) {
+				exist = true;
+				break;
+			}
+		}
+		if (!exist) {
+			list_add_tail(&p->locking_entry, &rq->locking_thread_list);
+			rq->rq_locking_task++;
+			get_task_struct(p);
+			trace_enqueue_locking_thread(p, p->locking_depth, rq->rq_locking_task);
+		}
+	}
+}
+
+void dequeue_locking_thread(struct rq *rq, struct task_struct *p)
+{
+	struct list_head *pos, *n;
+
+	if (!rq || !p)
 		return;
 
-	if (likely(0 == ots->locking_start_time))
+	if (!list_empty(&p->locking_entry)) {
+		list_for_each_safe(pos, n, &rq->locking_thread_list) {
+			if (pos == &p->locking_entry) {
+				list_del_init(&p->locking_entry);
+				rq->rq_locking_task--;
+				trace_dequeue_locking_thread(p, p->locking_depth, rq->rq_locking_task);
+				put_task_struct(p);
+				return;
+			}
+		}
+		/* Task p is not in this rq? */
+		pr_err("Can not find real rq, p->cpu=%d curr_rq=%d smpcpu=%d\n", task_cpu(p), cpu_of(rq), smp_processor_id());
+	}
+}
+
+void pick_locking_thread(struct rq *rq, struct task_struct **p, struct sched_entity **se)
+{
+	struct task_struct *ori_p = *p;
+	struct task_struct *key_task;
+	struct sched_entity *key_se;
+
+	if (!rq || !ori_p || !se || test_task_ux(*p) || unlikely(locking_protect_disable))
 		return;
 
-	if (time_after(jiffies, ots->locking_start_time))
-		ots->locking_start_time = 0;
+	if (rq->rq_picked_locking_cont >= RQ_LOCKING_TASK_LIMIT)
+		goto pick_locking_fail;
+
+pick_again:
+	if (!list_empty(&rq->locking_thread_list)) {
+		key_task = list_first_entry_or_null(&rq->locking_thread_list,
+					struct task_struct, locking_entry);
+		if (key_task) {
+			list_del_init(&key_task->locking_entry);
+			rq->rq_locking_task--;
+			put_task_struct(key_task);
+			if (task_inlock_with_depth_check(key_task)) {
+				key_se = &key_task->se;
+				if (key_se) {
+					*p = key_task;
+					*se = key_se;
+					rq->rq_picked_locking_cont++;
+					trace_select_locking_thread(key_task, key_task->locking_depth, rq->rq_locking_task);
+					return;
+				}
+			}
+			goto pick_again;
+		}
+	}
+pick_locking_fail:
+	if (rq->rq_picked_locking_cont > 0)
+		rq->rq_picked_locking_cont -= 1;
 }
 
-static int register_dstate_opt_vendor_hooks(void)
+void enqueue_locking_entity(struct cfs_rq *cfs_rq, struct sched_entity *se)
 {
-	int ret = 0;
+	struct task_struct *p = entity_is_task(se) ? task_of(se) : NULL;
+	struct rq *rq = rq_of(cfs_rq);
 
-	ret = register_trace_android_vh_record_mutex_lock_starttime(
-					record_lock_start_end_handler, NULL);
-	if (ret != 0) {
-		pr_err("android_vh_record_mutex_lock_starttime failed! ret=%d\n", ret);
-		goto out;
-	}
-
-	ret = register_trace_android_vh_record_rtmutex_lock_starttime(
-					record_lock_start_end_handler, NULL);
-	if (ret != 0) {
-		pr_err("android_vh_record_rtmutex_lock_starttime failed! ret=%d\n", ret);
-		goto out1;
-	}
-
-	ret = register_trace_android_vh_record_rwsem_lock_starttime(
-					record_lock_start_handler, NULL);
-	if (ret != 0) {
-		pr_err("record_rwsem_lock_starttime failed! ret=%d\n", ret);
-		goto out2;
-	}
-
-#ifdef CONFIG_PCPU_RWSEM_LOCKING_PROTECT
-	ret = register_trace_android_vh_record_pcpu_rwsem_starttime(
-					record_lock_start_end_handler, NULL);
-	if (ret != 0) {
-		pr_err("record_pcpu_rwsem_starttime failed! ret=%d\n", ret);
-		goto out3;
-	}
-#endif
-
-	ret = register_trace_android_vh_alter_rwsem_list_add(
-			android_vh_alter_rwsem_list_add_handler, NULL);
-	if (ret != 0) {
-		pr_err("register_trace_android_vh_alter_rwsem_list_add failed! ret=%d\n", ret);
-		goto out4;
-	}
-
-	ret = register_trace_android_vh_mutex_wait_start(android_vh_mutex_wait_start_handler, NULL);
-	if (ret != 0) {
-		pr_err("register_trace_android_vh_mutex_wait_start failed! ret=%d\n", ret);
-		goto out4;
-	}
-
-	ret = register_trace_android_vh_rtmutex_wait_start(android_vh_rtmutex_wait_start_handler, NULL);
-	if (ret != 0) {
-		pr_err("register_trace_android_vh_rtmutex_wait_start failed! ret=%d\n", ret);
-		goto out4;
-	}
-
-	ret = register_trace_android_vh_rwsem_up_read_end(rwsem_up_read_end_handler, NULL);
-	if (ret != 0)
-		pr_err("register_trace_android_vh_rwsem_up_read_end failed! ret=%d\n", ret);
-
-	ret = register_trace_android_vh_rwsem_up_write_end(rwsem_up_write_end_handler, NULL);
-	if (ret != 0)
-		pr_err("register_trace_android_vh_rwsem_up_write_end failed! ret=%d\n", ret);
-
-	return ret;
-
-out4:
-#ifdef CONFIG_PCPU_RWSEM_LOCKING_PROTECT
-	unregister_trace_android_vh_record_pcpu_rwsem_starttime(
-				record_lock_start_end_handler, NULL);
-out3:
-#endif
-	unregister_trace_android_vh_record_rwsem_lock_starttime(
-				record_lock_start_handler, NULL);
-out2:
-	unregister_trace_android_vh_record_rtmutex_lock_starttime(
-				record_lock_start_end_handler, NULL);
-out1:
-	unregister_trace_android_vh_record_mutex_lock_starttime(
-				record_lock_start_end_handler, NULL);
-out:
-	return ret;
+	enqueue_locking_thread(rq, p);
 }
+EXPORT_SYMBOL_GPL(enqueue_locking_entity);
 
-static void unregister_dstate_opt_vendor_hooks(void)
+void dequeue_locking_entity(struct cfs_rq *cfs_rq, struct sched_entity *se)
 {
-	unregister_trace_android_vh_rtmutex_wait_start(
-			android_vh_rtmutex_wait_start_handler, NULL);
-	unregister_trace_android_vh_mutex_wait_start(
-			android_vh_mutex_wait_start_handler, NULL);
-	unregister_trace_android_vh_alter_rwsem_list_add(
-			android_vh_alter_rwsem_list_add_handler, NULL);
-#ifdef CONFIG_PCPU_RWSEM_LOCKING_PROTECT
-	unregister_trace_android_vh_record_pcpu_rwsem_starttime(
-			record_lock_start_end_handler, NULL);
-#endif
-	unregister_trace_android_vh_record_mutex_lock_starttime(
-			record_lock_start_end_handler, NULL);
-	unregister_trace_android_vh_record_rtmutex_lock_starttime(
-			record_lock_start_end_handler, NULL);
-	unregister_trace_android_vh_record_rwsem_lock_starttime(
-			record_lock_start_handler, NULL);
+	struct task_struct *p = entity_is_task(se) ? task_of(se) : NULL;
+	struct rq *rq = rq_of(cfs_rq);
 
-	unregister_trace_android_vh_rwsem_up_read_end(
-			rwsem_up_read_end_handler, NULL);
-	unregister_trace_android_vh_rwsem_up_write_end(
-			rwsem_up_write_end_handler, NULL);
+	dequeue_locking_thread(rq, p);
 }
+EXPORT_SYMBOL_GPL(dequeue_locking_entity);
 
-int sched_assist_locking_init(void)
+void check_locking_protect_tick(struct sched_entity *curr)
 {
-	int ret = 0;
+	if (entity_is_task(curr)) {
+		struct task_struct *curr_tsk = container_of(curr, struct task_struct, se);
 
-	ret = register_dstate_opt_vendor_hooks();
-	if (ret != 0)
-		return ret;
-
-	pr_info("%s succeed!\n", __func__);
-	return 0;
+		if (curr_tsk && task_inlock(curr_tsk) && locking_protect_outtime(curr_tsk))
+			clear_locking_info(curr_tsk);
+	}
 }
+EXPORT_SYMBOL_GPL(check_locking_protect_tick);
 
-void sched_assist_locking_exit(void)
+bool check_locking_protect_wakeup(struct task_struct *curr, struct task_struct *p)
 {
-	unregister_dstate_opt_vendor_hooks();
-	pr_info("%s exit init succeed!\n", __func__);
+	return task_inlock_with_depth_check(curr) && !task_skip_protect(p);
 }
-#endif
+EXPORT_SYMBOL_GPL(check_locking_protect_wakeup);

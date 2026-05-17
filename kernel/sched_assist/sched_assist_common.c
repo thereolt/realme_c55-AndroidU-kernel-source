@@ -41,7 +41,7 @@
 #endif
 
 #define CREATE_TRACE_POINTS
-#include <sched_assist_trace.h>
+#include "sched_assist_trace.h"
 
 
 #define ERROR_CODE -1

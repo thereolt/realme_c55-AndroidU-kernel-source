@@ -52,7 +52,7 @@ obj-y += dma/
 
 
 #ifdef CONFIG_OPLUS_SECURE_GUARD
-obj-$(CONFIG_OPLUS_SECURE_GUARD) += keventupload/
+# obj-y += keventupload/
 #endif /* CONFIG_OPLUS_SECURE_GUARD */
 
 

@@ -11,7 +11,7 @@
 # GNU General Public License for more details.
 #
 
-ccflags-y += -DMET_USER_EVENT_SUPPORT
+ccflags-y += 
 
 ifeq ($(CONFIG_BUILD_ARM64_APPENDED_DTB_IMAGE_NAMES),"mediatek/mt6885_3gear")
 MTK_PLATFORM := mt6893

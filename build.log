@@ -101,66 +101,7 @@ WARNING: unmet direct dependencies detected for MTK_CACHE_PARITY_CHECK
   Depends on [n]: MTK_SDA [=n]
   Selected by [y]:
   - MACH_MT6768 [=y]
-*
-* Restart config...
-*
-*
-* Scheduler features
-*
-Enable utilization clamping for RT/FAIR tasks (UCLAMP_TASK) [Y/n/?] y
-  Number of supported utilization clamp buckets (UCLAMP_BUCKETS_COUNT) [5] 5
-sched_assist (OPLUS_FEATURE_SCHED_ASSIST) [Y/n/m/?] y
-sched_spread (OPLUS_FEATURE_SCHED_SPREAD) [N/y/?] n
-config ux im_flag (OPLUS_UX_IM_FLAG) [Y/n/?] y
-config audio opt (OPLUS_FEATURE_AUDIO_OPT) [N/y/?] n
-config mmap lock opt (MMAP_LOCK_OPT) [N/y/?] (NEW) 
-config allboost opt (OPLUS_ALLBOOST_OPT) [Y/n/?] y
-config oplus fg boost (OPLUS_FG_BOOST) [N/y/?] n
-boost audio task in scheduler (OPLUS_CPU_AUDIO_PERF) [N/m/y/?] n
-config monitor&juc locking optimation (OPLUS_LOCKING_STRATEGY) [N/y/?] (NEW) 
-eas opt (OPLUS_FEATURE_EAS_OPT) [N/m/y/?] n
-config kernel lock opt (KERNEL_LOCK_OPT) [N/m/y/?] n
-*
-* Linux/arm64 4.19.191 Kernel Configuration
-*
-*
-* Compiler: Proton clang version 13.0.0 (https://github.com/llvm/llvm-project b4fd512c36ca344a3ff69350219e8b0a67e9472a)
-*
-Support DMA32 zone (ZONE_DMA32) [Y/n/?] y
-Kernel support for 32-bit EL0 (COMPAT) [Y/?] y
-  Enable kuser helpers page for 32 bit applications. (KUSER_HELPERS) [Y/n/?] y
-oplus kernel secure guard (OPLUS_KERNEL_SECURE_GUARD) [N/m/y/?] n
-block layer monitor  (OPLUS_BLK_MONITOR) [N/y/?] n
-Support for ux io first opt (OPLUS_FEATURE_UXIO_FIRST) [Y/n/?] y
-locking protect (LOCKING_PROTECT) [N/y/?] n
-EAS: ignore cachemiss (OPLUS_FEATURE_EAS_IGNORE_CACHEMISS) [N/y/?] n
-Hidden DRM configs needed for GKI (GKI_HIDDEN_DRM_CONFIGS) [N/y/?] n
-Hidden Regmap configs needed for GKI (GKI_HIDDEN_REGMAP_CONFIGS) [N/y/?] n
-Hidden CRYPTO configs needed for GKI (GKI_HIDDEN_CRYPTO_CONFIGS) [N/y/?] n
-Hidden SND configs needed for GKI (GKI_HIDDEN_SND_CONFIGS) [N/y/?] n
-Hidden SND_SOC configs needed for GKI (GKI_HIDDEN_SND_SOC_CONFIGS) [N/y/?] n
-Hidden GPIO configs needed for GKI (GKI_HIDDEN_GPIO_CONFIGS) [N/y/?] n
-Hidden Virtual configs needed for GKI (GKI_HIDDEN_VIRTUAL_CONFIGS) [N/y/?] n
-Hidden wireless extension configs needed for GKI (GKI_LEGACY_WEXT_ALLCONFIG) [N/y/?] n
-Hidden SOC Power Management configs for GKI (GKI_HIDDEN_SOC_PM_CONFIGS) [N/y/?] n
-Hidden v4l2 configs for GKI (GKI_HIDDEN_VIDEOBUF2_CONFIGS) [N/y/?] n
-Hiddel USB configurations needed for GKI (GKI_HIDDEN_USB_CONFIGS) [N/y/?] n
-Hidden SoC bus configuration needed for GKI (GKI_HIDDEN_SOC_BUS_CONFIGS) [N/y/?] n
-Hidden GPU configuration needed for GKI (GKI_HIDDEN_GPU_CONFIGS) [N/y/?] n
-Hidden IRQ configuration needed for GKI (GKI_HIDDEN_IRQ_CONFIGS) [N/y/?] n
-GKI Dummy config options (GKI_HACKS_TO_FIX) [N/y/?] n
-sigkill diagnosis driver (OPLUS_FEATURE_SIGKILL_DIAGNOSIS) [N/m/y/?] n
-memory monitor  (OPLUS_MEM_MONITOR) [Y/n/?] y
-Physical memory anti-fragmentation (PHYSICAL_ANTI_FRAGMENTATION) [Y/n/?] y
-enable uxmem_opt (OPLUS_UXMEM_OPT) [N/y/?] (NEW) 
-Enable Create kmalloc caches with debug flag (KMALLOC_DEBUG) [Y/n/?] y
-trace vmalloc called information with a stack (VMALLOC_DEBUG) [Y/n/?] y
-dump all userspace process meminfo (DUMP_TASKS_MEM) [Y/n/?] y
-look around (LOOK_AROUND) [N/y/?] n
-mapped protect (MAPPED_PROTECT) [N/y/?] n
-trigger memory compact based on fragmentation index (PROACTIVE_COMPACT) [N/m/y/?] n
-enable async shrink_lruvecd (SHRINK_LRU_TRYLOCK) [N/y/?] n
-dynamic page fault read-ahead size (OPLUS_DYNAMIC_READAHEAD) [N/y/?] (NEW) 
+
 WARNING: unmet direct dependencies detected for MTK_PID_MAP
   Depends on [n]: (MTK_GMO_RAM_OPTIMIZE [=n] && MTK_ENG_BUILD [=n] || !MTK_GMO_RAM_OPTIMIZE [=n]) && DEBUG_FS [=n]
   Selected by [y]:
@@ -171,18 +112,15 @@ WARNING: unmet direct dependencies detected for MTK_CACHE_PARITY_CHECK
   Selected by [y]:
   - MACH_MT6768 [=y]
 
-Cont Pte Hugepage support (CONT_PTE_HUGEPAGE) [Y/n/?] y
-  Cont Pte Hugepage support on EXT4 (CONT_PTE_HUGEPAGE_ON_EXT4) [N/y/?] n
-  Cont Pte Hugepage support on QEMU (CONT_PTE_HUGEPAGE_ON_QEMU) [N/y/?] n
-  Cont Pte Hugepage support 64K ZRAM (CONT_PTE_HUGEPAGE_64K_ZRAM) [Y/n/?] y
-Add for oplus sla function (OPLUS_FEATURE_WIFI_SLA) [Y/n/m/?] y
-Add for network score (OPLUS_FEATURE_DATA_EVAL) [Y/n/m/?] y
-Add for Oplus Wifi capability center (OPLUS_FEATURE_WIFI_CAPCENTER) [N/y/?] n
-Add for OplusWFD (OPLUS_FEATURE_WIFI_OPLUSWFD) [N/y/?] n
-Add for quick app support dns hook (OPLUS_FEATURE_DNS_HOOK) [N/m/y/?] n
-Add for iface uid stats (OPLUS_FEATURE_STATS_CALC) [Y/n/m/?] y
-Add for qr scan (OPLUS_FEATURE_QR_SCAN) [N/m/y/?] n
-Add for data modules (OPLUS_FEATURE_DATA_MODULE) [N/m/y/?] n
+WARNING: unmet direct dependencies detected for MTK_PID_MAP
+  Depends on [n]: (MTK_GMO_RAM_OPTIMIZE [=n] && MTK_ENG_BUILD [=n] || !MTK_GMO_RAM_OPTIMIZE [=n]) && DEBUG_FS [=n]
+  Selected by [y]:
+  - MACH_MT6768 [=y]
+
+WARNING: unmet direct dependencies detected for MTK_CACHE_PARITY_CHECK
+  Depends on [n]: MTK_SDA [=n]
+  Selected by [y]:
+  - MACH_MT6768 [=y]
 OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_HANS_FREEZE
 OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_STORAGE_TOOL
 OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MMC_DRIVER
@@ -262,93 +200,83 @@ mali MTK evironment, building r32p1 DDK
 mtk-Kbuild CONFIG_MALI_PLATFORM_THIRDPARTY := y
 mtk-Kbuild CONFIG_MALI_PLATFORM_THIRDPARTY_NAME := "mt6768"
 ION:enable mtk ion
-.
+drivers/misc/mediatek/base/power/cpufreq_v1/src/Makefile:89: "use CONFIG_MTK_TINYSYS_SSPM_V1"
 drivers/misc/mediatek/ccu/src/Makefile:33: CCU_MAKE_FILE_CALLED
 drivers/misc/mediatek/ccu/src/1.2/Makefile:28: CCU_INC=./drivers/misc/mediatek/ccu/src/mt6768/ccu_ext_interface
-drivers/misc/mediatek/base/power/cpufreq_v1/src/Makefile:89: "use CONFIG_MTK_TINYSYS_SSPM_V1"
-FDVT: Drv use 4.0 folder
 .
+.
+FDVT: Drv use 4.0 folder
 .
 drivers/misc/mediatek/base/power/ppm_v3/src/Makefile:110: USE_PPM_CPI
 CONFIG_MTK_PLATFORM_CCCI := mt6768
 CONFIG_MTK_PLATFORM_CCCI := "mt6768"
 MTK_PLATFORM_CCCI := mt6768
 ************  drivers/trusty/mtee-kree mk ************
-imgsensor drv by common ../common/v1/s5k2t7sp_mipi_raw/ ../common/v1/s5k2p7_mipi_raw/ ../common/v1/ov8856_mipi_raw/ ../common/v1/imx386_mipi_raw/ ../common/v1/imx398_mipi_raw/ ../common/v1/s5k2l7_mipi_raw/ ../common/v1/even_qtech_main_s5kgm1st03/ ../common/v1/even_qtech_main_ov13b10/ ../common/v1/even_hlt_front_s5k4h7/ ../common/v1/even_hlt_depth_gc02m1b/ ../common/v1/even_shengtai_macro_ov02b10/ ../common/v1/even_shengtai_front_ov8856/
-imgsensor drv by platform imx519_mipi_raw/
 M4U platform folder:"mt6768"
 M4U version:2.0
+imgsensor drv by common ../common/v1/s5k2t7sp_mipi_raw/ ../common/v1/s5k2p7_mipi_raw/ ../common/v1/ov8856_mipi_raw/ ../common/v1/imx386_mipi_raw/ ../common/v1/imx398_mipi_raw/ ../common/v1/s5k2l7_mipi_raw/ ../common/v1/even_qtech_main_s5kgm1st03/ ../common/v1/even_qtech_main_ov13b10/ ../common/v1/even_hlt_front_s5k4h7/ ../common/v1/even_hlt_depth_gc02m1b/ ../common/v1/even_shengtai_macro_ov02b10/ ../common/v1/even_shengtai_front_ov8856/
+imgsensor drv by platform imx519_mipi_raw/
 TCORE_UT_TESTS_SUPPORT = n
 TCORE_PROFILING_SUPPORT = n
 TCORE_PROFILING_AUTO_DUMP = n
 TCORE_MEMORY_LEAK_DETECTION_SUPPORT = n
-In file included from kernel/sched_assist/sa_fair.c:7:
-kernel/sched_assist/sched_assist.h:10:10: fatal error: 'trace/hooks/sched.h' file not found
-#include <trace/hooks/sched.h>
-         ^~~~~~~~~~~~~~~~~~~~~
-In file included from kernel/sched_assist/sa_exec.c:6:
-kernel/sched_assist/sched_assist.h:10:10: fatal error: 'trace/hooks/sched.h' file not found
-#include <trace/hooks/sched.h>
-         ^~~~~~~~~~~~~~~~~~~~~
-1 error generated.
-make[2]: *** [scripts/Makefile.build:334: kernel/sched_assist/sa_exec.o] Error 1
-make[2]: *** Waiting for unfinished jobs....
-kernel/sched_assist/sa_oemdata.c:7:10: fatal error: 'linux/minmax.h' file not found
-#include <linux/minmax.h>
-         ^~~~~~~~~~~~~~~~
-1 error generated.
-In file included from kernel/sched_assist/sa_sysfs.c:15:
-kernel/sched_assist/sa_common.h:16:10: fatal error: 'linux/sched/walt.h' file not found
-#include <linux/sched/walt.h>
-         ^~~~~~~~~~~~~~~~~~~~
-make[2]: *** [scripts/Makefile.build:333: kernel/sched_assist/sa_fair.o] Error 1
-1 error generated.
-make[2]: *** [scripts/Makefile.build:333: kernel/sched_assist/sa_sysfs.o] Error 1
-1 error generated.
-make[2]: *** [scripts/Makefile.build:333: kernel/sched_assist/sa_oemdata.o] Error 1
-kernel/sched_assist/sched_assist.c:11:10: fatal error: 'trace/hooks/cgroup.h' file not found
-#include <trace/hooks/cgroup.h>
-         ^~~~~~~~~~~~~~~~~~~~~~
-1 error generated.
-make[2]: *** [scripts/Makefile.build:333: kernel/sched_assist/sched_assist.o] Error 1
-In file included from kernel/sched_assist/sa_common.c:41:
-kernel/sched_assist/sched_assist.h:10:10: fatal error: 'trace/hooks/sched.h' file not found
-#include <trace/hooks/sched.h>
-         ^~~~~~~~~~~~~~~~~~~~~
-1 error generated.
-make[2]: *** [scripts/Makefile.build:333: kernel/sched_assist/sa_common.o] Error 1
-In file included from kernel/sched_assist/sa_priority.c:10:
-kernel/sched_assist/sa_common.h:16:10: fatal error: 'linux/sched/walt.h' file not found
-#include <linux/sched/walt.h>
-         ^~~~~~~~~~~~~~~~~~~~
-1 error generated.
-make[2]: *** [scripts/Makefile.build:333: kernel/sched_assist/sa_priority.o] Error 1
-make[1]: *** [scripts/Makefile.build:637: kernel/sched_assist] Error 2
-make: *** [Makefile:1212: kernel] Error 2
-make: *** Waiting for unfinished jobs....
-mm/page_alloc.c:4956:6: warning: ISO C90 forbids mixing declarations and code [-Wdeclaration-after-statement]
-        int nr_populated = 0, nr_account = 0;
-            ^
-mm/page_alloc.c:7074:17: warning: incompatible integer to pointer conversion assigning to 'struct deferred_split *' from 'unsigned long' [-Wint-conversion]
-        chp_lruvec->ds = (unsigned long)chp_lruvec; // pgdat->split_queue_len;
-                       ^ ~~~~~~~~~~~~~~~~~~~~~~~~~
-mm/page_alloc.c:7065:21: warning: ISO C90 forbids mixing declarations and code [-Wdeclaration-after-statement]
-        struct chp_lruvec *chp_lruvec = NULL;
-                           ^
-mm/vmscan.c:1688:1: warning: unused label 'activate_locked_split' [-Wunused-label]
-activate_locked_split:
-^~~~~~~~~~~~~~~~~~~~~~
-mm/vmscan.c:2780:6: warning: ISO C90 forbids mixing declarations and code [-Wdeclaration-after-statement]
-        int zid;
-            ^
-mm/vmscan.c:2935:16: warning: unused variable 'totalswap' [-Wunused-variable]
-        unsigned long totalswap = total_swap_pages;
-                      ^
-mm/vmscan.c:7087:17: warning: unused variable 'lruvec' [-Wunused-variable]
-        struct lruvec *lruvec = mem_cgroup_chp_lruvec(NULL, pgdat);
-                       ^
-mm/vmscan.c:7085:13: warning: unused function 'clear_chp_pgdat_congested' [-Wunused-function]
-static void clear_chp_pgdat_congested(pg_data_t *pgdat)
-            ^
-5 warnings generated.
-3 warnings generated.
+drivers/tee/gud/Makefile.include:2: "CONFIG_MTK_PLATFORM: "mt6768""
+drivers/tee/gud/Makefile.include:3: "CONFIG_TRUSTONIC_TEE_VERSION: "500""
+$GED: CONFIG_MTK_PLATFORM is ["mt6768"]
+*MTK_GPU_VERSION 2 = valhall
+*MTK_GPU_VERSION 3 = r32p1
+mali MTK evironment, building r32p1 DDK
+mtk-Kbuild CONFIG_MALI_PLATFORM_THIRDPARTY := y
+mtk-Kbuild CONFIG_MALI_PLATFORM_THIRDPARTY_NAME := "mt6768"
+mali MTK evironment, building r32p1 DDK
+mtk-Kbuild CONFIG_MALI_PLATFORM_THIRDPARTY := y
+mtk-Kbuild CONFIG_MALI_PLATFORM_THIRDPARTY_NAME := "mt6768"
+mali MTK evironment, building r32p1 DDK
+mtk-Kbuild CONFIG_MALI_PLATFORM_THIRDPARTY := y
+mtk-Kbuild CONFIG_MALI_PLATFORM_THIRDPARTY_NAME := "mt6768"
+drivers/misc/mediatek/base/power/cpufreq_v1/src/Makefile:89: "use CONFIG_MTK_TINYSYS_SSPM_V1"
+.
+FDVT: Drv use 4.0 folder
+.
+.
+ION:enable mtk ion
+drivers/misc/mediatek/base/power/ppm_v3/src/Makefile:110: USE_PPM_CPI
+drivers/misc/mediatek/base/power/upower_v2/Makefile:33: extraneous text after 'ifeq' directive
+drivers/misc/mediatek/ccu/src/Makefile:33: CCU_MAKE_FILE_CALLED
+drivers/misc/mediatek/ccu/src/1.2/Makefile:28: CCU_INC=./drivers/misc/mediatek/ccu/src/mt6768/ccu_ext_interface
+drivers/tee/gud/Makefile.include:2: "CONFIG_MTK_PLATFORM: "mt6768""
+drivers/tee/gud/Makefile.include:3: "CONFIG_TRUSTONIC_TEE_VERSION: "500""
+CONFIG_MTK_PLATFORM_CCCI := mt6768
+CONFIG_MTK_PLATFORM_CCCI := "mt6768"
+MTK_PLATFORM_CCCI := mt6768
+CONFIG_MTK_PLATFORM := mt6768
+CONFIG_MTK_PLATFORM := "mt6768"
+MTK_PLATFORM := "mt6768"
+CONFIG_MTK_PLATFORM := mt6768
+CONFIG_MTK_PLATFORM := "mt6768"
+MTK_PLATFORM := "mt6768"
+************  drivers/trusty/mtee-kree mk ************
+drivers/tee/gud/Makefile.include:2: "CONFIG_MTK_PLATFORM: "mt6768""
+drivers/tee/gud/Makefile.include:3: "CONFIG_TRUSTONIC_TEE_VERSION: "500""
+imgsensor drv by common ../common/v1/s5k2t7sp_mipi_raw/ ../common/v1/s5k2p7_mipi_raw/ ../common/v1/ov8856_mipi_raw/ ../common/v1/imx386_mipi_raw/ ../common/v1/imx398_mipi_raw/ ../common/v1/s5k2l7_mipi_raw/ ../common/v1/even_qtech_main_s5kgm1st03/ ../common/v1/even_qtech_main_ov13b10/ ../common/v1/even_hlt_front_s5k4h7/ ../common/v1/even_hlt_depth_gc02m1b/ ../common/v1/even_shengtai_macro_ov02b10/ ../common/v1/even_shengtai_front_ov8856/
+imgsensor drv by platform imx519_mipi_raw/
+M4U platform folder:"mt6768"
+M4U version:2.0
+drivers/tee/gud/Makefile.include:2: "CONFIG_MTK_PLATFORM: "mt6768""
+drivers/tee/gud/Makefile.include:3: "CONFIG_TRUSTONIC_TEE_VERSION: "500""
+TCORE_UT_TESTS_SUPPORT = n
+TCORE_PROFILING_SUPPORT = n
+TCORE_PROFILING_AUTO_DUMP = n
+TCORE_MEMORY_LEAK_DETECTION_SUPPORT = n
+WARNING: modpost: Found 6 section mismatch(es).
+To see full details build your kernel with:
+'make CONFIG_DEBUG_SECTION_MISMATCH=y'
+/usr/bin/aarch64-linux-gnu-ld.bfd: warning: .tmp_vmlinux1 has a LOAD segment with RWX permissions
+/usr/bin/aarch64-linux-gnu-ld.bfd: arch/arm64/kernel/syscall.o: in function `el0_svc_common':
+/home/rein/realme_c55-AndroidU-kernel-source/arch/arm64/kernel/syscall.c:123:(.text+0xf4): undefined reference to `oplus_invoke_syscall'
+/usr/bin/aarch64-linux-gnu-ld.bfd: /home/rein/realme_c55-AndroidU-kernel-source/arch/arm64/kernel/syscall.c:123:(.text+0x10c): undefined reference to `oplus_invoke_syscall'
+/usr/bin/aarch64-linux-gnu-ld.bfd: fs/exec.o: in function `__do_execve_file':
+/home/rein/realme_c55-AndroidU-kernel-source/fs/exec.c:1794:(.text+0x21b0): undefined reference to `oplus_exec_block'
+/usr/bin/aarch64-linux-gnu-ld.bfd: fs/namespace.o: in function `do_mount':
+/home/rein/realme_c55-AndroidU-kernel-source/fs/namespace.c:2772:(.text+0x3a0c): undefined reference to `oplus_mount_block'
+make: *** [Makefile:1192: vmlinux] Error 1

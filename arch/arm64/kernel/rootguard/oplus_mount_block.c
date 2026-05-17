@@ -24,7 +24,7 @@
 #include <linux/sched/task.h>
 
 #ifdef CONFIG_OPLUS_MOUNT_BLOCK
-#include <uapi/linux/mount.h>
+#include <linux/fs.h>
 #include "oplus_guard_general.h"
 
 #ifdef CONFIG_OPLUS_KEVENT_UPLOAD

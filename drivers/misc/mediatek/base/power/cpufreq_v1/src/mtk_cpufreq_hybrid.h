@@ -68,7 +68,7 @@ void srate_doe(void);
 void cpuhvfs_write(void);
 int cpuhvfs_read_ack(void);
 #endif
-#define met_tag_oneshot(a, b, c) do {} while (0)
+// met_tag_oneshot already defined in met_drv.h
 int cpuhvfs_module_init(void);
 int cpuhvfs_set_init_sta(void);
 int cpuhvfs_set_init_volt(void);

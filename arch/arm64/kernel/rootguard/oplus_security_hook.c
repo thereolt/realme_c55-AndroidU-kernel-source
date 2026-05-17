@@ -18,10 +18,10 @@
 extern struct selinux_state selinux_state;
 extern int security_sid_to_context(struct selinux_state *state, u32 sid, char **scontext, u32 *scontext_len);
 
-extern struct lsm_blob_sizes selinux_blob_sizes;
+
 static inline struct task_security_struct *selinux_cred(const struct cred *cred)
 {
-    return cred->security + selinux_blob_sizes.lbs_cred;
+    return cred->security;
 }
 
 static inline u32 current_sid(void)
@@ -30,7 +30,7 @@ static inline u32 current_sid(void)
     return tsec->sid;
 }
 
-int get_current_security_context(char **context, u32 *context_len)
+int rootguard_get_current_security_context(char **context, u32 *context_len)
 {
 	u32 sid = current_sid();
 	return security_sid_to_context(&selinux_state, sid, context, context_len);
